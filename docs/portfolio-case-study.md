@@ -1,5 +1,9 @@
 # 문서담 — 사내 자료를 위한 근거 중심 검색
 
+![가상 문서의 출장 정산 질문에 원문 근거를 붙인 문서담 화면](media/answer-with-source.png)
+
+[사진으로 따라가는 시연](demo-walkthrough.md) · [AI 답변 추가 점검](ai-quality-review.md) · [실행 방법](technical-reference.md)
+
 ## 한눈에 보기
 
 문서담은 PDF, DOCX, TXT를 등록하고 자연어 질문으로 관련 내용을 찾는 로컬 우선 문서 검색 웹 앱이다. 검색 결과에는 원문 발췌와 문서 위치를 붙이며, 근거가 충분하지 않으면 답변을 보류한다. 답변 분량은 간결하게 또는 자세하게 선택할 수 있으며, 같은 검색 근거를 유지한다. 외부 AI API를 호출하지 않고 Ollama의 `embeddinggemma`와 `qwen3:4b-instruct`만 사용한다.

@@ -151,7 +151,7 @@ def evaluate(base_url: str, questions_path: Path, docs_dir: Path, question_ids: 
         },
         "results": rows,
         "limitations": [
-            "이 평가는 기존 모노랩 회귀 세트와 분리한 자체 작성 가상 문서 도전 세트입니다.",
+            "이 평가는 자체 작성 가상 문서와 질문으로 진행했습니다. 사용한 문서 집합은 보고서의 document_set에 기록됩니다.",
             "규칙과 질문은 사람이 작성했으며 실제 회사 자료를 대표하거나 대규모 독립 블라인드 평가를 대신하지 않습니다.",
             "정답성은 핵심 문구 일치로 자동 판정해 의미가 같은 다른 표현을 오답으로 볼 수 있습니다.",
         ],

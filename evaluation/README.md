@@ -41,9 +41,12 @@ python evaluation/run_local_ollama_evaluation.py --suite gold
 .\.venv\Scripts\python.exe evaluation/run_challenge_evaluation.py --questions evaluation/challenge/negation_v10_questions.json --docs evaluation/challenge/negation_v10/docs
 .\.venv\Scripts\python.exe evaluation/run_challenge_evaluation.py --questions evaluation/challenge/long_document_v11_questions.json --docs evaluation/challenge/long_document_v11/docs
 .\.venv\Scripts\python.exe evaluation/run_challenge_evaluation.py --questions evaluation/challenge/docx_v12_questions.json --docs evaluation/challenge/docx_v12/docs
+.\.venv\Scripts\python.exe evaluation/run_challenge_evaluation.py --questions evaluation/challenge/portfolio_smoke_questions.json --docs evaluation/docs
 ```
 
 통합 스크립트는 API가 `/api/ready`에서 DB·벡터 기능·지정 모델 상태를 확인한 다음 `docs/`의 문서를 필요할 때만 등록·인덱싱합니다. 모든 문항을 키워드·벡터·하이브리드 방식으로 검색하고, `/api/chat`에서 실제 웹 서비스의 답변·출처·보류 경로를 측정합니다. JSON 결과는 `results/`에 남습니다. 개발 세트로 임계값을 정하고, 골드 세트는 임계값 계산에는 사용하지 않습니다. 단, 골드 문항에서 관찰한 복합 질문 오류를 코드에서 수정했으므로 골드 수치는 blind holdout 성능으로 해석하지 않습니다.
+
+포트폴리오 화면과 같은 가상 문서 3개에 잘못된 수치·전후 조건, 대상과 시점, 문서에 없는 항목을 섞은 5문항을 추가했습니다. [질문](challenge/portfolio_smoke_questions.json)과 [2026-11-09 실행 보고서](results/portfolio_smoke_20261109_200438.json)를 공개합니다. 답변 가능한 4문항은 답변·출처가 4/4, 근거가 일부 없는 복합 질문은 1/1 보류했습니다. 이 질문은 발견한 오류를 고치는 데 사용했으므로 개발 회귀 결과입니다.
 
 2026-11-08 최신 격리 SQLite API 회귀는 [골드 보고서](results/gold_20261108_214008.json)와 [개발 보고서](results/dev_20261108_213902.json)에 기록했습니다. 골드는 Recall@5·답변·출처 24/24, 보류 12/12였고 응답 중앙값 1,437.0ms였습니다. 개발 세트는 답변·출처·검색 10/10, 보류 2/2, 중앙값 1,183.7ms였습니다. 기존 세트는 개발 중 보강에 사용했으며 독립 블라인드 결과가 아닙니다.
 

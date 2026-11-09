@@ -620,8 +620,8 @@ export default function DocumentDetail({
       ) : detail ? (
         <>
           <DocumentSummary detail={detail} />
-          {document && detail.chunk_count > 0 && <FindInDocument key={document.id} document={document} navigationBusy={loading} hasOtherSearchableDocuments={hasOtherSearchableDocuments} onNavigateToChunk={onNavigateToChunk} onSearchAll={onSearchAll} />}
-          {document && <DocumentOutlineNav key={`${document.id}:${outlineRevision}`} document={document} chunkCount={detail.chunk_count} currentChunkIndex={detail.chunk_offset} selectedChunkIndex={selectedChunkIndex} disabled={loading} onNavigateToChunk={onNavigateToChunk} />}
+          {document && detail.chunk_count > 0 && <FindInDocument key={`find:${document.id}`} document={document} navigationBusy={loading} hasOtherSearchableDocuments={hasOtherSearchableDocuments} onNavigateToChunk={onNavigateToChunk} onSearchAll={onSearchAll} />}
+          {document && <DocumentOutlineNav key={`outline:${document.id}:${outlineRevision}`} document={document} chunkCount={detail.chunk_count} currentChunkIndex={detail.chunk_offset} selectedChunkIndex={selectedChunkIndex} disabled={loading} onNavigateToChunk={onNavigateToChunk} />}
           {detail.error_message && <div className="chat-error" role={detail.status === 'failed' ? 'alert' : 'status'}>{detail.error_message}</div>}
           {selectedExcerpt && !detail?.chunks.some(chunk => chunk.chunk_index === selectedChunkIndex) && (
             <article className="text-chunk selected-excerpt">
@@ -630,7 +630,7 @@ export default function DocumentDetail({
             </article>
           )}
           {detail.chunks.length > 0 && document ? (
-            <ExtractedChunks key={detail.id} detail={detail} document={document} filename={document.filename} loading={loading} selectedChunkIndex={selectedChunkIndex} selectedQuery={selectedQuery} canAsk={documentLifecycle === 'searchable' && !busy} onAskAboutDocument={onAskAboutDocument} onLoadChunkPage={onLoadChunkPage} />
+            <ExtractedChunks key={`chunks:${detail.id}`} detail={detail} document={document} filename={document.filename} loading={loading} selectedChunkIndex={selectedChunkIndex} selectedQuery={selectedQuery} canAsk={documentLifecycle === 'searchable' && !busy} onAskAboutDocument={onAskAboutDocument} onLoadChunkPage={onLoadChunkPage} />
           ) : previewUnavailable ? (
             <div className="detail-empty detail-preview-note">
               <strong>문서 등록 정보</strong>

@@ -482,6 +482,31 @@ class AnswerGroundingTests(unittest.TestCase):
             "사진 삭제 기한은 정하지 않았다.",
             ["사진 삭제 기한은 이 안내에서 정하지 않았다."],
         ))
+        self.assertFalse(explicit_absence_matches_question(
+            "회사 급여일과 출장 정산 기한을 각각 알려주세요.",
+            "회사 급여일은 등록된 문서에 명시되어 있지 않습니다. 출장 정산은 복귀 후 7일 이내입니다.",
+            ["출장 비용은 복귀 후 7일 이내 정산한다."],
+        ))
+        self.assertFalse(explicit_absence_matches_question(
+            "회사 급여일과 출장 정산 기한을 각각 알려주세요.",
+            "회사 급여일 기한: 문서에 명시되지 않음. 출장 정산 기한: 복귀 후 7일 이내.",
+            ["출장 비용은 복귀 후 7일 이내 정산한다."],
+        ))
+        self.assertFalse(explicit_absence_matches_question(
+            "사진 삭제 기한은 언제야?",
+            "사진 삭제 기한을 문서에서 확인할 수 없습니다.",
+            ["사진은 승인된 보관함에 저장한다."],
+        ))
+        self.assertTrue(explicit_absence_matches_question(
+            "사진 삭제 기한은 언제야?",
+            "사진 삭제 기한은 문서에 명시되어 있지 않습니다.",
+            ["사진 삭제 기한은 이 안내에 명시되어 있지 않다."],
+        ))
+        self.assertTrue(explicit_absence_matches_question(
+            "증빙 자료가 없으면 어떻게 하나요?",
+            "증빙 자료가 없으면 관리자에게 연락합니다.",
+            ["증빙 자료가 없으면 관리자에게 연락한다."],
+        ))
 
     def test_answer_covers_the_requested_numeric_dimension(self):
         self.assertFalse(answer_covers_requested_detail("택시비 한도는 얼마인가요?", "밤 10시 이후에만 정산됩니다."))
@@ -802,6 +827,29 @@ class AnswerGroundingTests(unittest.TestCase):
         self.assertIn("재발급 비용은 이 안내에 정하지 않았다", result["answer"])
         self.assertIn("회의 시작 30분 전", result["answer"])
         self.assertEqual(len(result["sources"]), 2)
+
+    def test_chat_abstains_when_one_compound_fact_is_only_claimed_missing(self):
+        query = "회사 급여일과 출장 정산 기한을 각각 알려주세요."
+        expense = chunk("정산 기한", "출장 비용은 복귀 후 7일 이내 정산한다.")
+        client_context = MagicMock()
+        client = client_context.__enter__.return_value
+        response = MagicMock()
+        response.json.return_value = {"message": {"content": json.dumps({
+            "supported": True,
+            "answer": "회사 급여일은 등록된 문서에 명시되어 있지 않습니다. 출장 비용은 복귀 후 7일 이내 정산합니다.",
+            "source_indices": [1],
+        })}}
+        client.post.return_value = response
+        with (
+            patch("server.app.main.create_embeddings", return_value=[[0.1], [0.2]]),
+            patch("server.app.main.retrieve_chunks", side_effect=[[(expense, 0.3)], [(expense, 0.3)]]),
+            patch("server.app.main.httpx.Client", return_value=client_context),
+        ):
+            result = chat(ChatRequest(query=query), db=None, user=SimpleNamespace(id=uuid4()))
+
+        self.assertEqual(client.post.call_count, 2)
+        self.assertTrue(result["abstained"])
+        self.assertEqual(result["sources"], [])
 
 
 class TimeBoundaryFallbackTests(unittest.TestCase):

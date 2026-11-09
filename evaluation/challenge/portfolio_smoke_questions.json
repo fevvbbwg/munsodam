@@ -1,0 +1,37 @@
+[
+  {
+    "id": "PS01",
+    "question": "출장 정산은 복귀 전 7일 이내인가요?",
+    "answerable": true,
+    "required_sections": ["EXP-01-S2"],
+    "must_include": [["복귀 후 7일", "복귀하고 7일"]]
+  },
+  {
+    "id": "PS02",
+    "question": "출장 식비 한도는 하루 30,000원인가요?",
+    "answerable": true,
+    "required_sections": ["EXP-01-S3"],
+    "must_include": ["25,000원"]
+  },
+  {
+    "id": "PS03",
+    "question": "노트북을 분실하면 누구에게 언제까지 알려야 하나요?",
+    "answerable": true,
+    "required_sections": ["IT-01-S2"],
+    "must_include": ["1시간", "IT 담당자", "관리자"]
+  },
+  {
+    "id": "PS04",
+    "question": "회사 급여일과 출장 정산 기한을 각각 알려주세요.",
+    "answerable": false,
+    "required_sections": ["EXP-01-S2"],
+    "must_include": []
+  },
+  {
+    "id": "PS05",
+    "question": "회사 자료를 개인 클라우드에 올려도 되나요?",
+    "answerable": true,
+    "required_sections": ["IT-01-S3"],
+    "must_include": [["올리지 않", "올리면 안", "올릴 수 없", "금지"]]
+  }
+]

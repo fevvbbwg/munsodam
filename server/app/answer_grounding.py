@@ -439,8 +439,18 @@ def explicit_absence_matches_question(
     question: str, answer: str, excerpts: Iterable[str] | None = None,
 ) -> bool:
     """A stated missing detail must concern the asked subject and appear in cited text."""
-    absent = re.compile(r"정하지\s*않|정해져\s*있지\s*않|정해지지\s*않|명시하지\s*않|기재하지\s*않|규정하지\s*않")
-    if not absent.search(answer):
+    explicit_absent = re.compile(
+        r"정하지\s*않|정해져\s*있지\s*않|정해지지\s*않|"
+        r"(?:명시|기재|규정)하지\s*않|(?:명시|기재|규정)되어\s*있지\s*않|"
+        r"(?:명시|기재|규정)되지\s*않"
+    )
+    answer_absent = re.compile(
+        explicit_absent.pattern
+        + r"|(?:문서|자료|근거|안내서)(?:에서|에|에는|상|에선).{0,20}(?:없|찾을\s*수\s*없|확인할\s*수\s*없)"
+        + r"|(?:질문|항목|정보|답).{0,12}(?:찾을|확인할|알)\s*수\s*없"
+        + r"|확인되지\s*않|나와\s*있지\s*않"
+    )
+    if not answer_absent.search(answer):
         return True
     generic = {
         "업무", "자료", "보관", "기간", "기한", "시간", "금액", "비용", "한도",
@@ -450,11 +460,11 @@ def explicit_absence_matches_question(
     if not question_topics:
         return False
     source_sentences = (
-        [sentence for excerpt in excerpts for sentence in re.split(r"[.!?。！？;；\n]+", excerpt) if absent.search(sentence)]
+        [sentence for excerpt in excerpts for sentence in re.split(r"[.!?。！？;；\n]+", excerpt) if explicit_absent.search(sentence)]
         if excerpts is not None else None
     )
     for sentence in re.split(r"[.!?。！？;；\n]+", answer):
-        if not absent.search(sentence):
+        if not answer_absent.search(sentence):
             continue
         answer_topics = _context_terms(sentence) - generic
         if not _contexts_overlap(question_topics, answer_topics):
