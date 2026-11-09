@@ -1,0 +1,206 @@
+{
+  "suite": "fresh_local_challenge",
+  "generated_at": "2026-11-09T12:26:49.588990+00:00",
+  "counts": {
+    "total": 4,
+    "answerable": 3,
+    "unanswerable": 1
+  },
+  "metrics": {
+    "recall_at_5": {
+      "hits": 3,
+      "total": 3,
+      "value": 1.0
+    },
+    "answer_correctness": {
+      "hits": 3,
+      "total": 3,
+      "value": 1.0
+    },
+    "citation_recall": {
+      "hits": 3,
+      "total": 3,
+      "value": 1.0
+    },
+    "citation_precision": {
+      "hits": 3,
+      "total": 3,
+      "value": 1.0
+    },
+    "abstention_accuracy": {
+      "hits": 1,
+      "total": 1,
+      "value": 1.0
+    },
+    "median_response_ms": 1248.1
+  },
+  "results": [
+    {
+      "id": "V14-01",
+      "question": "회사 자료를 개인 USB에 저장해도 되나요?",
+      "answerable": false,
+      "answer": "등록된 문서에서 답을 확인할 수 없습니다.",
+      "abstained": true,
+      "abstention_reason": "같은 항목의 규정 값이 문서마다 다릅니다. 적용 연도를 질문에 넣거나 문서 검색 범위를 하나로 좁혀 주세요.",
+      "retrieved_sections": [
+        "SEC-2025.txt::개인 USB 저장",
+        "SEC-2026.txt::개인 USB 저장"
+      ],
+      "cited_sections": [],
+      "conflicting_sections": [
+        "SEC-2025.txt::개인 USB 저장",
+        "SEC-2026.txt::개인 USB 저장"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "SEC-2026.txt::개인 USB 저장",
+          "distance": 0.33574055498542543
+        },
+        {
+          "section": "SEC-2025.txt::개인 USB 저장",
+          "distance": 0.3508162941841245
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": false,
+      "citation_precision": false,
+      "latency_ms": 244.2
+    },
+    {
+      "id": "V14-02",
+      "question": "2025년 규정에서는 회사 자료를 개인 USB에 저장해도 되나요?",
+      "answerable": true,
+      "answer": "2025년 규정에서는 회사 자료를 개인 USB에 저장할 수 있으며, 저장할 때 암호화를 적용해야 합니다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "SEC-2025.txt::개인 USB 저장",
+        "SEC-2026.txt::개인 USB 저장"
+      ],
+      "cited_sections": [
+        "SEC-2025.txt::개인 USB 저장"
+      ],
+      "conflicting_sections": [],
+      "retrieval_distances": [
+        {
+          "section": "SEC-2025.txt::개인 USB 저장",
+          "distance": 0.18529320731893695
+        },
+        {
+          "section": "SEC-2026.txt::개인 USB 저장",
+          "distance": 0.29213493174069183
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1405.4
+    },
+    {
+      "id": "V14-03",
+      "question": "2026년 규정에서는 회사 자료를 개인 USB에 저장해도 되나요?",
+      "answerable": true,
+      "answer": "2026년 규정에서는 회사 자료를 개인 USB에 저장하지 않습니다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "SEC-2025.txt::개인 USB 저장",
+        "SEC-2026.txt::개인 USB 저장"
+      ],
+      "cited_sections": [
+        "SEC-2026.txt::개인 USB 저장"
+      ],
+      "conflicting_sections": [],
+      "retrieval_distances": [
+        {
+          "section": "SEC-2026.txt::개인 USB 저장",
+          "distance": 0.16890263848781584
+        },
+        {
+          "section": "SEC-2025.txt::개인 USB 저장",
+          "distance": 0.301793439273191
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1090.8
+    },
+    {
+      "id": "V14-04",
+      "question": "2025년과 2026년의 개인 USB 저장 규정을 비교해 주세요.",
+      "answerable": true,
+      "answer": "2025년 개인 USB 저장 규정은 회사 자료를 개인 USB에 저장할 수 있으며, 저장 시 암호화를 적용해야 한다. 2026년 개인 USB 저장 규정은 회사 자료를 개인 USB에 저장하지 않으며, 승인된 사내 저장소만을 이용해야 한다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "SEC-2025.txt::개인 USB 저장",
+        "SEC-2026.txt::개인 USB 저장"
+      ],
+      "cited_sections": [
+        "SEC-2025.txt::개인 USB 저장",
+        "SEC-2026.txt::개인 USB 저장"
+      ],
+      "conflicting_sections": [],
+      "retrieval_distances": [
+        {
+          "section": "SEC-2025.txt::개인 USB 저장",
+          "distance": 0.24406223138186967
+        },
+        {
+          "section": "SEC-2026.txt::개인 USB 저장",
+          "distance": 0.2678415618217057
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1815.4
+    }
+  ],
+  "limitations": [
+    "이 평가는 자체 작성 가상 문서와 질문으로 진행했습니다. 사용한 문서 집합은 보고서의 document_set에 기록됩니다.",
+    "규칙과 질문은 사람이 작성했으며 실제 회사 자료를 대표하거나 대규모 독립 블라인드 평가를 대신하지 않습니다.",
+    "정답성은 핵심 문구 일치로 자동 판정해 의미가 같은 다른 표현을 오답으로 볼 수 있습니다."
+  ],
+  "question_set": "permission_conflict_v14_questions.json",
+  "question_set_sha256": "9505249fb07e5f46d570188a4d8d1443efa1a954ddb09207c5df29326fadec8e",
+  "document_set": "docs",
+  "readiness": {
+    "database": {
+      "available": true,
+      "pgvector": false,
+      "backend": "sqlite"
+    },
+    "ollama": {
+      "available": true,
+      "version": "0.40.15",
+      "error": null
+    },
+    "models": {
+      "chat": {
+        "name": "qwen3:4b-instruct",
+        "installed": true,
+        "functional": true
+      },
+      "embedding": {
+        "name": "embeddinggemma",
+        "installed": true,
+        "functional": true,
+        "dimensions": 768
+      }
+    },
+    "retrieval": {
+      "max_cosine_distance": 0.68
+    }
+  },
+  "evaluation_environment": "isolated_sqlite_api_fresh_challenge",
+  "fixture_sha256": {
+    "SEC-2025.txt": "455d7efa39bbcd7fead32939d2821f6f54c671c89abc94eed786142424d2a2c9",
+    "SEC-2026.txt": "9bbf037cbc5b4c4e7c8699a2b5fb19c8da7d2dc7bba1e8f651f8d353396c1abe"
+  }
+}

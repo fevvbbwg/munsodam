@@ -1,0 +1,413 @@
+{
+  "suite": "fresh_local_challenge",
+  "generated_at": "2026-11-09T12:26:36.871997+00:00",
+  "counts": {
+    "total": 8,
+    "answerable": 6,
+    "unanswerable": 2
+  },
+  "metrics": {
+    "recall_at_5": {
+      "hits": 6,
+      "total": 6,
+      "value": 1.0
+    },
+    "answer_correctness": {
+      "hits": 6,
+      "total": 6,
+      "value": 1.0
+    },
+    "citation_recall": {
+      "hits": 6,
+      "total": 6,
+      "value": 1.0
+    },
+    "citation_precision": {
+      "hits": 6,
+      "total": 6,
+      "value": 1.0
+    },
+    "abstention_accuracy": {
+      "hits": 2,
+      "total": 2,
+      "value": 1.0
+    },
+    "median_response_ms": 1301.4
+  },
+  "results": [
+    {
+      "id": "V13-01",
+      "question": "출장 식비 하루 한도는 얼마인가요?",
+      "answerable": false,
+      "answer": "등록된 문서에서 답을 확인할 수 없습니다.",
+      "abstained": true,
+      "abstention_reason": "같은 항목의 규정 값이 문서마다 다릅니다. 적용 연도를 질문에 넣거나 문서 검색 범위를 하나로 좁혀 주세요.",
+      "retrieved_sections": [
+        "POL-2025.txt::출장 식비",
+        "POL-2025.txt::출장 정산",
+        "POL-2026.txt::출장 식비",
+        "POL-2026.txt::출장 정산"
+      ],
+      "cited_sections": [],
+      "conflicting_sections": [
+        "POL-2025.txt::출장 식비",
+        "POL-2026.txt::출장 식비"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "POL-2026.txt::출장 식비",
+          "distance": 0.32658260962314334
+        },
+        {
+          "section": "POL-2025.txt::출장 식비",
+          "distance": 0.3324294947967801
+        },
+        {
+          "section": "POL-2025.txt::출장 정산",
+          "distance": 0.5918452852126778
+        },
+        {
+          "section": "POL-2026.txt::출장 정산",
+          "distance": 0.6031550419570133
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": false,
+      "citation_precision": false,
+      "latency_ms": 229.9
+    },
+    {
+      "id": "V13-02",
+      "question": "2025년 출장 식비 하루 한도는 얼마인가요?",
+      "answerable": true,
+      "answer": "2025년 출장 식비 하루 한도는 20,000원이다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "POL-2025.txt::출장 식비",
+        "POL-2025.txt::출장 정산",
+        "POL-2026.txt::출장 식비",
+        "POL-2026.txt::출장 정산"
+      ],
+      "cited_sections": [
+        "POL-2025.txt::출장 식비"
+      ],
+      "conflicting_sections": [],
+      "retrieval_distances": [
+        {
+          "section": "POL-2025.txt::출장 식비",
+          "distance": 0.22354433481129654
+        },
+        {
+          "section": "POL-2026.txt::출장 식비",
+          "distance": 0.3352125229651802
+        },
+        {
+          "section": "POL-2025.txt::출장 정산",
+          "distance": 0.445410468010463
+        },
+        {
+          "section": "POL-2026.txt::출장 정산",
+          "distance": 0.5661166653365327
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1431.4
+    },
+    {
+      "id": "V13-03",
+      "question": "2026년 출장 식비 하루 한도는 얼마인가요?",
+      "answerable": true,
+      "answer": "2026년 출장 식비 하루 한도는 30,000원이다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "POL-2025.txt::출장 식비",
+        "POL-2025.txt::출장 정산",
+        "POL-2026.txt::출장 식비",
+        "POL-2026.txt::출장 정산"
+      ],
+      "cited_sections": [
+        "POL-2026.txt::출장 식비"
+      ],
+      "conflicting_sections": [],
+      "retrieval_distances": [
+        {
+          "section": "POL-2026.txt::출장 식비",
+          "distance": 0.19596995725139255
+        },
+        {
+          "section": "POL-2025.txt::출장 식비",
+          "distance": 0.33262722652838084
+        },
+        {
+          "section": "POL-2026.txt::출장 정산",
+          "distance": 0.43537584059857304
+        },
+        {
+          "section": "POL-2025.txt::출장 정산",
+          "distance": 0.5598489477986783
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1171.5
+    },
+    {
+      "id": "V13-04",
+      "question": "출장 비용은 복귀 후 며칠 이내 정산하나요?",
+      "answerable": false,
+      "answer": "등록된 문서에서 답을 확인할 수 없습니다.",
+      "abstained": true,
+      "abstention_reason": "같은 항목의 규정 값이 문서마다 다릅니다. 적용 연도를 질문에 넣거나 문서 검색 범위를 하나로 좁혀 주세요.",
+      "retrieved_sections": [
+        "POL-2025.txt::출장 식비",
+        "POL-2025.txt::출장 정산",
+        "POL-2026.txt::출장 식비",
+        "POL-2026.txt::출장 정산"
+      ],
+      "cited_sections": [],
+      "conflicting_sections": [
+        "POL-2025.txt::출장 정산",
+        "POL-2026.txt::출장 정산"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "POL-2025.txt::출장 정산",
+          "distance": 0.34272459073343053
+        },
+        {
+          "section": "POL-2026.txt::출장 정산",
+          "distance": 0.34333943411641177
+        },
+        {
+          "section": "POL-2026.txt::출장 식비",
+          "distance": 0.6066008617550209
+        },
+        {
+          "section": "POL-2025.txt::출장 식비",
+          "distance": 0.614129250590274
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": false,
+      "citation_precision": false,
+      "latency_ms": 258.3
+    },
+    {
+      "id": "V13-05",
+      "question": "2026년 출장 비용은 복귀 후 며칠 이내 정산하나요?",
+      "answerable": true,
+      "answer": "복귀 후 7일 이내 정산한다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "POL-2025.txt::출장 식비",
+        "POL-2025.txt::출장 정산",
+        "POL-2026.txt::출장 식비",
+        "POL-2026.txt::출장 정산"
+      ],
+      "cited_sections": [
+        "POL-2026.txt::출장 정산"
+      ],
+      "conflicting_sections": [],
+      "retrieval_distances": [
+        {
+          "section": "POL-2026.txt::출장 정산",
+          "distance": 0.20228013683637192
+        },
+        {
+          "section": "POL-2025.txt::출장 정산",
+          "distance": 0.3292937896873276
+        },
+        {
+          "section": "POL-2026.txt::출장 식비",
+          "distance": 0.4442861231815306
+        },
+        {
+          "section": "POL-2025.txt::출장 식비",
+          "distance": 0.5730698890642628
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1037.6
+    },
+    {
+      "id": "V13-06",
+      "question": "2025년과 2026년의 출장 식비 한도를 각각 비교해 주세요.",
+      "answerable": true,
+      "answer": "출장 식비: 2025년 출장 식비 한도는 하루 20,000원이다.\n출장 식비: 2026년 출장 식비 한도는 하루 30,000원이다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "POL-2025.txt::출장 식비",
+        "POL-2025.txt::출장 정산",
+        "POL-2026.txt::출장 식비",
+        "POL-2026.txt::출장 정산"
+      ],
+      "cited_sections": [
+        "POL-2025.txt::출장 식비",
+        "POL-2026.txt::출장 식비"
+      ],
+      "conflicting_sections": [],
+      "retrieval_distances": [
+        {
+          "section": "POL-2025.txt::출장 식비",
+          "distance": 0.24171277531509217
+        },
+        {
+          "section": "POL-2026.txt::출장 식비",
+          "distance": 0.21843305569164817
+        },
+        {
+          "section": "POL-2025.txt::출장 정산",
+          "distance": 0.46302575554553294
+        },
+        {
+          "section": "POL-2026.txt::출장 정산",
+          "distance": 0.45248891139216885
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 3537.1
+    },
+    {
+      "id": "V13-07",
+      "question": "2025년과 2026년의 출장 정산 기한을 비교해 주세요.",
+      "answerable": true,
+      "answer": "출장 정산: 2025년 출장 비용은 복귀 후 5일 이내 정산한다.\n출장 정산: 2026년 출장 비용은 복귀 후 7일 이내 정산한다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "POL-2025.txt::출장 식비",
+        "POL-2025.txt::출장 정산",
+        "POL-2026.txt::출장 식비",
+        "POL-2026.txt::출장 정산"
+      ],
+      "cited_sections": [
+        "POL-2025.txt::출장 정산",
+        "POL-2026.txt::출장 정산"
+      ],
+      "conflicting_sections": [],
+      "retrieval_distances": [
+        {
+          "section": "POL-2025.txt::출장 정산",
+          "distance": 0.30635613214217905
+        },
+        {
+          "section": "POL-2026.txt::출장 정산",
+          "distance": 0.2936063348745266
+        },
+        {
+          "section": "POL-2025.txt::출장 식비",
+          "distance": 0.48140822054925014
+        },
+        {
+          "section": "POL-2026.txt::출장 식비",
+          "distance": 0.4655559259745903
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 3284.8
+    },
+    {
+      "id": "V13-08",
+      "question": "2025년과 2026년 출장 식비 한도 차이가 뭐야?",
+      "answerable": true,
+      "answer": "출장 식비: 2025년 출장 식비 한도는 하루 20,000원이다.\n출장 식비: 2026년 출장 식비 한도는 하루 30,000원이다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "POL-2025.txt::출장 식비",
+        "POL-2025.txt::출장 정산",
+        "POL-2026.txt::출장 식비",
+        "POL-2026.txt::출장 정산"
+      ],
+      "cited_sections": [
+        "POL-2025.txt::출장 식비",
+        "POL-2026.txt::출장 식비"
+      ],
+      "conflicting_sections": [],
+      "retrieval_distances": [
+        {
+          "section": "POL-2025.txt::출장 식비",
+          "distance": 0.24171277531509217
+        },
+        {
+          "section": "POL-2026.txt::출장 식비",
+          "distance": 0.21843305569164817
+        },
+        {
+          "section": "POL-2025.txt::출장 정산",
+          "distance": 0.46302575554553294
+        },
+        {
+          "section": "POL-2026.txt::출장 정산",
+          "distance": 0.45248891139216885
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 3858.6
+    }
+  ],
+  "limitations": [
+    "이 평가는 자체 작성 가상 문서와 질문으로 진행했습니다. 사용한 문서 집합은 보고서의 document_set에 기록됩니다.",
+    "규칙과 질문은 사람이 작성했으며 실제 회사 자료를 대표하거나 대규모 독립 블라인드 평가를 대신하지 않습니다.",
+    "정답성은 핵심 문구 일치로 자동 판정해 의미가 같은 다른 표현을 오답으로 볼 수 있습니다."
+  ],
+  "question_set": "conflict_v13_questions.json",
+  "question_set_sha256": "c4de8d86b41ede00e2c72ad24efe0f569b37ade0f2e2558d4578671874a52c12",
+  "document_set": "docs",
+  "readiness": {
+    "database": {
+      "available": true,
+      "pgvector": false,
+      "backend": "sqlite"
+    },
+    "ollama": {
+      "available": true,
+      "version": "0.40.15",
+      "error": null
+    },
+    "models": {
+      "chat": {
+        "name": "qwen3:4b-instruct",
+        "installed": true,
+        "functional": true
+      },
+      "embedding": {
+        "name": "embeddinggemma",
+        "installed": true,
+        "functional": true,
+        "dimensions": 768
+      }
+    },
+    "retrieval": {
+      "max_cosine_distance": 0.68
+    }
+  },
+  "evaluation_environment": "isolated_sqlite_api_fresh_challenge",
+  "fixture_sha256": {
+    "POL-2025.txt": "c578cfd7a72decf98199a4bb07a85ae2746feed302bc767d72a4bd3f262d0dff",
+    "POL-2026.txt": "f31f084b6968d016424272cb023f0f323161fbd91685f0141d2ddbf99f2b1c4b"
+  }
+}

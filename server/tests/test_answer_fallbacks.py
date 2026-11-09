@@ -16,7 +16,7 @@ from server.app.main import (
     extractive_exact_boundary_fallback, extractive_permission_rule_fallback, extractive_policy_fallback, extractive_scenario_clock_fallback,
     extractive_multi_detail_fallback, extractive_temporal_policy_fallback, extractive_time_boundary_fallback, retrieval_query_text,
     answer_covers_question_parts, validated_compound_policy_fallback,
-    retrieve_question, split_compound_question,
+    retrieve_question, split_compound_question, conflicting_policy_sources, comparison_claims_match_sources,
 )
 
 
@@ -34,6 +34,75 @@ def chunk(section_path: str, content: str):
 
 
 class QuestionRetrievalTests(unittest.TestCase):
+    def test_unscoped_numeric_policy_conflict_requires_a_version(self):
+        old = chunk("출장 식비", "2025년 출장 식비 한도는 하루 20,000원이다.")
+        new = chunk("출장 식비", "2026년 출장 식비 한도는 하루 30,000원이다.")
+        old.document.filename = "POL-2025.txt"
+        new.document.filename = "POL-2026.txt"
+        rows = [(new, 0.32), (old, 0.33)]
+
+        self.assertEqual(conflicting_policy_sources("출장 식비 하루 한도는 얼마인가요?", rows), (new, old))
+        self.assertIsNone(conflicting_policy_sources("2025년 출장 식비 하루 한도는 얼마인가요?", rows))
+        self.assertIsNone(conflicting_policy_sources("2026년 출장 식비 하루 한도는 얼마인가요?", rows))
+        self.assertIsNone(conflicting_policy_sources("두 해의 출장 식비 한도를 각각 비교해 주세요.", rows))
+
+    def test_chat_exposes_both_conflicting_sources_without_treating_them_as_an_answer(self):
+        old = chunk("출장 식비", "2025년 출장 식비 한도는 하루 20,000원이다.")
+        new = chunk("출장 식비", "2026년 출장 식비 한도는 하루 30,000원이다.")
+        old.document.filename = "POL-2025.txt"
+        new.document.filename = "POL-2026.txt"
+        with (
+            patch("server.app.main.retrieve_chunks", return_value=[(new, 0.32), (old, 0.33)]),
+            patch("server.app.main.httpx.Client") as model_client,
+        ):
+            result = chat(ChatRequest(query="출장 식비 하루 한도는 얼마인가요?"), db=None, user=SimpleNamespace(id=uuid4()))
+        self.assertTrue(result["abstained"])
+        self.assertEqual(result["sources"], [])
+        self.assertEqual({source["filename"] for source in result["conflicting_sources"]}, {"POL-2025.txt", "POL-2026.txt"})
+        model_client.assert_not_called()
+
+    def test_conflict_check_ignores_different_topics_and_distant_chunks(self):
+        food = chunk("출장 식비", "출장 식비 한도는 하루 20,000원이다.")
+        taxi = chunk("출장 택시비", "출장 택시비 한도는 하루 30,000원이다.")
+        newer_food = chunk("출장 식비", "출장 식비 한도는 하루 30,000원이다.")
+        matching_food = chunk("출장 식비", "출장 식비 한도는 하루 20,000원이다.")
+
+        self.assertIsNone(conflicting_policy_sources("출장 식비 하루 한도는 얼마인가요?", [(food, 0.3), (taxi, 0.31)]))
+        self.assertIsNone(conflicting_policy_sources("출장 식비 하루 한도는 얼마인가요?", [(food, 0.3), (newer_food, 0.6)]))
+        self.assertIsNone(conflicting_policy_sources("출장 식비 하루 한도는 얼마인가요?", [(food, 0.3), (matching_food, 0.31)]))
+
+    def test_unscoped_permission_conflict_requires_a_version(self):
+        old = chunk("개인 USB 저장", "2025년 보안 규정은 회사 자료를 개인 USB에 저장할 수 있다.")
+        new = chunk("개인 USB 저장", "2026년 보안 규정은 회사 자료를 개인 USB에 저장하지 않는다.")
+        old.document.filename = "SEC-2025.txt"
+        new.document.filename = "SEC-2026.txt"
+        rows = [(new, 0.33), (old, 0.35)]
+
+        self.assertEqual(conflicting_policy_sources("회사 자료를 개인 USB에 저장해도 되나요?", rows), (new, old))
+        self.assertIsNone(conflicting_policy_sources("2025년 규정에서 회사 자료를 개인 USB에 저장해도 되나요?", rows))
+        self.assertIsNone(conflicting_policy_sources("2026년 규정에서 회사 자료를 개인 USB에 저장해도 되나요?", rows))
+        self.assertIsNone(conflicting_policy_sources("두 연도의 개인 USB 규정 차이를 비교해 주세요.", rows))
+
+    def test_year_comparison_rejects_swapped_values_and_permission(self):
+        old = chunk("출장 식비", "2025년 출장 식비 한도는 하루 20,000원이다.")
+        new = chunk("출장 식비", "2026년 출장 식비 한도는 하루 30,000원이다.")
+        old.document.filename = "POL-2025.txt"
+        new.document.filename = "POL-2026.txt"
+        parts = ["2025년 출장 식비 한도", "2026년 출장 식비 한도"]
+        citations = [old, new]
+        part_ids = [{old.id}, {new.id}]
+        self.assertTrue(comparison_claims_match_sources(parts, "2025년은 하루 20,000원, 2026년은 하루 30,000원입니다.", citations, part_ids))
+        self.assertFalse(comparison_claims_match_sources(parts, "2025년은 하루 30,000원, 2026년은 하루 20,000원입니다.", citations, part_ids))
+        self.assertFalse(comparison_claims_match_sources(parts, "2025년과 2026년은 각각 하루 20,000원과 30,000원입니다.", citations, part_ids))
+        old.content += " 출장 식비는 청구할 수 있다."
+        self.assertTrue(comparison_claims_match_sources(parts, "2025년은 하루 20,000원, 2026년은 하루 30,000원입니다.", citations, part_ids))
+
+        old.content = "2025년 회사 자료를 개인 USB에 저장할 수 있다."
+        new.content = "2026년 회사 자료를 개인 USB에 저장하지 않는다."
+        parts = ["2025년 개인 USB 저장 규정", "2026년 개인 USB 저장 규정"]
+        self.assertTrue(comparison_claims_match_sources(parts, "2025년에는 개인 USB 저장을 할 수 있다. 2026년에는 개인 USB 저장을 하지 않는다.", citations, part_ids))
+        self.assertFalse(comparison_claims_match_sources(parts, "2025년에는 개인 USB 저장을 하지 않는다. 2026년에는 개인 USB 저장을 할 수 있다.", citations, part_ids))
+
     def test_generic_leave_search_expands_to_planned_leave_without_rewriting_user_text(self):
         query = "휴가 신청과 기기 보안에서 알아둘 점은?"
         first = (SimpleNamespace(id=uuid4()), 0.2)
@@ -63,6 +132,18 @@ class QuestionRetrievalTests(unittest.TestCase):
         )
         tuition_question = "직무 교육 학비의 연간 지원 비율과 상한, 결제 전 승인자는 누구인가요?"
         self.assertEqual(split_compound_question(tuition_question), [tuition_question])
+        self.assertEqual(
+            split_compound_question("2025년과 2026년의 출장 식비 한도를 각각 비교해 주세요."),
+            ["2025년 출장 식비 한도", "2026년 출장 식비 한도"],
+        )
+        self.assertEqual(
+            split_compound_question("2025년과 2026년 출장 식비 한도 차이가 뭐야?"),
+            ["2025년 출장 식비 한도", "2026년 출장 식비 한도"],
+        )
+        self.assertEqual(
+            split_compound_question("2025년/2026년 개인 USB 저장 규정을 비교해 주세요."),
+            ["2025년 개인 USB 저장 규정", "2026년 개인 USB 저장 규정"],
+        )
 
     def test_postgres_answer_uses_distance_after_normalizing_rows(self):
         postgres_engine = SimpleNamespace(dialect=SimpleNamespace(name="postgresql"))
@@ -850,6 +931,34 @@ class AnswerGroundingTests(unittest.TestCase):
         self.assertEqual(client.post.call_count, 2)
         self.assertTrue(result["abstained"])
         self.assertEqual(result["sources"], [])
+
+    def test_chat_repairs_a_comparison_with_values_swapped_between_years(self):
+        query = "2025년과 2026년의 출장 식비 한도를 비교해 주세요."
+        old = chunk("출장 식비", "2025년 출장 식비 한도는 하루 20,000원이다.")
+        new = chunk("출장 식비", "2026년 출장 식비 한도는 하루 30,000원이다.")
+        old.document.filename = "POL-2025.txt"
+        new.document.filename = "POL-2026.txt"
+        client_context = MagicMock()
+        client = client_context.__enter__.return_value
+        response = MagicMock()
+        response.json.return_value = {"message": {"content": json.dumps({
+            "supported": True,
+            "answer": "2025년은 하루 30,000원, 2026년은 하루 20,000원입니다.",
+            "source_indices": [1, 2],
+        })}}
+        client.post.return_value = response
+        with (
+            patch("server.app.main.create_embeddings", return_value=[[0.1], [0.2]]),
+            patch("server.app.main.retrieve_chunks", side_effect=[[(old, 0.3)], [(new, 0.31)]]),
+            patch("server.app.main.httpx.Client", return_value=client_context),
+        ):
+            result = chat(ChatRequest(query=query), db=None, user=SimpleNamespace(id=uuid4()))
+
+        self.assertEqual(client.post.call_count, 2)
+        self.assertFalse(result["abstained"])
+        self.assertIn("2025년 출장 식비 한도는 하루 20,000원", result["answer"])
+        self.assertIn("2026년 출장 식비 한도는 하루 30,000원", result["answer"])
+        self.assertEqual({source["filename"] for source in result["sources"]}, {"POL-2025.txt", "POL-2026.txt"})
 
 
 class TimeBoundaryFallbackTests(unittest.TestCase):

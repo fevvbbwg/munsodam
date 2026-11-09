@@ -54,4 +54,5 @@ export type ChatResult = {
   abstained: boolean
   reason: string | null
   sources: SearchResult[]
+  conflicting_sources?: SearchResult[]
 }

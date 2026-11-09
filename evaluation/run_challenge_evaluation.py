@@ -31,6 +31,19 @@ def includes_required(answer: str, requirements) -> bool:
     )
 
 
+def includes_year_claims(answer: str, requirements) -> bool:
+    """Check that comparison values appear under the correct year, not just somewhere."""
+    markers = list(re.finditer(r"(?<!\d)((?:19|20)\d{2})\s*년(?!\d)", answer))
+    segments: dict[str, list[str]] = {}
+    for index, marker in enumerate(markers):
+        end = markers[index + 1].start() if index + 1 < len(markers) else len(answer)
+        segments.setdefault(marker.group(1), []).append(answer[marker.end():end])
+    return all(
+        any(includes_required(segment, item["must_include"]) for segment in segments.get(str(item["year"]), []))
+        for item in requirements
+    )
+
+
 def seed_corpus(base_url: str, docs_dir: Path) -> dict[str, str]:
     request_json(f"{base_url}/api/auth/register", {
         "display_name": "문서담 도전 평가",
@@ -113,10 +126,18 @@ def evaluate(base_url: str, questions_path: Path, docs_dir: Path, question_ids: 
         latency_ms = (time.perf_counter() - start) * 1000
         latencies.append(latency_ms)
         cited = source_keys(chat.get("sources", []))
+        conflicting = source_keys(chat.get("conflicting_sources", []))
         answer = chat.get("answer", "")
         correct = (
-            not chat.get("abstained") and includes_required(answer, item.get("must_include", []))
-            if item["answerable"] else bool(chat.get("abstained"))
+            not chat.get("abstained")
+            and includes_required(answer, item.get("must_include", []))
+            and includes_year_claims(answer, item.get("year_claims", []))
+            if item["answerable"] else (
+                bool(chat.get("abstained"))
+                and not cited
+                and includes_required(chat.get("reason") or "", item.get("reason_contains", []))
+                and (not item.get("conflict_sources_required") or conflicting == required)
+            )
         )
         citation_recall = item["answerable"] and required.issubset(cited)
         citation_precision = item["answerable"] and bool(cited) and cited.issubset(required)
@@ -125,6 +146,7 @@ def evaluate(base_url: str, questions_path: Path, docs_dir: Path, question_ids: 
             "answer": answer, "abstained": chat.get("abstained"),
             "abstention_reason": chat.get("reason"),
             "retrieved_sections": sorted(retrieved), "cited_sections": sorted(cited),
+            "conflicting_sections": sorted(conflicting),
             "retrieval_distances": retrieval_distances,
             "retrieval_recall_at_5": recall, "answer_or_abstention_correct": correct,
             "citation_recall": citation_recall, "citation_precision": citation_precision,

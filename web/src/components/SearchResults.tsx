@@ -327,7 +327,9 @@ function AnswerCard({
 }) {
   const cleanAnswer = cleanAnswerText(answer.answer, query, answer.sources)
   const sourcesHeadingRef = useRef<HTMLHeadingElement>(null)
-  const hasSources = answer.sources.length > 0
+  const hasPolicyConflict = answer.abstained && answer.reason?.includes('규정 값이 문서마다 다릅니다')
+  const displayedSources = hasPolicyConflict ? answer.conflicting_sources ?? [] : answer.sources
+  const hasSources = displayedSources.length > 0
 
   function showSources() {
     const heading = sourcesHeadingRef.current
@@ -343,19 +345,19 @@ function AnswerCard({
           <div className="answer-title" role="status">
             <span className="answer-symbol"><BookOpen size={16} /></span>
             <div>
-              <strong>{answer.abstained ? '문서에서 답을 찾지 못했어요' : '문서 내용을 바탕으로 답변했어요'}</strong>
+              <strong>{hasPolicyConflict ? '문서마다 규정이 달라요' : answer.abstained ? '문서에서 답을 찾지 못했어요' : '문서 내용을 바탕으로 답변했어요'}</strong>
               {answer.abstained && <span>{answer.reason?.trim() || '문서 내용을 더 확인하거나 질문 표현을 바꿔 보세요.'}</span>}
             </div>
           </div>
           {hasSources && <button type="button" className="answer-sources-jump" onClick={showSources}>
-            근거 {answer.sources.length}개 보기 <ArrowDown size={13} aria-hidden="true" />
+            {hasPolicyConflict ? '충돌 문서' : '근거'} {displayedSources.length}개 보기 <ArrowDown size={13} aria-hidden="true" />
           </button>}
         </div>
-        <p>{cleanAnswer}</p>
+        <p>{hasPolicyConflict ? '서로 다른 규정이 검색되어 한 가지 답으로 단정할 수 없어요.' : cleanAnswer}</p>
         {answer.abstained ? (
           <>
             <div className="abstain-hint">
-              <span>관련 자료가 아직 없다면 문서함에서 먼저 추가할 수 있습니다.</span>
+              <span>{hasPolicyConflict ? '질문에 적용 연도를 넣거나 검색 범위를 문서 하나로 좁혀 다시 물어보세요.' : '관련 자료가 아직 없다면 문서함에서 먼저 추가할 수 있습니다.'}</span>
               {isDocumentScoped && hasOtherSearchableDocuments && <button type="button" disabled={busy} onClick={() => onSearchAll(query)}><Search size={12} /> 전체 문서에서 찾기</button>}
               <button onClick={onBrowseDocuments}>문서함 열기 <ArrowUpRight size={12} /></button>
             </div>
@@ -381,8 +383,8 @@ function AnswerCard({
       </div>
       {hasSources && (
         <section className="chat-sources" aria-labelledby="answer-sources-heading">
-          <h3 id="answer-sources-heading" ref={sourcesHeadingRef} tabIndex={-1}>답변 근거</h3>
-          {answer.sources.map(source => {
+          <h3 id="answer-sources-heading" ref={sourcesHeadingRef} tabIndex={-1}>{hasPolicyConflict ? '서로 다른 규정의 원문' : '답변 근거'}</h3>
+          {displayedSources.map(source => {
             const documentName = documentNameFor(source.document_id, source.filename)
             const sourceUnavailable = sourceAvailabilityFor(source.document_id) === false
             return (

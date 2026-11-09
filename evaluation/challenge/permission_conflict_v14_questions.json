@@ -1,0 +1,36 @@
+[
+  {
+    "id": "V14-01",
+    "question": "회사 자료를 개인 USB에 저장해도 되나요?",
+    "answerable": false,
+    "required_sections": ["SEC-2025-S1", "SEC-2026-S1"],
+    "reason_contains": ["규정 값이 문서마다 다릅니다"],
+    "conflict_sources_required": true,
+    "must_include": []
+  },
+  {
+    "id": "V14-02",
+    "question": "2025년 규정에서는 회사 자료를 개인 USB에 저장해도 되나요?",
+    "answerable": true,
+    "required_sections": ["SEC-2025-S1"],
+    "must_include": [["저장할 수 있", "저장 가능", "허용"]]
+  },
+  {
+    "id": "V14-03",
+    "question": "2026년 규정에서는 회사 자료를 개인 USB에 저장해도 되나요?",
+    "answerable": true,
+    "required_sections": ["SEC-2026-S1"],
+    "must_include": [["저장하지 않", "저장할 수 없", "금지", "안 됩니다"]]
+  },
+  {
+    "id": "V14-04",
+    "question": "2025년과 2026년의 개인 USB 저장 규정을 비교해 주세요.",
+    "answerable": true,
+    "required_sections": ["SEC-2025-S1", "SEC-2026-S1"],
+    "must_include": [["저장할 수 있", "저장 가능", "허용"], ["저장하지 않", "저장할 수 없", "금지", "안 됩니다"]],
+    "year_claims": [
+      {"year": "2025", "must_include": [["저장할 수 있", "저장 가능", "허용"]]},
+      {"year": "2026", "must_include": [["저장하지 않", "저장할 수 없", "금지", "안 됩니다"]]}
+    ]
+  }
+]
