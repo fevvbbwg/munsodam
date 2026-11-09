@@ -1,0 +1,135 @@
+{
+  "suite": "fresh_local_challenge",
+  "generated_at": "2026-11-08T07:46:13.868185+00:00",
+  "counts": {
+    "total": 2,
+    "answerable": 2,
+    "unanswerable": 0
+  },
+  "metrics": {
+    "recall_at_5": {
+      "hits": 2,
+      "total": 2,
+      "value": 1.0
+    },
+    "answer_correctness": {
+      "hits": 2,
+      "total": 2,
+      "value": 1.0
+    },
+    "citation_recall": {
+      "hits": 2,
+      "total": 2,
+      "value": 1.0
+    },
+    "citation_precision": {
+      "hits": 2,
+      "total": 2,
+      "value": 1.0
+    },
+    "abstention_accuracy": {
+      "hits": 0,
+      "total": 0,
+      "value": null
+    },
+    "median_response_ms": 2436.4
+  },
+  "results": [
+    {
+      "id": "V3-01",
+      "question": "방문 등록을 언제까지 하고 어떤 정보를 입력해?",
+      "answerable": true,
+      "answer": "방문 담당자는 방문 전 영업일 오후 3시까지 방문자 성명, 소속, 담당 직원, 도착 예정 시각을 시설 포털에 등록한다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "ADMIN-23.txt::고객 방문 등록"
+      ],
+      "cited_sections": [
+        "ADMIN-23.txt::고객 방문 등록"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "ADMIN-23.txt::고객 방문 등록",
+          "distance": 0.3803791180343469
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 2915.7
+    },
+    {
+      "id": "V3-08",
+      "question": "교육비 정산 서류는 몇 년 동안 보관해야 해?",
+      "answerable": true,
+      "answer": "교육비 정산 서류의 보관 기간은 별도로 정하지 않았다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "PEOPLE-23.txt::교육비 서류 보관",
+        "PEOPLE-23.txt::자격시험 교육비"
+      ],
+      "cited_sections": [
+        "PEOPLE-23.txt::교육비 서류 보관"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "PEOPLE-23.txt::교육비 서류 보관",
+          "distance": 0.32637917178114584
+        },
+        {
+          "section": "PEOPLE-23.txt::자격시험 교육비",
+          "distance": 0.6048033469615155
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1957.2
+    }
+  ],
+  "limitations": [
+    "이 평가는 기존 모노랩 회귀 세트와 분리한 새 가상 시설·운영·출장 문서 도전 세트입니다.",
+    "규칙과 질문은 사람이 작성했으며 실제 회사 자료를 대표하거나 대규모 독립 블라인드 평가를 대신하지 않습니다.",
+    "정답성은 핵심 문구 일치로 자동 판정해 의미가 같은 다른 표현을 오답으로 볼 수 있습니다."
+  ],
+  "question_set": "independent_v3_questions.json",
+  "question_set_sha256": "63ef85b13bc20eb88a7102cfecc0359275e954da2bb79209ceb44a656b78246c",
+  "document_set": "docs",
+  "readiness": {
+    "database": {
+      "available": true,
+      "pgvector": false,
+      "backend": "sqlite"
+    },
+    "ollama": {
+      "available": true,
+      "version": "0.40.11",
+      "error": null
+    },
+    "models": {
+      "chat": {
+        "name": "qwen3:4b-instruct",
+        "installed": true,
+        "functional": true
+      },
+      "embedding": {
+        "name": "embeddinggemma",
+        "installed": true,
+        "functional": true,
+        "dimensions": 768
+      }
+    },
+    "retrieval": {
+      "max_cosine_distance": 0.68
+    }
+  },
+  "evaluation_environment": "isolated_sqlite_api_fresh_challenge",
+  "fixture_sha256": {
+    "ADMIN-23.txt": "567a56165343a156b17af2db46861e236e09c8676230cd6ef52c0a375d5025b5",
+    "PEOPLE-23.txt": "ab407c7abd0e7b39bb137c2a6d949f3b91cadde1607f1d44ec10332e0866b005"
+  }
+}

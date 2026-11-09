@@ -1,0 +1,753 @@
+{
+  "suite": "fresh_local_challenge",
+  "generated_at": "2026-11-08T06:27:53.161525+00:00",
+  "counts": {
+    "total": 20,
+    "answerable": 19,
+    "unanswerable": 1
+  },
+  "metrics": {
+    "recall_at_5": {
+      "hits": 19,
+      "total": 19,
+      "value": 1.0
+    },
+    "answer_correctness": {
+      "hits": 18,
+      "total": 19,
+      "value": 0.9473684210526315
+    },
+    "citation_recall": {
+      "hits": 19,
+      "total": 19,
+      "value": 1.0
+    },
+    "citation_precision": {
+      "hits": 19,
+      "total": 19,
+      "value": 1.0
+    },
+    "abstention_accuracy": {
+      "hits": 1,
+      "total": 1,
+      "value": 1.0
+    },
+    "median_response_ms": 1484.0
+  },
+  "results": [
+    {
+      "id": "N01",
+      "question": "승인받은 재택근무일의 점심값은 하루 얼마까지 청구할 수 있어요?",
+      "answerable": true,
+      "answer": "하루 최대 9,000원까지 청구할 수 있다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "POL-01.txt::승인된 재택근무 식사",
+        "POL-01.txt::연장근무 및 교육 식사",
+        "TRV-01.txt::숙박비",
+        "TRV-01.txt::출장 택시"
+      ],
+      "cited_sections": [
+        "POL-01.txt::승인된 재택근무 식사"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "POL-01.txt::승인된 재택근무 식사",
+          "distance": 0.25718823750823083
+        },
+        {
+          "section": "POL-01.txt::연장근무 및 교육 식사",
+          "distance": 0.47546293296178677
+        },
+        {
+          "section": "TRV-01.txt::출장 택시",
+          "distance": 0.6240896262966434
+        },
+        {
+          "section": "TRV-01.txt::숙박비",
+          "distance": 0.6362099479641623
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1169.3
+    },
+    {
+      "id": "N02",
+      "question": "사무실에 출근한 평일 점심도 재택 식사 기준으로 청구할 수 있나요?",
+      "answerable": true,
+      "answer": "아니요, 사무실에 출근한 평일 점심은 재택근무 식사 기준으로 청구할 수 없습니다. 사전에 승인된 재택근무일에 한해 점심 식사비를 정산할 수 있으며, 사무실에 출근한 날의 일반 점심 식사는 이 기준에서 제외됩니다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "POL-01.txt::승인된 재택근무 식사",
+        "POL-01.txt::연장근무 및 교육 식사",
+        "TRV-01.txt::출장 택시"
+      ],
+      "cited_sections": [
+        "POL-01.txt::승인된 재택근무 식사"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "POL-01.txt::승인된 재택근무 식사",
+          "distance": 0.29782305985307733
+        },
+        {
+          "section": "POL-01.txt::연장근무 및 교육 식사",
+          "distance": 0.4698675743559815
+        },
+        {
+          "section": "TRV-01.txt::출장 택시",
+          "distance": 0.6404736400059845
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 2080.0
+    },
+    {
+      "id": "N03",
+      "question": "연장근무가 밤 9시에 끝났습니다. 저녁 식사비 기준과 상한을 알려주세요.",
+      "answerable": true,
+      "answer": "연장근무가 21시에 끝났으므로, 20시 30분 이후에 끝난 것으로 간주되며, 저녁 식사비 기준에 따라 하루 최대 16,000원까지 청구할 수 있습니다. 저녁 식사비 상한은 16,000원입니다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "POL-01.txt::승인된 재택근무 식사",
+        "POL-01.txt::연장근무 및 교육 식사",
+        "TRV-01.txt::숙박비",
+        "TRV-01.txt::출장 택시"
+      ],
+      "cited_sections": [
+        "POL-01.txt::연장근무 및 교육 식사"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "POL-01.txt::연장근무 및 교육 식사",
+          "distance": 0.3020182142971335
+        },
+        {
+          "section": "POL-01.txt::승인된 재택근무 식사",
+          "distance": 0.4598275101733391
+        },
+        {
+          "section": "TRV-01.txt::출장 택시",
+          "distance": 0.609090974292411
+        },
+        {
+          "section": "TRV-01.txt::숙박비",
+          "distance": 0.6287426934567018
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 2099.3
+    },
+    {
+      "id": "N04",
+      "question": "연장근무가 오후 8시에 끝나도 저녁 식사비를 정산할 수 있나요?",
+      "answerable": true,
+      "answer": "아니요, 연장근무가 오후 8시에 끝나도 저녁 식사비를 정산할 수 없습니다. 연장근무가 20시 30분 이후에 끝난 경우에만 저녁 식사비를 청구할 수 있으며, 오후 8시는 20시 30분 이전이므로 해당 기준을 적용하지 않습니다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "POL-01.txt::승인된 재택근무 식사",
+        "POL-01.txt::연장근무 및 교육 식사",
+        "TRV-01.txt::출장 택시"
+      ],
+      "cited_sections": [
+        "POL-01.txt::연장근무 및 교육 식사"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "POL-01.txt::연장근무 및 교육 식사",
+          "distance": 0.33094590460098205
+        },
+        {
+          "section": "POL-01.txt::승인된 재택근무 식사",
+          "distance": 0.5221684907387387
+        },
+        {
+          "section": "TRV-01.txt::출장 택시",
+          "distance": 0.6390409421689289
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": false,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 2269.4
+    },
+    {
+      "id": "N05",
+      "question": "내부 회의에서 먹은 저녁은 외부 공인 교육 식비 기준으로 정산되나요?",
+      "answerable": true,
+      "answer": "연장근무가 20시 30분 이후 끝난 직원은 저녁 식사비를 하루 최대 16,000원까지 청구할 수 있다. 연장근무 종료 시각이 20시 30분 이전이면 이 기준을 적용하지 않는다. 내부 회의 식사는 교육 식비 기준으로 정산하지 않는다. 외부 공인 교육에 참석한 직원은 교육 식사비를 하루 최대 11,000원까지 정산할 수 있다. 내부 회의나 사내 교육은 외부 공인 교육 기준의 대상이 아니다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "POL-01.txt::승인된 재택근무 식사",
+        "POL-01.txt::연장근무 및 교육 식사",
+        "TRV-01.txt::숙박비",
+        "TRV-01.txt::철도 좌석",
+        "TRV-01.txt::출장 택시"
+      ],
+      "cited_sections": [
+        "POL-01.txt::연장근무 및 교육 식사"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "POL-01.txt::연장근무 및 교육 식사",
+          "distance": 0.2930710323274124
+        },
+        {
+          "section": "POL-01.txt::승인된 재택근무 식사",
+          "distance": 0.5120923427155273
+        },
+        {
+          "section": "TRV-01.txt::출장 택시",
+          "distance": 0.6617697469732113
+        },
+        {
+          "section": "TRV-01.txt::철도 좌석",
+          "distance": 0.673034713859283
+        },
+        {
+          "section": "TRV-01.txt::숙박비",
+          "distance": 0.6737627518959929
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1037.0
+    },
+    {
+      "id": "N06",
+      "question": "공급업체 청구서는 필수 증빙이 다 접수된 뒤 며칠 안에 내나요?",
+      "answerable": true,
+      "answer": "공급업체 청구서는 필수 증빙이 모두 접수된 날부터 5영업일 이내 제출한다. 증빙이 빠져 보완한 경우에는 마지막 필수 증빙이 접수된 날부터 5영업일을 계산한다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "POL-01.txt::매입 정산 기한"
+      ],
+      "cited_sections": [
+        "POL-01.txt::매입 정산 기한"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "POL-01.txt::매입 정산 기한",
+          "distance": 0.2893612604547451
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1785.7
+    },
+    {
+      "id": "N07",
+      "question": "빠진 증빙을 나중에 보완했다면 제출 기한은 어느 날부터 계산하나요?",
+      "answerable": true,
+      "answer": "빠진 증빙을 나중에 보완했다면 제출 기한은 마지막 필수 증빙이 접수된 날부터 5영업일을 계산한다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "POL-01.txt::매입 정산 기한",
+        "POL-01.txt::회계 자료 보존"
+      ],
+      "cited_sections": [
+        "POL-01.txt::매입 정산 기한"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "POL-01.txt::매입 정산 기한",
+          "distance": 0.48006164998578926
+        },
+        {
+          "section": "POL-01.txt::회계 자료 보존",
+          "distance": 0.6423242765962779
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1436.6
+    },
+    {
+      "id": "N08",
+      "question": "완전한 청구서가 승인되면 지급까지 며칠 걸립니까?",
+      "answerable": true,
+      "answer": "완전한 청구서가 승인된 뒤 지급까지는 10영업일이 걸린다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "ITX-01.txt::시스템 계정 권한",
+        "POL-01.txt::매입 정산 기한"
+      ],
+      "cited_sections": [
+        "POL-01.txt::매입 정산 기한"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "POL-01.txt::매입 정산 기한",
+          "distance": 0.35005950880237513
+        },
+        {
+          "section": "ITX-01.txt::시스템 계정 권한",
+          "distance": 0.6591286695920056
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1255.4
+    },
+    {
+      "id": "N09",
+      "question": "회계 증빙은 회계연도 끝난 뒤 몇 년 동안 보관해야 해요?",
+      "answerable": true,
+      "answer": "회계 증빙은 해당 회계연도 종료일로부터 5년간 보관한다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "POL-01.txt::매입 정산 기한",
+        "POL-01.txt::회계 자료 보존"
+      ],
+      "cited_sections": [
+        "POL-01.txt::회계 자료 보존"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "POL-01.txt::회계 자료 보존",
+          "distance": 0.30961887522492704
+        },
+        {
+          "section": "POL-01.txt::매입 정산 기한",
+          "distance": 0.6740861120579473
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1170.6
+    },
+    {
+      "id": "N10",
+      "question": "회사 노트북을 분실하면 어디에 몇 분 안에 신고하고 관리자에게는 언제 알려야 하죠?",
+      "answerable": true,
+      "answer": "회사 기기를 분실하면 발견 시점부터 15분 이내 서비스 데스크에 신고하고, 같은 영업일이 끝나기 전에 직속 관리자에게 알린다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "ITX-01.txt::분실 기기 신고",
+        "ITX-01.txt::파손 장비 처리"
+      ],
+      "cited_sections": [
+        "ITX-01.txt::분실 기기 신고"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "ITX-01.txt::분실 기기 신고",
+          "distance": 0.3313120983659258
+        },
+        {
+          "section": "ITX-01.txt::파손 장비 처리",
+          "distance": 0.651047570325711
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1484.9
+    },
+    {
+      "id": "N11",
+      "question": "장비가 깨진 경우 직접 고쳐도 되나요? 신고 시한도 알려주세요.",
+      "answerable": true,
+      "answer": "장비가 깨진 경우 사용자는 직접 분해하거나 수리하지 않습니다. 파손 장비는 30분 이내에 서비스 데스크에 알리야 합니다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "ITX-01.txt::분실 기기 신고",
+        "ITX-01.txt::서비스 장애 대응",
+        "ITX-01.txt::파손 장비 처리"
+      ],
+      "cited_sections": [
+        "ITX-01.txt::파손 장비 처리"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "ITX-01.txt::파손 장비 처리",
+          "distance": 0.3978292294115292
+        },
+        {
+          "section": "ITX-01.txt::분실 기기 신고",
+          "distance": 0.5455330353714525
+        },
+        {
+          "section": "ITX-01.txt::서비스 장애 대응",
+          "distance": 0.6617674685607193
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1339.5
+    },
+    {
+      "id": "N12",
+      "question": "시스템 권한은 언제 신청하고 누가 승인해야 하며 언제 회수되나요?",
+      "answerable": true,
+      "answer": "새 시스템 권한은 사용 시작일보다 2영업일 전에 신청하고 자산 소유자의 승인을 받으며, 권한은 사용자의 마지막 근무일에 회수한다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "ITX-01.txt::시스템 계정 권한"
+      ],
+      "cited_sections": [
+        "ITX-01.txt::시스템 계정 권한"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "ITX-01.txt::시스템 계정 권한",
+          "distance": 0.3066144548830314
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1463.2
+    },
+    {
+      "id": "N13",
+      "question": "심각도 1 장애 대응에서 당직자 응답 시한과 상황 공유 간격은 어떻게 되나요?",
+      "answerable": true,
+      "answer": "심각도 1 장애는 당직자가 신고를 받은 뒤 10분 이내 확인 응답한다. 장애 책임자는 진행 상황을 30분마다 공유한다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "ITX-01.txt::서비스 장애 대응"
+      ],
+      "cited_sections": [
+        "ITX-01.txt::서비스 장애 대응"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "ITX-01.txt::서비스 장애 대응",
+          "distance": 0.34487974979914504
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1483.2
+    },
+    {
+      "id": "N14",
+      "question": "밤 9시에 대중교통을 이용할 수 있는데 택시비를 정산할 수 있나요?",
+      "answerable": true,
+      "answer": "아니요, 밤 9시에 대중교통을 이용할 수 있으므로 택시비를 정산할 수 없습니다. 택시비는 22시 이후 이동하거나 대중교통 이용이 불가능한 경우에만 정산할 수 있습니다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "TRV-01.txt::출장 택시"
+      ],
+      "cited_sections": [
+        "TRV-01.txt::출장 택시"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "TRV-01.txt::출장 택시",
+          "distance": 0.4350507066324909
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1718.3
+    },
+    {
+      "id": "N15",
+      "question": "출장 택시비의 1회 기본 상한과 초과 시 예외 승인자는 누구인가요?",
+      "answerable": true,
+      "answer": "출장 택시비의 1회 기본 상한은 30,000원이며, 이를 초과하는 비용은 부서장의 승인을 받은 경우에만 예외로 인정한다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "POL-01.txt::승인된 재택근무 식사",
+        "POL-01.txt::연장근무 및 교육 식사",
+        "TRV-01.txt::숙박비",
+        "TRV-01.txt::철도 좌석",
+        "TRV-01.txt::출장 택시"
+      ],
+      "cited_sections": [
+        "TRV-01.txt::출장 택시"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "TRV-01.txt::출장 택시",
+          "distance": 0.35090526048657844
+        },
+        {
+          "section": "TRV-01.txt::숙박비",
+          "distance": 0.5272867249279084
+        },
+        {
+          "section": "POL-01.txt::승인된 재택근무 식사",
+          "distance": 0.6164845066718745
+        },
+        {
+          "section": "TRV-01.txt::철도 좌석",
+          "distance": 0.6250554096145224
+        },
+        {
+          "section": "POL-01.txt::연장근무 및 교육 식사",
+          "distance": 0.6518674992135723
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1679.6
+    },
+    {
+      "id": "N16",
+      "question": "택시비 30,000원을 넘길 때 사후에 승인을 받으면 예외 처리됩니까?",
+      "answerable": true,
+      "answer": "택시는 22시 이후 이동했거나 대중교통 이용이 불가능한 경우에만 출장비로 정산할 수 있다. 택시비는 1회 30,000원까지이며 디지털 영수증과 이용 사유를 제출한다. 택시비 30,000원을 넘는 비용은 이용 전에 부서장의 승인을 받은 경우에만 예외로 인정한다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "POL-01.txt::승인된 재택근무 식사",
+        "TRV-01.txt::숙박비",
+        "TRV-01.txt::철도 좌석",
+        "TRV-01.txt::출장 택시"
+      ],
+      "cited_sections": [
+        "TRV-01.txt::출장 택시"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "TRV-01.txt::출장 택시",
+          "distance": 0.3356640062658751
+        },
+        {
+          "section": "TRV-01.txt::숙박비",
+          "distance": 0.6261253727290199
+        },
+        {
+          "section": "TRV-01.txt::철도 좌석",
+          "distance": 0.6626254111979228
+        },
+        {
+          "section": "POL-01.txt::승인된 재택근무 식사",
+          "distance": 0.6626980117061844
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 931.0
+    },
+    {
+      "id": "N17",
+      "question": "특실로 승급한 철도 요금도 출장비로 받을 수 있나요?",
+      "answerable": true,
+      "answer": "아니요, 특실로 승급한 철도 요금은 출장비로 받을 수 없습니다. 출장 철도비는 일반석 기준으로 정산되며, 특실이나 좌석 승급 비용은 정산하지 않습니다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "POL-01.txt::승인된 재택근무 식사",
+        "POL-01.txt::연장근무 및 교육 식사",
+        "TRV-01.txt::숙박비",
+        "TRV-01.txt::철도 좌석",
+        "TRV-01.txt::출장 택시"
+      ],
+      "cited_sections": [
+        "TRV-01.txt::철도 좌석"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "TRV-01.txt::철도 좌석",
+          "distance": 0.3575170960911126
+        },
+        {
+          "section": "TRV-01.txt::출장 택시",
+          "distance": 0.5539199116981964
+        },
+        {
+          "section": "TRV-01.txt::숙박비",
+          "distance": 0.6024184754815782
+        },
+        {
+          "section": "POL-01.txt::연장근무 및 교육 식사",
+          "distance": 0.6309381269378309
+        },
+        {
+          "section": "POL-01.txt::승인된 재택근무 식사",
+          "distance": 0.6550701878567962
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1707.6
+    },
+    {
+      "id": "N18",
+      "question": "출장 숙박비의 하루 상한액은 얼마입니까?",
+      "answerable": false,
+      "answer": "등록된 문서에서 답을 확인할 수 없습니다.",
+      "abstained": true,
+      "abstention_reason": "검색 근거가 질문을 충분히 뒷받침하지 않아 응답을 보류했습니다.",
+      "retrieved_sections": [
+        "POL-01.txt::승인된 재택근무 식사",
+        "POL-01.txt::연장근무 및 교육 식사",
+        "TRV-01.txt::숙박비",
+        "TRV-01.txt::철도 좌석",
+        "TRV-01.txt::출장 택시"
+      ],
+      "cited_sections": [],
+      "retrieval_distances": [
+        {
+          "section": "TRV-01.txt::숙박비",
+          "distance": 0.3655186081975912
+        },
+        {
+          "section": "POL-01.txt::승인된 재택근무 식사",
+          "distance": 0.48116560421589083
+        },
+        {
+          "section": "TRV-01.txt::출장 택시",
+          "distance": 0.5146416893829235
+        },
+        {
+          "section": "POL-01.txt::연장근무 및 교육 식사",
+          "distance": 0.5234483174342559
+        },
+        {
+          "section": "TRV-01.txt::철도 좌석",
+          "distance": 0.6717851640937846
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": false,
+      "citation_precision": false,
+      "latency_ms": 1565.4
+    },
+    {
+      "id": "N19",
+      "question": "장애 호스트에서 직접 서비스를 재시작해도 되나요?",
+      "answerable": true,
+      "answer": "아니요, 장애 호스트에서 직접 서비스를 재시작할 수 없습니다. 장애가 발생한 호스트에서는 사용자가 임의로 서비스를 재시작하지 않아야 하며, 이는 서비스 장애 대응 정책에 명시되어 있습니다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "ITX-01.txt::서비스 장애 대응"
+      ],
+      "cited_sections": [
+        "ITX-01.txt::서비스 장애 대응"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "ITX-01.txt::서비스 장애 대응",
+          "distance": 0.4632036875775747
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1746.3
+    },
+    {
+      "id": "N20",
+      "question": "헬프데스크 지원 티켓의 정확한 보관 시작일과 기간은 어떻게 돼요?",
+      "answerable": true,
+      "answer": "헬프데스크 지원 티켓은 티켓 종료일로부터 3년간 보관한다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "POL-01.txt::회계 자료 보존"
+      ],
+      "cited_sections": [
+        "POL-01.txt::회계 자료 보존"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "POL-01.txt::회계 자료 보존",
+          "distance": 0.4421226995493507
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1193.6
+    }
+  ],
+  "limitations": [
+    "이 평가는 기존 모노랩 회귀 세트와 분리한 새 가상 시설·운영·출장 문서 도전 세트입니다.",
+    "규칙과 질문은 사람이 작성했으며 실제 회사 자료를 대표하거나 대규모 독립 블라인드 평가를 대신하지 않습니다.",
+    "정답성은 핵심 문구 일치로 자동 판정해 의미가 같은 다른 표현을 오답으로 볼 수 있습니다."
+  ],
+  "question_set": "nuance_questions.json",
+  "document_set": "nuance_docs",
+  "readiness": {
+    "database": {
+      "available": true,
+      "pgvector": false,
+      "backend": "sqlite"
+    },
+    "ollama": {
+      "available": true,
+      "version": "0.40.11",
+      "error": null
+    },
+    "models": {
+      "chat": {
+        "name": "qwen3:4b-instruct",
+        "installed": true,
+        "functional": true
+      },
+      "embedding": {
+        "name": "embeddinggemma",
+        "installed": true,
+        "functional": true,
+        "dimensions": 768
+      }
+    },
+    "retrieval": {
+      "max_cosine_distance": 0.68
+    }
+  },
+  "evaluation_environment": "isolated_sqlite_api_fresh_challenge",
+  "fixture_sha256": {
+    "ITX-01.txt": "9d5651c31e9a3744481ca12a2ee809c539170cd93375c15f393df7b88ba4263e",
+    "POL-01.txt": "6f497499f9b7694ebaabede741b8e12c8019f371f651ed636584da18c9d3079b",
+    "TRV-01.txt": "9226bff4c1346871aaaff6d8a898d85a75a85670f65d9a6c0a1943768f556492"
+  }
+}

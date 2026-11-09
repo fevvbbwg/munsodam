@@ -1,0 +1,13 @@
+[
+  {"id":"V5-01","question":"국내 출장 요청은 출발 며칠 전에 어디에 등록하고 누가 승인해야 하나요?","answerable":true,"required_sections":["TRAVEL-51-S1"],"must_include":[["3근무일 전","근무일 3일 전"],"RouteMate",["직속 관리자","관리자"]]},
+  {"id":"V5-02","question":"승인된 출장 일정이 바뀌면 무엇을 언제 다시 제출하나요?","answerable":true,"required_sections":["TRAVEL-51-S1"],"must_include":[["변경 요청","변경신청"],["출발 전에","출발 전"],"RouteMate"]},
+  {"id":"V5-03","question":"출장 식비는 하루 얼마까지 정산할 수 있어요?","answerable":true,"required_sections":["TRAVEL-51-S2"],"must_include":["22,000원",["출장일마다","하루"]]},
+  {"id":"V5-04","question":"출장 식비 영수증은 복귀 후 언제까지 어느 시스템에 제출하나요?","answerable":true,"required_sections":["TRAVEL-51-S2"],"must_include":[["복귀일 다음 날부터","복귀 다음 날부터"],["5근무일 이내","근무일 5일 이내"],"MoneyFlow"]},
+  {"id":"V5-05","question":"개인 약속에서 먹은 식사도 출장 식비로 정산할 수 있나요?","answerable":true,"required_sections":["TRAVEL-51-S2"],"must_include":[["정산하지 않습니다","정산할 수 없습니다","지원하지 않습니다"]]},
+  {"id":"V5-06","question":"회사 노트북을 잃어버렸을 때 몇 분 안에 누구에게 어디로 신고하고, 신고에 무엇을 적어야 하나요?","answerable":true,"required_sections":["DEVICE-51-S1"],"must_include":["30분 이내","IT 보안팀","HelpHub",["일련번호","시리얼 번호"],["마지막으로 확인한 장소","마지막 장소"]]},
+  {"id":"V5-07","question":"분실한 노트북을 찾으면 보안팀 답변을 받기 전에 원격 초기화해도 되나요?","answerable":true,"required_sections":["DEVICE-51-S1"],"must_include":[["초기화하지 않습니다","실행하지 않습니다","하면 안 됩니다"],["회신 전","회신을 받기 전","답변 전"]]},
+  {"id":"V5-08","question":"수리 중 빌린 노트북은 언제 어디에 반납하고 어떤 확인을 해야 하나요?","answerable":true,"required_sections":["DEVICE-51-S2"],"must_include":[["돌려받은 날부터","장비를 받은 날부터"],["2근무일 이내","근무일 2일 이내"],"IT 창구",["전자 장비 인수증","전자 인수증"]]},
+  {"id":"V5-09","question":"분실 노트북 교체 가격은 얼마인가요?","answerable":false,"required_sections":["DEVICE-51-S2"],"must_include":[]},
+  {"id":"V5-10","question":"출장 식비의 월간 한도는 얼마인가요?","answerable":false,"required_sections":["TRAVEL-51-S2"],"must_include":[]},
+  {"id":"V5-11","question":"IT 보안팀의 직통 전화번호를 알려줘.","answerable":false,"required_sections":["DEVICE-51-S1"],"must_include":[]}
+]

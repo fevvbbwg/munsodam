@@ -1,0 +1,212 @@
+{
+  "suite": "fresh_local_challenge",
+  "generated_at": "2026-11-08T12:43:17.404902+00:00",
+  "counts": {
+    "total": 5,
+    "answerable": 4,
+    "unanswerable": 1
+  },
+  "metrics": {
+    "recall_at_5": {
+      "hits": 4,
+      "total": 4,
+      "value": 1.0
+    },
+    "answer_correctness": {
+      "hits": 4,
+      "total": 4,
+      "value": 1.0
+    },
+    "citation_recall": {
+      "hits": 4,
+      "total": 4,
+      "value": 1.0
+    },
+    "citation_precision": {
+      "hits": 4,
+      "total": 4,
+      "value": 1.0
+    },
+    "abstention_accuracy": {
+      "hits": 1,
+      "total": 1,
+      "value": 1.0
+    },
+    "median_response_ms": 1182.2
+  },
+  "results": [
+    {
+      "id": "V10-01",
+      "question": "직원의 실내 점검용 드론 사용이 금지되어 있어?",
+      "answerable": true,
+      "answer": "직원의 실내 점검용 드론 사용은 금지하지 않는다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "OPS-44.txt::드론 사용 장소",
+        "OPS-44.txt::장비 예약 문의"
+      ],
+      "cited_sections": [
+        "OPS-44.txt::드론 사용 장소"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "OPS-44.txt::드론 사용 장소",
+          "distance": 0.26052236163971954
+        },
+        {
+          "section": "OPS-44.txt::장비 예약 문의",
+          "distance": 0.6578631043964541
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1924.5
+    },
+    {
+      "id": "V10-02",
+      "question": "대외 행사장에서 점검용 드론을 사용해도 돼?",
+      "answerable": true,
+      "answer": "아니요, 대외 행사장에서 점검용 드론을 사용하는 것은 허용되지 않습니다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "OPS-44.txt::드론 사용 장소"
+      ],
+      "cited_sections": [
+        "OPS-44.txt::드론 사용 장소"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "OPS-44.txt::드론 사용 장소",
+          "distance": 0.3212887748612717
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1182.2
+    },
+    {
+      "id": "V10-03",
+      "question": "장비 예약 문의 이메일 주소는 뭐야?",
+      "answerable": true,
+      "answer": "장비 예약 문의 이메일 주소는 gear@example.org이다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "OPS-44.txt::장비 예약 문의"
+      ],
+      "cited_sections": [
+        "OPS-44.txt::장비 예약 문의"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "OPS-44.txt::장비 예약 문의",
+          "distance": 0.28075447224790473
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 959.2
+    },
+    {
+      "id": "V10-04",
+      "question": "드론 사용 기록 삭제 기한은 정해져 있어?",
+      "answerable": true,
+      "answer": "드론 사용 기록 삭제 기한은 정해져 있지 않습니다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "OPS-44.txt::드론 사용 장소",
+        "OPS-44.txt::장비 예약 문의"
+      ],
+      "cited_sections": [
+        "OPS-44.txt::장비 예약 문의"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "OPS-44.txt::드론 사용 장소",
+          "distance": 0.4373220045773889
+        },
+        {
+          "section": "OPS-44.txt::장비 예약 문의",
+          "distance": 0.4609816590202056
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 966.1
+    },
+    {
+      "id": "V10-05",
+      "question": "대외 행사장 드론 사용 승인자는 누구야?",
+      "answerable": false,
+      "answer": "등록된 문서에서 답을 확인할 수 없습니다.",
+      "abstained": true,
+      "abstention_reason": "검색 근거가 질문을 충분히 뒷받침하지 않아 응답을 보류했습니다.",
+      "retrieved_sections": [
+        "OPS-44.txt::드론 사용 장소"
+      ],
+      "cited_sections": [],
+      "retrieval_distances": [
+        {
+          "section": "OPS-44.txt::드론 사용 장소",
+          "distance": 0.42748292565800816
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": false,
+      "citation_precision": false,
+      "latency_ms": 1469.8
+    }
+  ],
+  "limitations": [
+    "이 평가는 기존 모노랩 회귀 세트와 분리한 새 가상 시설·운영·출장 문서 도전 세트입니다.",
+    "규칙과 질문은 사람이 작성했으며 실제 회사 자료를 대표하거나 대규모 독립 블라인드 평가를 대신하지 않습니다.",
+    "정답성은 핵심 문구 일치로 자동 판정해 의미가 같은 다른 표현을 오답으로 볼 수 있습니다."
+  ],
+  "question_set": "negation_v10_questions.json",
+  "question_set_sha256": "6189adbf43a1696137c2aef0dc0d7fcf333ef96cd72a960e37c1fcc881d9d504",
+  "document_set": "docs",
+  "readiness": {
+    "database": {
+      "available": true,
+      "pgvector": false,
+      "backend": "sqlite"
+    },
+    "ollama": {
+      "available": true,
+      "version": "0.40.11",
+      "error": null
+    },
+    "models": {
+      "chat": {
+        "name": "qwen3:4b-instruct",
+        "installed": true,
+        "functional": true
+      },
+      "embedding": {
+        "name": "embeddinggemma",
+        "installed": true,
+        "functional": true,
+        "dimensions": 768
+      }
+    },
+    "retrieval": {
+      "max_cosine_distance": 0.68
+    }
+  },
+  "evaluation_environment": "isolated_sqlite_api_fresh_challenge",
+  "fixture_sha256": {
+    "OPS-44.txt": "c6d54ad51fa4fba0b92d8b5e654a1ca345ff52bfcb0ac3e8eb1dcfe2f085a67f"
+  }
+}

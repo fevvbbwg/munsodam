@@ -1,0 +1,16 @@
+[
+  {"id":"H01","question":"방문객 맞이하는 직원은 안내 데스크에서 어떤 정보를 받아 적나요?","answerable":true,"required_sections":["FAC-01-S1"],"must_include":[["이름"],["소속 회사","회사"]]},
+  {"id":"H02","question":"방문객 혼자 보안 장비실에 들어가도 됩니까?","answerable":true,"required_sections":["FAC-01-S2"],"must_include":[["동행","함께"],["입실부터 퇴실까지","들어갈 때부터 나올 때까지"]]},
+  {"id":"H03","question":"회의실 예약 일정은 어떤 서비스에서 취소하나요?","answerable":true,"required_sections":["FAC-01-S3"],"must_include":[["WorkCalendar"]]},
+  {"id":"H04","question":"일반 배송 물품은 어디에서 찾아가야 해요?","answerable":true,"required_sections":["FAC-01-S4"],"must_include":[["1층 안내 데스크","일층 안내 데스크"]]},
+  {"id":"H05","question":"출장 택시비의 원화 상한액이 얼마인지 알려주세요.","answerable":false,"required_sections":["FIN-01-S3"]},
+  {"id":"H06","question":"출장 중 식사비는 하루 최대 얼마까지 정산해요?","answerable":true,"required_sections":["FIN-01-S1"],"must_include":[["12,000원","1만 2천원","1만2천원"],["하루"]]},
+  {"id":"H07","question":"출장 주차비 청구에 영수증이 있어야 하나요?","answerable":true,"required_sections":["FIN-01-S2"],"must_include":[["결제 영수증","영수증"]]},
+  {"id":"H08","question":"장비가 깨진 걸 발견했을 때 직접 고쳐도 되나요?","answerable":true,"required_sections":["OPS-01-S2"],"must_include":[["직접 분해하거나 수리하지","수리하지 않습니다","안 됩니다"]]},
+  {"id":"H09","question":"자리를 비우면 컴퓨터 화면 잠금이 몇 분 내 작동해야 해요?","answerable":true,"required_sections":["OPS-01-S3"],"must_include":[["2분 이내","2분 내","이 분 이내"]]},
+  {"id":"H10","question":"예비 노트북 대여 기간과 함께 반납할 액세서리는 무엇인가요?","answerable":true,"required_sections":["OPS-01-S1"],"must_include":[["2영업일","이틀"],["전원 어댑터"]]},
+  {"id":"H11","question":"방문객이 직원용 네트워크 계정을 받아 쓸 수 있나요?","answerable":true,"required_sections":["FAC-01-S2"],"must_include":[["발급하지 않는다","발급하지 않습니다","제공하지 않는다"]]},
+  {"id":"H12","question":"택시비 청구할 때 영수증 말고 어떤 내용을 제출해야 하죠?","answerable":true,"required_sections":["FIN-01-S3"],"must_include":[["이용 사유","사유"]]},
+  {"id":"H13","question":"출장이 아닌 평일 점심값도 출장 식비 기준으로 청구할 수 있어요?","answerable":true,"required_sections":["FIN-01-S1"],"must_include":[["정산하지 않는다","정산하지 않습니다","정산할 수 없다","청구할 수 없다"]]},
+  {"id":"H14","question":"택시비 상한을 넘길 때 승인받을 담당자의 이메일 주소가 뭔가요?","answerable":false,"required_sections":["FIN-01-S3"]}
+]

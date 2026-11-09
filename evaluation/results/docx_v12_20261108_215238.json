@@ -1,0 +1,222 @@
+{
+  "suite": "fresh_local_challenge",
+  "generated_at": "2026-11-08T12:52:38.963468+00:00",
+  "counts": {
+    "total": 4,
+    "answerable": 3,
+    "unanswerable": 1
+  },
+  "metrics": {
+    "recall_at_5": {
+      "hits": 3,
+      "total": 3,
+      "value": 1.0
+    },
+    "answer_correctness": {
+      "hits": 3,
+      "total": 3,
+      "value": 1.0
+    },
+    "citation_recall": {
+      "hits": 3,
+      "total": 3,
+      "value": 1.0
+    },
+    "citation_precision": {
+      "hits": 3,
+      "total": 3,
+      "value": 1.0
+    },
+    "abstention_accuracy": {
+      "hits": 1,
+      "total": 1,
+      "value": 1.0
+    },
+    "median_response_ms": 1184.3
+  },
+  "results": [
+    {
+      "id": "V12-01",
+      "question": "현장 카메라는 언제 EquipDesk에서 대여 신청해야 해?",
+      "answerable": true,
+      "answer": "출발 2일 전까지 EquipDesk에서 대여 신청해야 한다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "DEVICE-55.docx::사무실 장비 / 대여 신청",
+        "DEVICE-55.docx::현장 장비 운영 / 대여 신청",
+        "DEVICE-55.docx::현장 장비 운영 / 반납"
+      ],
+      "cited_sections": [
+        "DEVICE-55.docx::현장 장비 운영 / 대여 신청"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "DEVICE-55.docx::현장 장비 운영 / 대여 신청",
+          "distance": 0.2226891936522547
+        },
+        {
+          "section": "DEVICE-55.docx::현장 장비 운영 / 반납",
+          "distance": 0.5142635699165368
+        },
+        {
+          "section": "DEVICE-55.docx::사무실 장비 / 대여 신청",
+          "distance": 0.5661104459735189
+        },
+        {
+          "section": "DEVICE-55.docx::현장 장비 운영 / 대여 신청",
+          "distance": 0.6037297889514965
+        },
+        {
+          "section": "DEVICE-55.docx::사무실 장비 / 대여 신청",
+          "distance": 0.643516818164055
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1267.3
+    },
+    {
+      "id": "V12-02",
+      "question": "현장 카메라는 언제 어디에 반납해야 해?",
+      "answerable": true,
+      "answer": "현장 카메라는 복귀 다음 날까지 장비실에 반납해야 합니다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "DEVICE-55.docx::현장 장비 운영 / 대여 신청",
+        "DEVICE-55.docx::현장 장비 운영 / 반납"
+      ],
+      "cited_sections": [
+        "DEVICE-55.docx::현장 장비 운영 / 반납"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "DEVICE-55.docx::현장 장비 운영 / 반납",
+          "distance": 0.29809348466520025
+        },
+        {
+          "section": "DEVICE-55.docx::현장 장비 운영 / 대여 신청",
+          "distance": 0.43355302394789075
+        },
+        {
+          "section": "DEVICE-55.docx::현장 장비 운영 / 반납",
+          "distance": 0.6507710458024617
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1078.3
+    },
+    {
+      "id": "V12-03",
+      "question": "사무실 키보드도 대여 신청을 해야 해?",
+      "answerable": true,
+      "answer": "아니요, 사무실 키보드는 사전 대여 신청이 필요하지 않습니다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "DEVICE-55.docx::사무실 장비 / 대여 신청",
+        "DEVICE-55.docx::현장 장비 운영 / 대여 신청"
+      ],
+      "cited_sections": [
+        "DEVICE-55.docx::사무실 장비 / 대여 신청"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "DEVICE-55.docx::사무실 장비 / 대여 신청",
+          "distance": 0.29141973166497703
+        },
+        {
+          "section": "DEVICE-55.docx::사무실 장비 / 대여 신청",
+          "distance": 0.5461123539104771
+        },
+        {
+          "section": "DEVICE-55.docx::현장 장비 운영 / 대여 신청",
+          "distance": 0.5604204726998303
+        },
+        {
+          "section": "DEVICE-55.docx::현장 장비 운영 / 대여 신청",
+          "distance": 0.6438812225892081
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1101.4
+    },
+    {
+      "id": "V12-04",
+      "question": "현장 카메라 대여 수수료는 얼마야?",
+      "answerable": false,
+      "answer": "등록된 문서에서 답을 확인할 수 없습니다.",
+      "abstained": true,
+      "abstention_reason": "검색 근거가 질문을 충분히 뒷받침하지 않아 응답을 보류했습니다.",
+      "retrieved_sections": [
+        "DEVICE-55.docx::현장 장비 운영 / 대여 신청",
+        "DEVICE-55.docx::현장 장비 운영 / 반납"
+      ],
+      "cited_sections": [],
+      "retrieval_distances": [
+        {
+          "section": "DEVICE-55.docx::현장 장비 운영 / 대여 신청",
+          "distance": 0.48748982289006904
+        },
+        {
+          "section": "DEVICE-55.docx::현장 장비 운영 / 반납",
+          "distance": 0.5799106182778527
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": false,
+      "citation_precision": false,
+      "latency_ms": 1483.9
+    }
+  ],
+  "limitations": [
+    "이 평가는 기존 모노랩 회귀 세트와 분리한 새 가상 시설·운영·출장 문서 도전 세트입니다.",
+    "규칙과 질문은 사람이 작성했으며 실제 회사 자료를 대표하거나 대규모 독립 블라인드 평가를 대신하지 않습니다.",
+    "정답성은 핵심 문구 일치로 자동 판정해 의미가 같은 다른 표현을 오답으로 볼 수 있습니다."
+  ],
+  "question_set": "docx_v12_questions.json",
+  "question_set_sha256": "1467bf16d607df0f6bc0e255508324432099d963a0d80c956774aa98888a83b1",
+  "document_set": "docs",
+  "readiness": {
+    "database": {
+      "available": true,
+      "pgvector": false,
+      "backend": "sqlite"
+    },
+    "ollama": {
+      "available": true,
+      "version": "0.40.11",
+      "error": null
+    },
+    "models": {
+      "chat": {
+        "name": "qwen3:4b-instruct",
+        "installed": true,
+        "functional": true
+      },
+      "embedding": {
+        "name": "embeddinggemma",
+        "installed": true,
+        "functional": true,
+        "dimensions": 768
+      }
+    },
+    "retrieval": {
+      "max_cosine_distance": 0.68
+    }
+  },
+  "evaluation_environment": "isolated_sqlite_api_fresh_challenge",
+  "fixture_sha256": {
+    "DEVICE-55.docx": "6912014e533a8ea3d0d8fac5a9d8d44e9db4df1cc919803456b2b90f9a97bdf0"
+  }
+}

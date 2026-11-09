@@ -1,0 +1,550 @@
+{
+  "suite": "fresh_local_challenge",
+  "generated_at": "2026-11-08T08:09:37.594791+00:00",
+  "counts": {
+    "total": 15,
+    "answerable": 14,
+    "unanswerable": 1
+  },
+  "metrics": {
+    "recall_at_5": {
+      "hits": 14,
+      "total": 14,
+      "value": 1.0
+    },
+    "answer_correctness": {
+      "hits": 14,
+      "total": 14,
+      "value": 1.0
+    },
+    "citation_recall": {
+      "hits": 14,
+      "total": 14,
+      "value": 1.0
+    },
+    "citation_precision": {
+      "hits": 14,
+      "total": 14,
+      "value": 1.0
+    },
+    "abstention_accuracy": {
+      "hits": 1,
+      "total": 1,
+      "value": 1.0
+    },
+    "median_response_ms": 1215.2
+  },
+  "results": [
+    {
+      "id": "V01",
+      "question": "실험실 방문객이 안전 안내 없이 먼저 들어가도 괜찮나요?",
+      "answerable": true,
+      "answer": "아니요, 실험실 방문객이 안전 안내 없이 먼저 들어가면 안 됩니다. 방문객은 실험실에 들어가기 전에 안전 안내를 이수하고 방문 기록을 작성해야 하며, 입실부터 퇴실까지 방문을 주관한 직원과 함께 있어야 합니다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "LAB-01.txt::방문객 출입",
+        "LAB-01.txt::시료 라벨과 보관",
+        "LAB-01.txt::저온 장비 온도 점검",
+        "LAB-01.txt::화학물질 유출 대응"
+      ],
+      "cited_sections": [
+        "LAB-01.txt::방문객 출입"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "LAB-01.txt::방문객 출입",
+          "distance": 0.2892499279762638
+        },
+        {
+          "section": "LAB-01.txt::화학물질 유출 대응",
+          "distance": 0.496337096557089
+        },
+        {
+          "section": "LAB-01.txt::시료 라벨과 보관",
+          "distance": 0.5897702387641168
+        },
+        {
+          "section": "LAB-01.txt::저온 장비 온도 점검",
+          "distance": 0.6053230735632658
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1977.2
+    },
+    {
+      "id": "V02",
+      "question": "방문객은 실험실에 있는 동안 누가 동행해야 합니까?",
+      "answerable": true,
+      "answer": "방문객은 실험실에 있는 동안 방문을 주관한 직원과 함께 있어야 한다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "LAB-01.txt::방문객 출입",
+        "LAB-01.txt::시료 라벨과 보관",
+        "LAB-01.txt::저온 장비 온도 점검",
+        "LAB-01.txt::화학물질 유출 대응"
+      ],
+      "cited_sections": [
+        "LAB-01.txt::방문객 출입"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "LAB-01.txt::방문객 출입",
+          "distance": 0.26518719082682896
+        },
+        {
+          "section": "LAB-01.txt::시료 라벨과 보관",
+          "distance": 0.580888132812441
+        },
+        {
+          "section": "LAB-01.txt::화학물질 유출 대응",
+          "distance": 0.5956369864517216
+        },
+        {
+          "section": "LAB-01.txt::저온 장비 온도 점검",
+          "distance": 0.633486366046606
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1223.1
+    },
+    {
+      "id": "V03",
+      "question": "방문객이 연구실 워크스테이션을 직접 사용해도 되나요?",
+      "answerable": true,
+      "answer": "아니요, 방문객은 연구실 업무용 워크스테이션을 조작할 수 없습니다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "LAB-01.txt::방문객 출입"
+      ],
+      "cited_sections": [
+        "LAB-01.txt::방문객 출입"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "LAB-01.txt::방문객 출입",
+          "distance": 0.3446552184293272
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1215.2
+    },
+    {
+      "id": "V04",
+      "question": "화학물질을 흘리면 직접 닦아도 되나요? 책임자에게 몇 분 안에 알려야 하나요?",
+      "answerable": true,
+      "answer": "직원은 화학물질을 직접 닦거나 회수하지 않는다. 실험실 책임자에게 5분 이내 알린다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "LAB-01.txt::시료 라벨과 보관",
+        "LAB-01.txt::화학물질 유출 대응"
+      ],
+      "cited_sections": [
+        "LAB-01.txt::화학물질 유출 대응"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "LAB-01.txt::화학물질 유출 대응",
+          "distance": 0.3266569989977921
+        },
+        {
+          "section": "LAB-01.txt::시료 라벨과 보관",
+          "distance": 0.6779915067918243
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 2380.6
+    },
+    {
+      "id": "V05",
+      "question": "유출 사고에서 연기나 강한 냄새가 날 때 연락할 비상 내선은 몇 번인가요?",
+      "answerable": true,
+      "answer": "비상 내선은 7711번입니다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "LAB-01.txt::화학물질 유출 대응"
+      ],
+      "cited_sections": [
+        "LAB-01.txt::화학물질 유출 대응"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "LAB-01.txt::화학물질 유출 대응",
+          "distance": 0.4119149339269875
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1152.4
+    },
+    {
+      "id": "V06",
+      "question": "저온 보관 장비 온도는 하루 중 몇 시에 기록하나요?",
+      "answerable": true,
+      "answer": "하루 중 오전 9시와 오후 4시에 기록한다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "LAB-01.txt::시료 라벨과 보관",
+        "LAB-01.txt::저온 장비 온도 점검"
+      ],
+      "cited_sections": [
+        "LAB-01.txt::저온 장비 온도 점검"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "LAB-01.txt::저온 장비 온도 점검",
+          "distance": 0.32306710136710914
+        },
+        {
+          "section": "LAB-01.txt::시료 라벨과 보관",
+          "distance": 0.5806362103946693
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1103.7
+    },
+    {
+      "id": "V07",
+      "question": "저온 장비가 9°C를 표시하면 누구에게 언제 알리고 시료는 언제까지 옮겨야 해요?",
+      "answerable": true,
+      "answer": "저온 장비가 9°C를 표시하면, 10분 이내에 실험실 관리자에게 알리고, 영향을 받은 시료를 20분 이내에 예비 냉동고로 옮겨야 합니다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "LAB-01.txt::시료 라벨과 보관",
+        "LAB-01.txt::장비 교정",
+        "LAB-01.txt::저온 장비 온도 점검"
+      ],
+      "cited_sections": [
+        "LAB-01.txt::저온 장비 온도 점검"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "LAB-01.txt::저온 장비 온도 점검",
+          "distance": 0.3180770634430299
+        },
+        {
+          "section": "LAB-01.txt::시료 라벨과 보관",
+          "distance": 0.5613328208695594
+        },
+        {
+          "section": "LAB-01.txt::장비 교정",
+          "distance": 0.6534405475148556
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1697.2
+    },
+    {
+      "id": "V08",
+      "question": "저온 장비 표시가 정확히 8°C면 초과 대응을 해야 하나요?",
+      "answerable": true,
+      "answer": "정확히 8°C인 경우에는 초과 기준에 해당하지 않는다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "LAB-01.txt::장비 교정",
+        "LAB-01.txt::저온 장비 온도 점검"
+      ],
+      "cited_sections": [
+        "LAB-01.txt::저온 장비 온도 점검"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "LAB-01.txt::저온 장비 온도 점검",
+          "distance": 0.2967996961560715
+        },
+        {
+          "section": "LAB-01.txt::장비 교정",
+          "distance": 0.666422309834406
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 198.3
+    },
+    {
+      "id": "V09",
+      "question": "교정 라벨 날짜가 지난 장비는 어떻게 하고 재교정은 어디에 신청합니까?",
+      "answerable": true,
+      "answer": "교정 라벨 날짜가 지난 장비는 사용을 멈춘다. 재교정은 LabDesk에 티켓을 등록하여 신청한다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "LAB-01.txt::장비 교정"
+      ],
+      "cited_sections": [
+        "LAB-01.txt::장비 교정"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "LAB-01.txt::장비 교정",
+          "distance": 0.3514342758856156
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1400.9
+    },
+    {
+      "id": "V10",
+      "question": "교정 기한이 되기 전에 조정이 필요하면 담당자가 교정 조절부를 직접 바꿔도 되나요?",
+      "answerable": true,
+      "answer": "사용자는 교정 조절부를 직접 변경하지 않는다. 정기 일정 전 교정이 필요하면 LabDesk에 재교정 티켓을 등록한다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "LAB-01.txt::장비 교정"
+      ],
+      "cited_sections": [
+        "LAB-01.txt::장비 교정"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "LAB-01.txt::장비 교정",
+          "distance": 0.47708835576064856
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 2196.2
+    },
+    {
+      "id": "V11",
+      "question": "시료 라벨에 반드시 들어갈 정보 두 가지는 무엇인가요?",
+      "answerable": true,
+      "answer": "모든 시료 라벨에는 프로젝트 코드와 채취 날짜를 적는다. 채취한 시료는 30분 이내에 -20°C로 냉동한다. 사용하지 않은 시료는 프로젝트 종료 후 90일간 보관한 뒤 폐기한다. 냉장 장비의 센서 교체 비용과 실험실 접근 기록의 보존 기간은 이 규정에 정하지 않았다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "LAB-01.txt::방문객 출입",
+        "LAB-01.txt::시료 라벨과 보관",
+        "LAB-01.txt::장비 교정",
+        "LAB-01.txt::저온 장비 온도 점검"
+      ],
+      "cited_sections": [
+        "LAB-01.txt::시료 라벨과 보관"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "LAB-01.txt::시료 라벨과 보관",
+          "distance": 0.4349528885051558
+        },
+        {
+          "section": "LAB-01.txt::저온 장비 온도 점검",
+          "distance": 0.6588237911046394
+        },
+        {
+          "section": "LAB-01.txt::장비 교정",
+          "distance": 0.6629238073686192
+        },
+        {
+          "section": "LAB-01.txt::방문객 출입",
+          "distance": 0.677033940155761
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1167.4
+    },
+    {
+      "id": "V12",
+      "question": "채취한 시료를 얼리기 시작할 때까지 몇 분 이내여야 하나요?",
+      "answerable": true,
+      "answer": "30분 이내에 -20°C로 냉동해야 한다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "LAB-01.txt::시료 라벨과 보관",
+        "LAB-01.txt::저온 장비 온도 점검"
+      ],
+      "cited_sections": [
+        "LAB-01.txt::시료 라벨과 보관"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "LAB-01.txt::시료 라벨과 보관",
+          "distance": 0.42914955813331956
+        },
+        {
+          "section": "LAB-01.txt::저온 장비 온도 점검",
+          "distance": 0.5563826453574391
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1129.3
+    },
+    {
+      "id": "V13",
+      "question": "사용하지 않은 시료는 프로젝트 종료 후 며칠 동안 보관해요?",
+      "answerable": true,
+      "answer": "사용하지 않은 시료는 프로젝트 종료 후 90일간 보관합니다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "LAB-01.txt::시료 라벨과 보관",
+        "LAB-01.txt::저온 장비 온도 점검",
+        "LAB-01.txt::화학물질 유출 대응"
+      ],
+      "cited_sections": [
+        "LAB-01.txt::시료 라벨과 보관"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "LAB-01.txt::시료 라벨과 보관",
+          "distance": 0.290553249746173
+        },
+        {
+          "section": "LAB-01.txt::저온 장비 온도 점검",
+          "distance": 0.6469250194224577
+        },
+        {
+          "section": "LAB-01.txt::화학물질 유출 대응",
+          "distance": 0.6693994513022732
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1179.2
+    },
+    {
+      "id": "V14",
+      "question": "저온 장비 센서 교체 비용은 얼마인가요?",
+      "answerable": false,
+      "answer": "등록된 문서에서 답을 확인할 수 없습니다.",
+      "abstained": true,
+      "abstention_reason": "질문과 충분히 가까운 근거 구간을 찾지 못했습니다.",
+      "retrieved_sections": [],
+      "cited_sections": [],
+      "retrieval_distances": [],
+      "retrieval_recall_at_5": false,
+      "answer_or_abstention_correct": true,
+      "citation_recall": false,
+      "citation_precision": false,
+      "latency_ms": 175.2
+    },
+    {
+      "id": "V15",
+      "question": "실험실 출입 기록의 정확한 보존 기간은 며칠인지 알려주세요.",
+      "answerable": true,
+      "answer": "냉장 장비의 센서 교체 비용과 실험실 접근 기록의 보존 기간은 이 규정에 정하지 않았다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "LAB-01.txt::방문객 출입",
+        "LAB-01.txt::시료 라벨과 보관",
+        "LAB-01.txt::장비 교정",
+        "LAB-01.txt::저온 장비 온도 점검",
+        "LAB-01.txt::화학물질 유출 대응"
+      ],
+      "cited_sections": [
+        "LAB-01.txt::시료 라벨과 보관"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "LAB-01.txt::시료 라벨과 보관",
+          "distance": 0.43796611619212156
+        },
+        {
+          "section": "LAB-01.txt::방문객 출입",
+          "distance": 0.5149801967937324
+        },
+        {
+          "section": "LAB-01.txt::저온 장비 온도 점검",
+          "distance": 0.5685382186383008
+        },
+        {
+          "section": "LAB-01.txt::화학물질 유출 대응",
+          "distance": 0.6323045316558242
+        },
+        {
+          "section": "LAB-01.txt::장비 교정",
+          "distance": 0.6494827093661938
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1765.9
+    }
+  ],
+  "limitations": [
+    "이 평가는 기존 모노랩 회귀 세트와 분리한 새 가상 시설·운영·출장 문서 도전 세트입니다.",
+    "규칙과 질문은 사람이 작성했으며 실제 회사 자료를 대표하거나 대규모 독립 블라인드 평가를 대신하지 않습니다.",
+    "정답성은 핵심 문구 일치로 자동 판정해 의미가 같은 다른 표현을 오답으로 볼 수 있습니다."
+  ],
+  "question_set": "release_validation_questions.json",
+  "question_set_sha256": "28d19766e0dc16272d839b9825a03ce6856104b08a5af3824532676269ca09c8",
+  "document_set": "release_validation_docs",
+  "readiness": {
+    "database": {
+      "available": true,
+      "pgvector": false,
+      "backend": "sqlite"
+    },
+    "ollama": {
+      "available": true,
+      "version": "0.40.11",
+      "error": null
+    },
+    "models": {
+      "chat": {
+        "name": "qwen3:4b-instruct",
+        "installed": true,
+        "functional": true
+      },
+      "embedding": {
+        "name": "embeddinggemma",
+        "installed": true,
+        "functional": true,
+        "dimensions": 768
+      }
+    },
+    "retrieval": {
+      "max_cosine_distance": 0.68
+    }
+  },
+  "evaluation_environment": "isolated_sqlite_api_fresh_challenge",
+  "fixture_sha256": {
+    "LAB-01.txt": "c24866fd2178c1631452f1534f8b80e2917323582230ffd85faa2677941d8a3f"
+  }
+}

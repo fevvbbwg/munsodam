@@ -1,0 +1,15 @@
+[
+  {"id":"F01","question":"행사 참가자는 시작 시각 몇 분 전에 도착해 등록해야 하나요?","answerable":true,"required_sections":["CONF-01-S1"],"must_include":[["15분","십오 분"],["등록"]]},
+  {"id":"F02","question":"행사에서 나가기 전에 참가자가 무엇을 어디에 반납해야 합니까?","answerable":true,"required_sections":["CONF-01-S1"],"must_include":[["배지"],["등록대"]]},
+  {"id":"F03","question":"회의 주관자는 화면과 마이크를 언제 확인해야 해요?","answerable":true,"required_sections":["CONF-01-S2"],"must_include":[["10분 전","십 분 전"],["화면 공유","화면"],["마이크"]]},
+  {"id":"F04","question":"회의실 예약을 취소할 수 있는 마지막 시점과 취소할 서비스는 무엇인가요?","answerable":true,"required_sections":["CONF-01-S2"],"must_include":[["2시간 전","두 시간 전"],["MeetPlan"]]},
+  {"id":"F05","question":"참가자 얼굴이 보이는 사진은 어떤 경우에 찍어도 되나요?","answerable":true,"required_sections":["CONF-01-S3"],"must_include":[["촬영 전에","사전에"],["동의","동의를 받은"]]},
+  {"id":"F06","question":"행사 뒤 택시비를 정산할 수 있는 조건과 1회 한도를 알려주세요.","answerable":true,"required_sections":["CONF-01-S4"],"must_include":[["대중교통을 이용할 수 없","22시 이후"],["28,000원","28000원","2만 8천원"],["1회"]]},
+  {"id":"F07","question":"택시비 30,000원이 나오면 어떤 승인을 언제 받아야 예외로 처리되나요?","answerable":true,"required_sections":["CONF-01-S4"],"must_include":[["팀 관리자","관리자"],["이용 전에","사전에"],["서면 승인"]]},
+  {"id":"F08","question":"택시비 정산을 위해 제출할 영수증 형태는 무엇입니까?","answerable":true,"required_sections":["CONF-01-S4"],"must_include":[["디지털 영수증","전자 영수증"]]},
+  {"id":"F09","question":"참가자 연락처 목록을 어디에 저장하고 공유 링크는 언제 만료되게 해야 하나요?","answerable":true,"required_sections":["CONF-01-S5"],"must_include":[["CompanyDrive"],["48시간","마흔여덟 시간"],["행사 종료 후"]]},
+  {"id":"F10","question":"참가자 연락처 목록을 개인 이메일로 보내도 되나요?","answerable":true,"required_sections":["CONF-01-S5"],"must_include":[["보내지 않는다","보낼 수 없다","전송하지 않는다"]]},
+  {"id":"F11","question":"행사 참가자 목록은 행사가 끝나고 며칠 안에 삭제해야 합니까?","answerable":true,"required_sections":["CONF-01-S5"],"must_include":[["30일","삼십 일"],["삭제"]]},
+  {"id":"F12","question":"회의실을 한 시간 대여하는 정확한 비용이 얼마인지 알려주세요.","answerable":false,"required_sections":["CONF-01-S2"]},
+  {"id":"F13","question":"행사 택시비의 하루 총한도는 얼마인가요?","answerable":false,"required_sections":["CONF-01-S4"]}
+]

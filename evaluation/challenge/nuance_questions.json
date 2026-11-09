@@ -1,0 +1,22 @@
+[
+  {"id":"N01","question":"승인받은 재택근무일의 점심값은 하루 얼마까지 청구할 수 있어요?","answerable":true,"required_sections":["POL-01-S1"],"must_include":[["9,000원","9000원","9천원"],["하루"]]},
+  {"id":"N02","question":"사무실에 출근한 평일 점심도 재택 식사 기준으로 청구할 수 있나요?","answerable":true,"required_sections":["POL-01-S1"],"must_include":[["정산하지 않는다","정산할 수 없다","청구할 수 없다","청구할 수 없습니다","대상이 아니다"]]},
+  {"id":"N03","question":"연장근무가 밤 9시에 끝났습니다. 저녁 식사비 기준과 상한을 알려주세요.","answerable":true,"required_sections":["POL-01-S2"],"must_include":[["20시 30분","20:30"],["16,000원","16000원","1만 6천원"]]},
+  {"id":"N04","question":"연장근무가 오후 8시에 끝나도 저녁 식사비를 정산할 수 있나요?","answerable":true,"required_sections":["POL-01-S2"],"must_include":[["20시 30분","20:30"],["정산하지 않는다","적용하지 않는다","정산할 수 없습니다","청구할 수 없다"]]},
+  {"id":"N05","question":"내부 회의에서 먹은 저녁은 외부 공인 교육 식비 기준으로 정산되나요?","answerable":true,"required_sections":["POL-01-S2"],"must_include":[["정산하지 않는다","정산되지 않습니다","대상이 아니다","아니다"]]},
+  {"id":"N06","question":"공급업체 청구서는 필수 증빙이 다 접수된 뒤 며칠 안에 내나요?","answerable":true,"required_sections":["POL-01-S3"],"must_include":[["5영업일","영업일 5일"]]},
+  {"id":"N07","question":"빠진 증빙을 나중에 보완했다면 제출 기한은 어느 날부터 계산하나요?","answerable":true,"required_sections":["POL-01-S3"],"must_include":[["마지막 필수 증빙","모든 필수 증빙"],["접수된 날","접수일"]]},
+  {"id":"N08","question":"완전한 청구서가 승인되면 지급까지 며칠 걸립니까?","answerable":true,"required_sections":["POL-01-S3"],"must_include":[["10영업일","영업일 10일"]]},
+  {"id":"N09","question":"회계 증빙은 회계연도 끝난 뒤 몇 년 동안 보관해야 해요?","answerable":true,"required_sections":["POL-01-S4"],"must_include":[["5년","5 년"],["회계연도 종료","회계연도 끝"]]},
+  {"id":"N10","question":"회사 노트북을 분실하면 어디에 몇 분 안에 신고하고 관리자에게는 언제 알려야 하죠?","answerable":true,"required_sections":["ITX-01-S1"],"must_include":[["서비스 데스크"],["15분","십오 분"],["같은 영업일","영업일이 끝나기 전"]]},
+  {"id":"N11","question":"장비가 깨진 경우 직접 고쳐도 되나요? 신고 시한도 알려주세요.","answerable":true,"required_sections":["ITX-01-S2"],"must_include":[["분해하거나 수리하지","직접 수리하지 않는다","수리하면 안 된다"],["30분","삼십 분"]]},
+  {"id":"N12","question":"시스템 권한은 언제 신청하고 누가 승인해야 하며 언제 회수되나요?","answerable":true,"required_sections":["ITX-01-S3"],"must_include":[["2영업일","영업일 2일"],["자산 소유자"],["마지막 근무일"]]},
+  {"id":"N13","question":"심각도 1 장애 대응에서 당직자 응답 시한과 상황 공유 간격은 어떻게 되나요?","answerable":true,"required_sections":["ITX-01-S4"],"must_include":[["10분","십 분"],["30분마다","30분 간격"]]},
+  {"id":"N14","question":"밤 9시에 대중교통을 이용할 수 있는데 택시비를 정산할 수 있나요?","answerable":true,"required_sections":["TRV-01-S1"],"must_include":[["22시","22시 이후"],["정산할 수 없다","정산할 수 없습니다","정산하지 않는다","조건에 해당하지 않는다"]]},
+  {"id":"N15","question":"출장 택시비의 1회 기본 상한과 초과 시 예외 승인자는 누구인가요?","answerable":true,"required_sections":["TRV-01-S1"],"must_include":[["30,000원","30000원","3만원"],["부서장","부서장의 승인"]]},
+  {"id":"N16","question":"택시비 30,000원을 넘길 때 사후에 승인을 받으면 예외 처리됩니까?","answerable":true,"required_sections":["TRV-01-S1"],"must_include":[["이용 전에","사전에"],["부서장"]]},
+  {"id":"N17","question":"특실로 승급한 철도 요금도 출장비로 받을 수 있나요?","answerable":true,"required_sections":["TRV-01-S2"],"must_include":[["정산하지 않는다","정산할 수 없다","일반석"]]},
+  {"id":"N18","question":"출장 숙박비의 하루 상한액은 얼마입니까?","answerable":false,"required_sections":["TRV-01-S3"]},
+  {"id":"N19","question":"장애 호스트에서 직접 서비스를 재시작해도 되나요?","answerable":true,"required_sections":["ITX-01-S4"],"must_include":[["재시작하지 않는다","재시작할 수 없습니다","재시작하면 안 된다","임의로 재시작하지 않는다"]]},
+  {"id":"N20","question":"헬프데스크 지원 티켓의 정확한 보관 시작일과 기간은 어떻게 돼요?","answerable":true,"required_sections":["POL-01-S4"],"must_include":[["티켓 종료일","종료일"],["3년","3 년"]]}
+]

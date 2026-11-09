@@ -1,0 +1,134 @@
+{
+  "suite": "fresh_local_challenge",
+  "generated_at": "2026-11-08T08:06:53.619969+00:00",
+  "counts": {
+    "total": 2,
+    "answerable": 2,
+    "unanswerable": 0
+  },
+  "metrics": {
+    "recall_at_5": {
+      "hits": 2,
+      "total": 2,
+      "value": 1.0
+    },
+    "answer_correctness": {
+      "hits": 1,
+      "total": 2,
+      "value": 0.5
+    },
+    "citation_recall": {
+      "hits": 2,
+      "total": 2,
+      "value": 1.0
+    },
+    "citation_precision": {
+      "hits": 2,
+      "total": 2,
+      "value": 1.0
+    },
+    "abstention_accuracy": {
+      "hits": 0,
+      "total": 0,
+      "value": null
+    },
+    "median_response_ms": 2446.1
+  },
+  "results": [
+    {
+      "id": "V04",
+      "question": "화학물질을 흘리면 직접 닦아도 되나요? 책임자에게 몇 분 안에 알려야 하나요?",
+      "answerable": true,
+      "answer": "화학물질을 흘리면 직접 닦아야 하지 않습니다. 직원은 화학물질을 직접 닦거나 회수하지 않습니다. 책임자에게 5분 이내에 알려야 합니다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "LAB-01.txt::시료 라벨과 보관",
+        "LAB-01.txt::화학물질 유출 대응"
+      ],
+      "cited_sections": [
+        "LAB-01.txt::화학물질 유출 대응"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "LAB-01.txt::화학물질 유출 대응",
+          "distance": 0.3266569989977921
+        },
+        {
+          "section": "LAB-01.txt::시료 라벨과 보관",
+          "distance": 0.6779915067918243
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": false,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 2584.4
+    },
+    {
+      "id": "V10",
+      "question": "교정 기한이 되기 전에 조정이 필요하면 담당자가 교정 조절부를 직접 바꿔도 되나요?",
+      "answerable": true,
+      "answer": "사용자는 교정 조절부를 직접 변경하지 않는다. 정기 일정 전 교정이 필요하면 LabDesk에 재교정 티켓을 등록한다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "LAB-01.txt::장비 교정"
+      ],
+      "cited_sections": [
+        "LAB-01.txt::장비 교정"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "LAB-01.txt::장비 교정",
+          "distance": 0.47708835576064856
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 2307.8
+    }
+  ],
+  "limitations": [
+    "이 평가는 기존 모노랩 회귀 세트와 분리한 새 가상 시설·운영·출장 문서 도전 세트입니다.",
+    "규칙과 질문은 사람이 작성했으며 실제 회사 자료를 대표하거나 대규모 독립 블라인드 평가를 대신하지 않습니다.",
+    "정답성은 핵심 문구 일치로 자동 판정해 의미가 같은 다른 표현을 오답으로 볼 수 있습니다."
+  ],
+  "question_set": "release_validation_questions.json",
+  "question_set_sha256": "25a2a438328b1406dbd76642f654e5cf5da402a9ba254ff0c2635a02df470fa3",
+  "document_set": "release_validation_docs",
+  "readiness": {
+    "database": {
+      "available": true,
+      "pgvector": false,
+      "backend": "sqlite"
+    },
+    "ollama": {
+      "available": true,
+      "version": "0.40.11",
+      "error": null
+    },
+    "models": {
+      "chat": {
+        "name": "qwen3:4b-instruct",
+        "installed": true,
+        "functional": true
+      },
+      "embedding": {
+        "name": "embeddinggemma",
+        "installed": true,
+        "functional": true,
+        "dimensions": 768
+      }
+    },
+    "retrieval": {
+      "max_cosine_distance": 0.68
+    }
+  },
+  "evaluation_environment": "isolated_sqlite_api_fresh_challenge",
+  "fixture_sha256": {
+    "LAB-01.txt": "c24866fd2178c1631452f1534f8b80e2917323582230ffd85faa2677941d8a3f"
+  }
+}

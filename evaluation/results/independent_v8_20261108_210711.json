@@ -1,0 +1,104 @@
+{
+  "suite": "fresh_local_challenge",
+  "generated_at": "2026-11-08T12:07:11.255007+00:00",
+  "counts": {
+    "total": 1,
+    "answerable": 1,
+    "unanswerable": 0
+  },
+  "metrics": {
+    "recall_at_5": {
+      "hits": 1,
+      "total": 1,
+      "value": 1.0
+    },
+    "answer_correctness": {
+      "hits": 1,
+      "total": 1,
+      "value": 1.0
+    },
+    "citation_recall": {
+      "hits": 1,
+      "total": 1,
+      "value": 1.0
+    },
+    "citation_precision": {
+      "hits": 1,
+      "total": 1,
+      "value": 1.0
+    },
+    "abstention_accuracy": {
+      "hits": 0,
+      "total": 0,
+      "value": null
+    },
+    "median_response_ms": 886.5
+  },
+  "results": [
+    {
+      "id": "V8-06",
+      "question": "협력사가 실험실에 들어가려면 먼저 누구 승인이 필요해?",
+      "answerable": true,
+      "answer": "외부 협력사는 실험실에 들어가기 전에 관리자 승인을 받아야 한다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "FIELD-93.txt::방문객 촬영 구역"
+      ],
+      "cited_sections": [
+        "FIELD-93.txt::방문객 촬영 구역"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "FIELD-93.txt::방문객 촬영 구역",
+          "distance": 0.45623751156390235
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 886.5
+    }
+  ],
+  "limitations": [
+    "이 평가는 기존 모노랩 회귀 세트와 분리한 새 가상 시설·운영·출장 문서 도전 세트입니다.",
+    "규칙과 질문은 사람이 작성했으며 실제 회사 자료를 대표하거나 대규모 독립 블라인드 평가를 대신하지 않습니다.",
+    "정답성은 핵심 문구 일치로 자동 판정해 의미가 같은 다른 표현을 오답으로 볼 수 있습니다."
+  ],
+  "question_set": "independent_v8_questions.json",
+  "question_set_sha256": "1dacd5c1941e1d154b35e7851bbcac1d2cabc7b2707e16339197c15965410c5a",
+  "document_set": "docs",
+  "readiness": {
+    "database": {
+      "available": true,
+      "pgvector": false,
+      "backend": "sqlite"
+    },
+    "ollama": {
+      "available": true,
+      "version": "0.40.11",
+      "error": null
+    },
+    "models": {
+      "chat": {
+        "name": "qwen3:4b-instruct",
+        "installed": true,
+        "functional": true
+      },
+      "embedding": {
+        "name": "embeddinggemma",
+        "installed": true,
+        "functional": true,
+        "dimensions": 768
+      }
+    },
+    "retrieval": {
+      "max_cosine_distance": 0.68
+    }
+  },
+  "evaluation_environment": "isolated_sqlite_api_fresh_challenge",
+  "fixture_sha256": {
+    "FIELD-93.txt": "67af8b89ebc55754dde39a8babfb21d5b53825815a9a81948baddd39bd3d2cab"
+  }
+}

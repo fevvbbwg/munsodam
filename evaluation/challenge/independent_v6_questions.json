@@ -1,0 +1,14 @@
+[
+  {"id":"V6-01","question":"방문객은 어디에 어떤 정보를 등록하고 누가 입실부터 퇴실까지 함께해야 해?","answerable":true,"required_sections":["OFFICE-72-S1"],"must_include":["LobbyPass",["이름","성명"],["방문 대상 직원","방문 직원"],["입실 예정 시각","입실 시각"],["방문을 주관한 직원","주관 직원"],["퇴실할 때까지","퇴실까지"]]},
+  {"id":"V6-02","question":"방문객 개인 촬영은 허용돼?","answerable":true,"required_sections":["OFFICE-72-S1"],"must_include":[["허용하지 않습니다","허용되지 않습니다","할 수 없습니다","금지"]]},
+  {"id":"V6-03","question":"회의실을 사용하려면 며칠 전까지 어디에서 예약해야 하고, 취소 마감은 언제야?","answerable":true,"required_sections":["OFFICE-72-S2"],"must_include":[["1근무일 전","근무일 1일 전"],"RoomPanel",["시작 30분 전","30분 전"]]},
+  {"id":"V6-04","question":"예약한 회의실에 늦으면 몇 분 뒤 예약이 풀려?","answerable":true,"required_sections":["OFFICE-72-S2"],"must_include":["15분","자동 해제"]},
+  {"id":"V6-05","question":"출입 카드를 잃어버리면 어디에 어떤 방식으로 몇 분 안에 알려야 해?","answerable":true,"required_sections":["SUPPORT-72-S1"],"must_include":["20분 이내","보안 데스크","AccessNow",["분실 신고 양식","분실 신고"]]},
+  {"id":"V6-06","question":"새 카드를 받기 전에 임시 출입을 하려면 어떤 승인이 먼저 필요해?","answerable":true,"required_sections":["SUPPORT-72-S1"],"must_include":["관리자 승인",["먼저","사전에","받아야"]]},
+  {"id":"V6-07","question":"첫 근무일에 신규 입사자는 어떤 보안 절차를 하고, 어디에서 이수 여부를 확인할 수 있어?","answerable":true,"required_sections":["SUPPORT-72-S2"],"must_include":["보안 안내","계정 보호 확인서","PeopleDesk"]},
+  {"id":"V6-08","question":"신규 입사자 보안 안내 교육은 몇 시간인가요?","answerable":true,"required_sections":["SUPPORT-72-S2"],"must_include":[["정하지 않았다","정해져 있지 않다","별도로 정하지 않았다"],["교육 시간","보안 안내"]]},
+  {"id":"V6-09","question":"분실 카드 재발급 비용은 얼마야?","answerable":true,"required_sections":["SUPPORT-72-S1"],"must_include":[["정하지 않았다","정하지 않았습니다","정해져 있지 않다","정해져 있지 않습니다","별도로 정하지 않았다"],["재발급 비용","재발급"]]},
+  {"id":"V6-10","question":"분실 카드 재발급 비용과 회의실 취소 마감을 각각 알려줘.","answerable":true,"required_sections":["SUPPORT-72-S1","OFFICE-72-S2"],"must_include":[["재발급 비용","비용은 정하지 않았다","비용이 정해져 있지 않다","비용은 정해져 있지 않습니다","재발급 비용은 이 안내에 정하지 않았다"],["30분 전","회의 시작 30분"]]},
+  {"id":"V6-11","question":"회의실은 일주일에 최대 몇 번 예약할 수 있어?","answerable":false,"required_sections":["OFFICE-72-S2"],"must_include":[]},
+  {"id":"V6-12","question":"보안 데스크의 개인 휴대폰 번호를 알려줘.","answerable":false,"required_sections":["SUPPORT-72-S1"],"must_include":[]}
+]

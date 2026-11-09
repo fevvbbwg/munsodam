@@ -1,0 +1,109 @@
+{
+  "suite": "fresh_local_challenge",
+  "generated_at": "2026-11-08T08:08:48.327032+00:00",
+  "counts": {
+    "total": 1,
+    "answerable": 1,
+    "unanswerable": 0
+  },
+  "metrics": {
+    "recall_at_5": {
+      "hits": 1,
+      "total": 1,
+      "value": 1.0
+    },
+    "answer_correctness": {
+      "hits": 1,
+      "total": 1,
+      "value": 1.0
+    },
+    "citation_recall": {
+      "hits": 1,
+      "total": 1,
+      "value": 1.0
+    },
+    "citation_precision": {
+      "hits": 1,
+      "total": 1,
+      "value": 1.0
+    },
+    "abstention_accuracy": {
+      "hits": 0,
+      "total": 0,
+      "value": null
+    },
+    "median_response_ms": 2223.3
+  },
+  "results": [
+    {
+      "id": "V04",
+      "question": "화학물질을 흘리면 직접 닦아도 되나요? 책임자에게 몇 분 안에 알려야 하나요?",
+      "answerable": true,
+      "answer": "직원은 화학물질을 직접 닦거나 회수하지 않는다. 실험실 책임자에게 5분 이내 알린다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "LAB-01.txt::시료 라벨과 보관",
+        "LAB-01.txt::화학물질 유출 대응"
+      ],
+      "cited_sections": [
+        "LAB-01.txt::화학물질 유출 대응"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "LAB-01.txt::화학물질 유출 대응",
+          "distance": 0.3266569989977921
+        },
+        {
+          "section": "LAB-01.txt::시료 라벨과 보관",
+          "distance": 0.6779915067918243
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 2223.3
+    }
+  ],
+  "limitations": [
+    "이 평가는 기존 모노랩 회귀 세트와 분리한 새 가상 시설·운영·출장 문서 도전 세트입니다.",
+    "규칙과 질문은 사람이 작성했으며 실제 회사 자료를 대표하거나 대규모 독립 블라인드 평가를 대신하지 않습니다.",
+    "정답성은 핵심 문구 일치로 자동 판정해 의미가 같은 다른 표현을 오답으로 볼 수 있습니다."
+  ],
+  "question_set": "release_validation_questions.json",
+  "question_set_sha256": "25a2a438328b1406dbd76642f654e5cf5da402a9ba254ff0c2635a02df470fa3",
+  "document_set": "release_validation_docs",
+  "readiness": {
+    "database": {
+      "available": true,
+      "pgvector": false,
+      "backend": "sqlite"
+    },
+    "ollama": {
+      "available": true,
+      "version": "0.40.11",
+      "error": null
+    },
+    "models": {
+      "chat": {
+        "name": "qwen3:4b-instruct",
+        "installed": true,
+        "functional": true
+      },
+      "embedding": {
+        "name": "embeddinggemma",
+        "installed": true,
+        "functional": true,
+        "dimensions": 768
+      }
+    },
+    "retrieval": {
+      "max_cosine_distance": 0.68
+    }
+  },
+  "evaluation_environment": "isolated_sqlite_api_fresh_challenge",
+  "fixture_sha256": {
+    "LAB-01.txt": "c24866fd2178c1631452f1534f8b80e2917323582230ffd85faa2677941d8a3f"
+  }
+}

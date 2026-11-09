@@ -1,0 +1,280 @@
+{
+  "suite": "fresh_local_challenge",
+  "generated_at": "2026-11-08T12:31:43.025870+00:00",
+  "counts": {
+    "total": 8,
+    "answerable": 6,
+    "unanswerable": 2
+  },
+  "metrics": {
+    "recall_at_5": {
+      "hits": 6,
+      "total": 6,
+      "value": 1.0
+    },
+    "answer_correctness": {
+      "hits": 6,
+      "total": 6,
+      "value": 1.0
+    },
+    "citation_recall": {
+      "hits": 6,
+      "total": 6,
+      "value": 1.0
+    },
+    "citation_precision": {
+      "hits": 6,
+      "total": 6,
+      "value": 1.0
+    },
+    "abstention_accuracy": {
+      "hits": 2,
+      "total": 2,
+      "value": 1.0
+    },
+    "median_response_ms": 1080.1
+  },
+  "results": [
+    {
+      "id": "V8-01",
+      "question": "방문객이 로비에서 개인 사진을 찍어도 돼?",
+      "answerable": true,
+      "answer": "예, 방문객은 로비에서 개인 사진을 찍을 수 있습니다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "FIELD-93.txt::방문객 촬영 구역"
+      ],
+      "cited_sections": [
+        "FIELD-93.txt::방문객 촬영 구역"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "FIELD-93.txt::방문객 촬영 구역",
+          "distance": 0.35392021987060285
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1032.5
+    },
+    {
+      "id": "V8-02",
+      "question": "방문객이 업무 구역 안에서 개인 사진을 찍어도 돼?",
+      "answerable": true,
+      "answer": "아니요, 방문객은 업무 구역 안에서 개인 사진을 찍을 수 없습니다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "FIELD-93.txt::방문객 촬영 구역"
+      ],
+      "cited_sections": [
+        "FIELD-93.txt::방문객 촬영 구역"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "FIELD-93.txt::방문객 촬영 구역",
+          "distance": 0.29363788425323
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1077.4
+    },
+    {
+      "id": "V8-03",
+      "question": "방문객 개인 촬영은 어느 구역에서 가능한가요?",
+      "answerable": true,
+      "answer": "방문객은 로비에서 개인 사진을 촬영할 수 있다. 방문객은 업무 구역 안에서 개인 사진을 촬영하지 않는다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "FIELD-93.txt::방문객 촬영 구역"
+      ],
+      "cited_sections": [
+        "FIELD-93.txt::방문객 촬영 구역"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "FIELD-93.txt::방문객 촬영 구역",
+          "distance": 0.3223310719505511
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1378.3
+    },
+    {
+      "id": "V8-04",
+      "question": "업무 자료를 개인 클라우드에 올려도 돼?",
+      "answerable": true,
+      "answer": "업무 자료를 개인 클라우드에 올리지 않습니다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "FIELD-93.txt::업무 자료 저장 위치"
+      ],
+      "cited_sections": [
+        "FIELD-93.txt::업무 자료 저장 위치"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "FIELD-93.txt::업무 자료 저장 위치",
+          "distance": 0.36870390396989894
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1082.7
+    },
+    {
+      "id": "V8-05",
+      "question": "업무 자료는 TeamVault에 저장할 수 있어?",
+      "answerable": true,
+      "answer": "업무 자료는 승인된 TeamVault에 저장할 수 있다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "FIELD-93.txt::업무 자료 저장 위치"
+      ],
+      "cited_sections": [
+        "FIELD-93.txt::업무 자료 저장 위치"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "FIELD-93.txt::업무 자료 저장 위치",
+          "distance": 0.2591658951871376
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1005.0
+    },
+    {
+      "id": "V8-06",
+      "question": "협력사가 실험실에 들어가려면 먼저 누구 승인이 필요해?",
+      "answerable": true,
+      "answer": "외부 협력사는 실험실에 들어가기 전에 관리자 승인을 받아야 한다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "FIELD-93.txt::방문객 촬영 구역"
+      ],
+      "cited_sections": [
+        "FIELD-93.txt::방문객 촬영 구역"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "FIELD-93.txt::방문객 촬영 구역",
+          "distance": 0.45623751156390235
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 873.3
+    },
+    {
+      "id": "V8-07",
+      "question": "업무 구역 사진 촬영 후 보관 기간은 몇 년이야?",
+      "answerable": false,
+      "answer": "등록된 문서에서 답을 확인할 수 없습니다.",
+      "abstained": true,
+      "abstention_reason": "검색 근거가 질문을 충분히 뒷받침하지 않아 응답을 보류했습니다.",
+      "retrieved_sections": [
+        "FIELD-93.txt::방문객 촬영 구역",
+        "FIELD-93.txt::업무 자료 저장 위치"
+      ],
+      "cited_sections": [],
+      "retrieval_distances": [
+        {
+          "section": "FIELD-93.txt::업무 자료 저장 위치",
+          "distance": 0.5248551579820272
+        },
+        {
+          "section": "FIELD-93.txt::방문객 촬영 구역",
+          "distance": 0.5713334431112702
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": false,
+      "citation_precision": false,
+      "latency_ms": 1444.9
+    },
+    {
+      "id": "V8-08",
+      "question": "로비 방문객의 개인 휴대폰 번호 알려줘.",
+      "answerable": false,
+      "answer": "등록된 문서에서 답을 확인할 수 없습니다.",
+      "abstained": true,
+      "abstention_reason": "검색 근거가 질문을 충분히 뒷받침하지 않아 응답을 보류했습니다.",
+      "retrieved_sections": [
+        "FIELD-93.txt::방문객 촬영 구역"
+      ],
+      "cited_sections": [],
+      "retrieval_distances": [
+        {
+          "section": "FIELD-93.txt::방문객 촬영 구역",
+          "distance": 0.5973366191172994
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": false,
+      "citation_precision": false,
+      "latency_ms": 1527.4
+    }
+  ],
+  "limitations": [
+    "이 평가는 기존 모노랩 회귀 세트와 분리한 새 가상 시설·운영·출장 문서 도전 세트입니다.",
+    "규칙과 질문은 사람이 작성했으며 실제 회사 자료를 대표하거나 대규모 독립 블라인드 평가를 대신하지 않습니다.",
+    "정답성은 핵심 문구 일치로 자동 판정해 의미가 같은 다른 표현을 오답으로 볼 수 있습니다."
+  ],
+  "question_set": "independent_v8_questions.json",
+  "question_set_sha256": "1dacd5c1941e1d154b35e7851bbcac1d2cabc7b2707e16339197c15965410c5a",
+  "document_set": "docs",
+  "readiness": {
+    "database": {
+      "available": true,
+      "pgvector": false,
+      "backend": "sqlite"
+    },
+    "ollama": {
+      "available": true,
+      "version": "0.40.11",
+      "error": null
+    },
+    "models": {
+      "chat": {
+        "name": "qwen3:4b-instruct",
+        "installed": true,
+        "functional": true
+      },
+      "embedding": {
+        "name": "embeddinggemma",
+        "installed": true,
+        "functional": true,
+        "dimensions": 768
+      }
+    },
+    "retrieval": {
+      "max_cosine_distance": 0.68
+    }
+  },
+  "evaluation_environment": "isolated_sqlite_api_fresh_challenge",
+  "fixture_sha256": {
+    "FIELD-93.txt": "67af8b89ebc55754dde39a8babfb21d5b53825815a9a81948baddd39bd3d2cab"
+  }
+}

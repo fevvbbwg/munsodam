@@ -1,0 +1,5 @@
+[
+  {"id":"V11-01","question":"실험실 폐기물 용기는 언제 교체해?","answerable":true,"required_sections":["FACILITY-88-S1"],"must_include":["표시선",["즉시","바로"],["교체","바꿔"]]},
+  {"id":"V11-02","question":"실험실 폐기물 용기는 며칠마다 정기 교체해?","answerable":false,"required_sections":["FACILITY-88-S1"],"must_include":[]},
+  {"id":"V11-03","question":"냉장 장비에 경보가 뜨면 누구에게 연락해?","answerable":true,"required_sections":["FACILITY-88-S2"],"must_include":["시설 책임자",["즉시","바로"]]}
+]

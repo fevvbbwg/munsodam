@@ -1,0 +1,419 @@
+{
+  "suite": "fresh_local_challenge",
+  "generated_at": "2026-11-08T10:17:17.165155+00:00",
+  "counts": {
+    "total": 12,
+    "answerable": 10,
+    "unanswerable": 2
+  },
+  "metrics": {
+    "recall_at_5": {
+      "hits": 10,
+      "total": 10,
+      "value": 1.0
+    },
+    "answer_correctness": {
+      "hits": 7,
+      "total": 10,
+      "value": 0.7
+    },
+    "citation_recall": {
+      "hits": 8,
+      "total": 10,
+      "value": 0.8
+    },
+    "citation_precision": {
+      "hits": 9,
+      "total": 10,
+      "value": 0.9
+    },
+    "abstention_accuracy": {
+      "hits": 2,
+      "total": 2,
+      "value": 1.0
+    },
+    "median_response_ms": 1551.0
+  },
+  "results": [
+    {
+      "id": "V6-01",
+      "question": "방문객은 어디에 어떤 정보를 등록하고 누가 입실부터 퇴실까지 함께해야 해?",
+      "answerable": true,
+      "answer": "방문객은 LobbyPass에 이름, 방문 대상 직원, 입실 예정 시각을 등록하고, 방문을 주관한 직원이 입실부터 퇴실까지 함께 있어야 한다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "OFFICE-72.txt::방문객 등록과 동행",
+        "SUPPORT-72.txt::신규 입사자 보안 안내"
+      ],
+      "cited_sections": [
+        "OFFICE-72.txt::방문객 등록과 동행"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "OFFICE-72.txt::방문객 등록과 동행",
+          "distance": 0.31593379325007986
+        },
+        {
+          "section": "SUPPORT-72.txt::신규 입사자 보안 안내",
+          "distance": 0.6185114888956922
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1513.0
+    },
+    {
+      "id": "V6-02",
+      "question": "방문객 개인 촬영은 허용돼?",
+      "answerable": true,
+      "answer": "아니요, 방문객의 사무실 내 개인 촬영은 허용하지 않습니다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "OFFICE-72.txt::방문객 등록과 동행"
+      ],
+      "cited_sections": [
+        "OFFICE-72.txt::방문객 등록과 동행"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "OFFICE-72.txt::방문객 등록과 동행",
+          "distance": 0.36993038423475966
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1144.1
+    },
+    {
+      "id": "V6-03",
+      "question": "회의실을 사용하려면 며칠 전까지 어디에서 예약해야 하고, 취소 마감은 언제야?",
+      "answerable": true,
+      "answer": "회의실을 사용하려면 사용일 기준 1근무일 전까지 RoomPanel에서 예약해야 하며, 취소 마감은 회의 시작 30분 전까지 RoomPanel에서 해야 한다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "OFFICE-72.txt::방문객 등록과 동행",
+        "OFFICE-72.txt::회의실 예약과 취소"
+      ],
+      "cited_sections": [
+        "OFFICE-72.txt::회의실 예약과 취소"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "OFFICE-72.txt::회의실 예약과 취소",
+          "distance": 0.35056290757258823
+        },
+        {
+          "section": "OFFICE-72.txt::방문객 등록과 동행",
+          "distance": 0.6342586309439902
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1444.3
+    },
+    {
+      "id": "V6-04",
+      "question": "예약한 회의실에 늦으면 몇 분 뒤 예약이 풀려?",
+      "answerable": true,
+      "answer": "회의실은 RoomPanel에서 사용일 기준 1근무일 전까지 예약한다. 예약을 취소하려면 회의 시작 30분 전까지 RoomPanel에서 취소한다. 예약 시각이 지난 뒤 15분 안에 입실하지 않으면 예약은 자동 해제된다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "OFFICE-72.txt::회의실 예약과 취소"
+      ],
+      "cited_sections": [
+        "OFFICE-72.txt::회의실 예약과 취소"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "OFFICE-72.txt::회의실 예약과 취소",
+          "distance": 0.32309492350899904
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 984.4
+    },
+    {
+      "id": "V6-05",
+      "question": "출입 카드를 잃어버리면 어디에 어떤 방식으로 몇 분 안에 알려야 해?",
+      "answerable": true,
+      "answer": "등록된 문서에서 답을 확인할 수 없습니다.",
+      "abstained": true,
+      "abstention_reason": "답변의 수치나 기한을 인용한 원문에서 확인하지 못했습니다.",
+      "retrieved_sections": [
+        "SUPPORT-72.txt::출입 카드 분실"
+      ],
+      "cited_sections": [],
+      "retrieval_distances": [
+        {
+          "section": "SUPPORT-72.txt::출입 카드 분실",
+          "distance": 0.32213453752479637
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": false,
+      "citation_recall": false,
+      "citation_precision": false,
+      "latency_ms": 2401.1
+    },
+    {
+      "id": "V6-06",
+      "question": "새 카드를 받기 전에 임시 출입을 하려면 어떤 승인이 먼저 필요해?",
+      "answerable": true,
+      "answer": "출입 카드를 분실하면 20분 이내에 AccessNow의 분실 신고 양식으로 보안 데스크에 알린다. 새 카드를 발급받기 전까지 임시 출입은 관리자 승인을 먼저 받아야 한다. 분실 카드 재발급 비용은 이 안내에 정하지 않았다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "OFFICE-72.txt::방문객 등록과 동행",
+        "SUPPORT-72.txt::신규 입사자 보안 안내",
+        "SUPPORT-72.txt::출입 카드 분실"
+      ],
+      "cited_sections": [
+        "SUPPORT-72.txt::출입 카드 분실"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "SUPPORT-72.txt::출입 카드 분실",
+          "distance": 0.41973705622038104
+        },
+        {
+          "section": "SUPPORT-72.txt::신규 입사자 보안 안내",
+          "distance": 0.6456408576365162
+        },
+        {
+          "section": "OFFICE-72.txt::방문객 등록과 동행",
+          "distance": 0.6583814336221278
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 997.0
+    },
+    {
+      "id": "V6-07",
+      "question": "첫 근무일에 신규 입사자는 어떤 보안 절차를 하고, 어디에서 이수 여부를 확인할 수 있어?",
+      "answerable": true,
+      "answer": "첫 근무일에 신규 입사자는 보안 안내를 이수하고 계정 보호 확인서에 서명한다. 이수 여부는 PeopleDesk에서 확인할 수 있다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "OFFICE-72.txt::방문객 등록과 동행",
+        "SUPPORT-72.txt::신규 입사자 보안 안내",
+        "SUPPORT-72.txt::출입 카드 분실"
+      ],
+      "cited_sections": [
+        "SUPPORT-72.txt::신규 입사자 보안 안내"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "SUPPORT-72.txt::신규 입사자 보안 안내",
+          "distance": 0.31388216610289765
+        },
+        {
+          "section": "OFFICE-72.txt::방문객 등록과 동행",
+          "distance": 0.5992459343903576
+        },
+        {
+          "section": "SUPPORT-72.txt::출입 카드 분실",
+          "distance": 0.6699359208502355
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1378.2
+    },
+    {
+      "id": "V6-08",
+      "question": "신규 입사자 보안 안내 교육은 몇 시간인가요?",
+      "answerable": true,
+      "answer": "보안 안내의 교육 시간은 이 안내에 별도로 정하지 않았다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "SUPPORT-72.txt::신규 입사자 보안 안내",
+        "SUPPORT-72.txt::출입 카드 분실"
+      ],
+      "cited_sections": [
+        "SUPPORT-72.txt::신규 입사자 보안 안내"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "SUPPORT-72.txt::신규 입사자 보안 안내",
+          "distance": 0.3340775807769858
+        },
+        {
+          "section": "SUPPORT-72.txt::출입 카드 분실",
+          "distance": 0.6678188018915641
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1589.0
+    },
+    {
+      "id": "V6-09",
+      "question": "분실 카드 재발급 비용은 얼마야?",
+      "answerable": true,
+      "answer": "분실 카드 재발급 비용은 문서에 정하지 않았습니다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "SUPPORT-72.txt::출입 카드 분실"
+      ],
+      "cited_sections": [
+        "SUPPORT-72.txt::출입 카드 분실"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "SUPPORT-72.txt::출입 카드 분실",
+          "distance": 0.43511734869240315
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": false,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1600.3
+    },
+    {
+      "id": "V6-10",
+      "question": "분실 카드 재발급 비용과 회의실 취소 마감을 각각 알려줘.",
+      "answerable": true,
+      "answer": "회의실은 RoomPanel에서 사용일 기준 1근무일 전까지 예약한다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "OFFICE-72.txt::회의실 예약과 취소",
+        "SUPPORT-72.txt::출입 카드 분실"
+      ],
+      "cited_sections": [
+        "OFFICE-72.txt::회의실 예약과 취소"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "SUPPORT-72.txt::출입 카드 분실",
+          "distance": 0.4229048106494294
+        },
+        {
+          "section": "OFFICE-72.txt::회의실 예약과 취소",
+          "distance": 0.391766718999933
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": false,
+      "citation_recall": false,
+      "citation_precision": true,
+      "latency_ms": 2398.0
+    },
+    {
+      "id": "V6-11",
+      "question": "회의실은 일주일에 최대 몇 번 예약할 수 있어?",
+      "answerable": false,
+      "answer": "등록된 문서에서 답을 확인할 수 없습니다.",
+      "abstained": true,
+      "abstention_reason": "검색 근거가 질문을 충분히 뒷받침하지 않아 응답을 보류했습니다.",
+      "retrieved_sections": [
+        "OFFICE-72.txt::회의실 예약과 취소"
+      ],
+      "cited_sections": [],
+      "retrieval_distances": [
+        {
+          "section": "OFFICE-72.txt::회의실 예약과 취소",
+          "distance": 0.4431683498235611
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": false,
+      "citation_precision": false,
+      "latency_ms": 1590.1
+    },
+    {
+      "id": "V6-12",
+      "question": "보안 데스크의 개인 휴대폰 번호를 알려줘.",
+      "answerable": false,
+      "answer": "등록된 문서에서 답을 확인할 수 없습니다.",
+      "abstained": true,
+      "abstention_reason": "검색 근거가 질문을 충분히 뒷받침하지 않아 응답을 보류했습니다.",
+      "retrieved_sections": [
+        "OFFICE-72.txt::방문객 등록과 동행",
+        "SUPPORT-72.txt::신규 입사자 보안 안내"
+      ],
+      "cited_sections": [],
+      "retrieval_distances": [
+        {
+          "section": "SUPPORT-72.txt::신규 입사자 보안 안내",
+          "distance": 0.5576793892572178
+        },
+        {
+          "section": "OFFICE-72.txt::방문객 등록과 동행",
+          "distance": 0.6524215094289255
+        }
+      ],
+      "retrieval_recall_at_5": false,
+      "answer_or_abstention_correct": true,
+      "citation_recall": false,
+      "citation_precision": false,
+      "latency_ms": 1670.0
+    }
+  ],
+  "limitations": [
+    "이 평가는 기존 모노랩 회귀 세트와 분리한 새 가상 시설·운영·출장 문서 도전 세트입니다.",
+    "규칙과 질문은 사람이 작성했으며 실제 회사 자료를 대표하거나 대규모 독립 블라인드 평가를 대신하지 않습니다.",
+    "정답성은 핵심 문구 일치로 자동 판정해 의미가 같은 다른 표현을 오답으로 볼 수 있습니다."
+  ],
+  "question_set": "independent_v6_questions.json",
+  "question_set_sha256": "16c93af9ac8b9bda48cd6885660744783c11572aea9c2c5a71737f38c0f4292e",
+  "document_set": "docs",
+  "readiness": {
+    "database": {
+      "available": true,
+      "pgvector": false,
+      "backend": "sqlite"
+    },
+    "ollama": {
+      "available": true,
+      "version": "0.40.11",
+      "error": null
+    },
+    "models": {
+      "chat": {
+        "name": "qwen3:4b-instruct",
+        "installed": true,
+        "functional": true
+      },
+      "embedding": {
+        "name": "embeddinggemma",
+        "installed": true,
+        "functional": true,
+        "dimensions": 768
+      }
+    },
+    "retrieval": {
+      "max_cosine_distance": 0.68
+    }
+  },
+  "evaluation_environment": "isolated_sqlite_api_fresh_challenge",
+  "fixture_sha256": {
+    "OFFICE-72.txt": "6118b0897caf3f64d1ec865810d99aa5244ea57206d02bcabf92cf86bd0e9b4d",
+    "SUPPORT-72.txt": "13eb2bcbc1a9b105bf9f4978500f9fad80ba92eba5b86796e76a4da42b7f6a57"
+  }
+}

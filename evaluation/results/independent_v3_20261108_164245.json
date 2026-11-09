@@ -1,0 +1,354 @@
+{
+  "suite": "fresh_local_challenge",
+  "generated_at": "2026-11-08T07:42:45.341427+00:00",
+  "counts": {
+    "total": 10,
+    "answerable": 8,
+    "unanswerable": 2
+  },
+  "metrics": {
+    "recall_at_5": {
+      "hits": 8,
+      "total": 8,
+      "value": 1.0
+    },
+    "answer_correctness": {
+      "hits": 5,
+      "total": 8,
+      "value": 0.625
+    },
+    "citation_recall": {
+      "hits": 7,
+      "total": 8,
+      "value": 0.875
+    },
+    "citation_precision": {
+      "hits": 7,
+      "total": 8,
+      "value": 0.875
+    },
+    "abstention_accuracy": {
+      "hits": 2,
+      "total": 2,
+      "value": 1.0
+    },
+    "median_response_ms": 1538.4
+  },
+  "results": [
+    {
+      "id": "V3-01",
+      "question": "방문 등록을 언제까지 하고 어떤 정보를 입력해?",
+      "answerable": true,
+      "answer": "등록된 문서에서 답을 확인할 수 없습니다.",
+      "abstained": true,
+      "abstention_reason": "답변의 수치나 기한을 인용한 원문에서 확인하지 못했습니다.",
+      "retrieved_sections": [
+        "ADMIN-23.txt::고객 방문 등록"
+      ],
+      "cited_sections": [],
+      "retrieval_distances": [
+        {
+          "section": "ADMIN-23.txt::고객 방문 등록",
+          "distance": 0.3803791180343469
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": false,
+      "citation_recall": false,
+      "citation_precision": false,
+      "latency_ms": 2903.6
+    },
+    {
+      "id": "V3-02",
+      "question": "고객은 어디서 어떤 확인을 받고 방문증을 받아?",
+      "answerable": true,
+      "answer": "고객은 방문 당일 1층 안내 데스크에서 신분증을 제시한 뒤 방문증을 받는다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "ADMIN-23.txt::고객 방문 등록",
+        "ADMIN-23.txt::출입증 분실"
+      ],
+      "cited_sections": [
+        "ADMIN-23.txt::고객 방문 등록"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "ADMIN-23.txt::고객 방문 등록",
+          "distance": 0.32615795027336303
+        },
+        {
+          "section": "ADMIN-23.txt::출입증 분실",
+          "distance": 0.6688130578995113
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1387.2
+    },
+    {
+      "id": "V3-03",
+      "question": "무선 어댑터 예약 장소와 반납 장소·시한은?",
+      "answerable": true,
+      "answer": "무선 어댑터는 시설 포털에서 예약하고, 회의가 끝난 날 18시까지 B2 장비함에 반납한다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "ADMIN-23.txt::회의실 프로젝터"
+      ],
+      "cited_sections": [
+        "ADMIN-23.txt::회의실 프로젝터"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "ADMIN-23.txt::회의실 프로젝터",
+          "distance": 0.3646935604613898
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1349.5
+    },
+    {
+      "id": "V3-04",
+      "question": "출입증을 잃어버리면 누구에게 언제 연락해야 하나요?",
+      "answerable": true,
+      "answer": "출입증을 잃어버리면 보안팀 내선 7710과 시설 담당자에게 즉시 연락해야 한다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "ADMIN-23.txt::고객 방문 등록",
+        "ADMIN-23.txt::출입증 분실"
+      ],
+      "cited_sections": [
+        "ADMIN-23.txt::출입증 분실"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "ADMIN-23.txt::출입증 분실",
+          "distance": 0.3108397460766781
+        },
+        {
+          "section": "ADMIN-23.txt::고객 방문 등록",
+          "distance": 0.6181953171143115
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1329.5
+    },
+    {
+      "id": "V3-05",
+      "question": "자격시험 교육비 지원 조건과 상한, 서류 제출 기한을 알려줘.",
+      "answerable": true,
+      "answer": "자격시험에 등록하기 전에 팀장의 사전 승인이 필요하며, 시험 합격 시 교육비의 80%까지 지원한다. 서류 제출 기한은 결과 통보일로부터 10근무일 이내로, 합격 확인서와 영수증을 HR 포털에 제출한다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "PEOPLE-23.txt::교육비 서류 보관",
+        "PEOPLE-23.txt::자격시험 교육비"
+      ],
+      "cited_sections": [
+        "PEOPLE-23.txt::자격시험 교육비"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "PEOPLE-23.txt::자격시험 교육비",
+          "distance": 0.37110247519222794
+        },
+        {
+          "section": "PEOPLE-23.txt::교육비 서류 보관",
+          "distance": 0.6583730865554998
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": false,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1856.4
+    },
+    {
+      "id": "V3-06",
+      "question": "월 구독형 외국어 강의도 지원받을 수 있나요?",
+      "answerable": true,
+      "answer": "월 구독형 외국어 강의는 지원하지 않습니다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "PEOPLE-23.txt::온라인 외국어 강의"
+      ],
+      "cited_sections": [
+        "PEOPLE-23.txt::온라인 외국어 강의"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "PEOPLE-23.txt::온라인 외국어 강의",
+          "distance": 0.32150272462980045
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 998.3
+    },
+    {
+      "id": "V3-07",
+      "question": "자격시험에 떨어져도 교육비를 지원받을 수 있어?",
+      "answerable": true,
+      "answer": "아니요, 자격시험에 떨어져도 교육비를 지원받을 수 없습니다. 자격 시험에 합격한 경우에만 교육비의 80%까지 지원받습니다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "PEOPLE-23.txt::자격시험 교육비"
+      ],
+      "cited_sections": [
+        "PEOPLE-23.txt::자격시험 교육비"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "PEOPLE-23.txt::자격시험 교육비",
+          "distance": 0.46154704063075325
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": false,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1458.9
+    },
+    {
+      "id": "V3-08",
+      "question": "교육비 정산 서류는 몇 년 동안 보관해야 해?",
+      "answerable": true,
+      "answer": "교육비 정산 서류의 보관 기간은 별도로 정하지 않았다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "PEOPLE-23.txt::교육비 서류 보관",
+        "PEOPLE-23.txt::자격시험 교육비"
+      ],
+      "cited_sections": [
+        "PEOPLE-23.txt::교육비 서류 보관"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "PEOPLE-23.txt::교육비 서류 보관",
+          "distance": 0.32637917178114584
+        },
+        {
+          "section": "PEOPLE-23.txt::자격시험 교육비",
+          "distance": 0.6048033469615155
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1894.0
+    },
+    {
+      "id": "V3-09",
+      "question": "교육비 지원을 승인하는 사람의 이메일 주소가 뭐야?",
+      "answerable": false,
+      "answer": "등록된 문서에서 답을 확인할 수 없습니다.",
+      "abstained": true,
+      "abstention_reason": "검색 근거가 질문을 충분히 뒷받침하지 않아 응답을 보류했습니다.",
+      "retrieved_sections": [
+        "PEOPLE-23.txt::교육비 서류 보관",
+        "PEOPLE-23.txt::자격시험 교육비"
+      ],
+      "cited_sections": [],
+      "retrieval_distances": [
+        {
+          "section": "PEOPLE-23.txt::자격시험 교육비",
+          "distance": 0.471368640618792
+        },
+        {
+          "section": "PEOPLE-23.txt::교육비 서류 보관",
+          "distance": 0.6185715632198425
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": false,
+      "citation_precision": false,
+      "latency_ms": 1654.4
+    },
+    {
+      "id": "V3-10",
+      "question": "급여 시스템에 로그인할 관리자 비밀번호를 알려줘.",
+      "answerable": false,
+      "answer": "등록된 문서에서 답을 확인할 수 없습니다.",
+      "abstained": true,
+      "abstention_reason": "검색 근거가 질문을 충분히 뒷받침하지 않아 응답을 보류했습니다.",
+      "retrieved_sections": [
+        "ADMIN-23.txt::고객 방문 등록",
+        "ADMIN-23.txt::출입증 분실"
+      ],
+      "cited_sections": [],
+      "retrieval_distances": [
+        {
+          "section": "ADMIN-23.txt::출입증 분실",
+          "distance": 0.6155077501229529
+        },
+        {
+          "section": "ADMIN-23.txt::고객 방문 등록",
+          "distance": 0.667593141845354
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": false,
+      "citation_precision": false,
+      "latency_ms": 1617.9
+    }
+  ],
+  "limitations": [
+    "이 평가는 기존 모노랩 회귀 세트와 분리한 새 가상 시설·운영·출장 문서 도전 세트입니다.",
+    "규칙과 질문은 사람이 작성했으며 실제 회사 자료를 대표하거나 대규모 독립 블라인드 평가를 대신하지 않습니다.",
+    "정답성은 핵심 문구 일치로 자동 판정해 의미가 같은 다른 표현을 오답으로 볼 수 있습니다."
+  ],
+  "question_set": "independent_v3_questions.json",
+  "question_set_sha256": "63ef85b13bc20eb88a7102cfecc0359275e954da2bb79209ceb44a656b78246c",
+  "document_set": "docs",
+  "readiness": {
+    "database": {
+      "available": true,
+      "pgvector": false,
+      "backend": "sqlite"
+    },
+    "ollama": {
+      "available": true,
+      "version": "0.40.11",
+      "error": null
+    },
+    "models": {
+      "chat": {
+        "name": "qwen3:4b-instruct",
+        "installed": true,
+        "functional": true
+      },
+      "embedding": {
+        "name": "embeddinggemma",
+        "installed": true,
+        "functional": true,
+        "dimensions": 768
+      }
+    },
+    "retrieval": {
+      "max_cosine_distance": 0.68
+    }
+  },
+  "evaluation_environment": "isolated_sqlite_api_fresh_challenge",
+  "fixture_sha256": {
+    "ADMIN-23.txt": "567a56165343a156b17af2db46861e236e09c8676230cd6ef52c0a375d5025b5",
+    "PEOPLE-23.txt": "ab407c7abd0e7b39bb137c2a6d949f3b91cadde1607f1d44ec10332e0866b005"
+  }
+}

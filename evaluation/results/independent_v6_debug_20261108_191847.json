@@ -1,0 +1,133 @@
+{
+  "suite": "fresh_local_challenge",
+  "generated_at": "2026-11-08T10:18:47.735358+00:00",
+  "counts": {
+    "total": 2,
+    "answerable": 2,
+    "unanswerable": 0
+  },
+  "metrics": {
+    "recall_at_5": {
+      "hits": 2,
+      "total": 2,
+      "value": 1.0
+    },
+    "answer_correctness": {
+      "hits": 0,
+      "total": 2,
+      "value": 0.0
+    },
+    "citation_recall": {
+      "hits": 0,
+      "total": 2,
+      "value": 0.0
+    },
+    "citation_precision": {
+      "hits": 1,
+      "total": 2,
+      "value": 0.5
+    },
+    "abstention_accuracy": {
+      "hits": 0,
+      "total": 0,
+      "value": null
+    },
+    "median_response_ms": 2400.0
+  },
+  "results": [
+    {
+      "id": "V6-05",
+      "question": "출입 카드를 잃어버리면 어디에 어떤 방식으로 몇 분 안에 알려야 해?",
+      "answerable": true,
+      "answer": "등록된 문서에서 답을 확인할 수 없습니다.",
+      "abstained": true,
+      "abstention_reason": "답변의 수치나 기한을 인용한 원문에서 확인하지 못했습니다.",
+      "retrieved_sections": [
+        "SUPPORT-72.txt::출입 카드 분실"
+      ],
+      "cited_sections": [],
+      "retrieval_distances": [
+        {
+          "section": "SUPPORT-72.txt::출입 카드 분실",
+          "distance": 0.32213453752479637
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": false,
+      "citation_recall": false,
+      "citation_precision": false,
+      "latency_ms": 2445.8
+    },
+    {
+      "id": "V6-10",
+      "question": "분실 카드 재발급 비용과 회의실 취소 마감을 각각 알려줘.",
+      "answerable": true,
+      "answer": "회의실은 RoomPanel에서 사용일 기준 1근무일 전까지 예약한다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "OFFICE-72.txt::회의실 예약과 취소",
+        "SUPPORT-72.txt::출입 카드 분실"
+      ],
+      "cited_sections": [
+        "OFFICE-72.txt::회의실 예약과 취소"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "SUPPORT-72.txt::출입 카드 분실",
+          "distance": 0.4229048106494294
+        },
+        {
+          "section": "OFFICE-72.txt::회의실 예약과 취소",
+          "distance": 0.391766718999933
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": false,
+      "citation_recall": false,
+      "citation_precision": true,
+      "latency_ms": 2354.1
+    }
+  ],
+  "limitations": [
+    "이 평가는 기존 모노랩 회귀 세트와 분리한 새 가상 시설·운영·출장 문서 도전 세트입니다.",
+    "규칙과 질문은 사람이 작성했으며 실제 회사 자료를 대표하거나 대규모 독립 블라인드 평가를 대신하지 않습니다.",
+    "정답성은 핵심 문구 일치로 자동 판정해 의미가 같은 다른 표현을 오답으로 볼 수 있습니다."
+  ],
+  "question_set": "independent_v6_debug.json",
+  "question_set_sha256": "89f3a404bdd26f8a595c1ac8a81bd1c02dcf56b2422126ff4e38bd3731d7535a",
+  "document_set": "docs",
+  "readiness": {
+    "database": {
+      "available": true,
+      "pgvector": false,
+      "backend": "sqlite"
+    },
+    "ollama": {
+      "available": true,
+      "version": "0.40.11",
+      "error": null
+    },
+    "models": {
+      "chat": {
+        "name": "qwen3:4b-instruct",
+        "installed": true,
+        "functional": true
+      },
+      "embedding": {
+        "name": "embeddinggemma",
+        "installed": true,
+        "functional": true,
+        "dimensions": 768
+      }
+    },
+    "retrieval": {
+      "max_cosine_distance": 0.68
+    }
+  },
+  "evaluation_environment": "isolated_sqlite_api_fresh_challenge",
+  "fixture_sha256": {
+    "OFFICE-72.txt": "6118b0897caf3f64d1ec865810d99aa5244ea57206d02bcabf92cf86bd0e9b4d",
+    "SUPPORT-72.txt": "13eb2bcbc1a9b105bf9f4978500f9fad80ba92eba5b86796e76a4da42b7f6a57"
+  }
+}

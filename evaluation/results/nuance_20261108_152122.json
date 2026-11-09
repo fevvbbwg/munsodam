@@ -1,0 +1,248 @@
+{
+  "suite": "fresh_local_challenge",
+  "generated_at": "2026-11-08T06:21:22.182580+00:00",
+  "counts": {
+    "total": 5,
+    "answerable": 5,
+    "unanswerable": 0
+  },
+  "metrics": {
+    "recall_at_5": {
+      "hits": 5,
+      "total": 5,
+      "value": 1.0
+    },
+    "answer_correctness": {
+      "hits": 3,
+      "total": 5,
+      "value": 0.6
+    },
+    "citation_recall": {
+      "hits": 4,
+      "total": 5,
+      "value": 0.8
+    },
+    "citation_precision": {
+      "hits": 4,
+      "total": 5,
+      "value": 0.8
+    },
+    "abstention_accuracy": {
+      "hits": 0,
+      "total": 0,
+      "value": null
+    },
+    "median_response_ms": 1488.4
+  },
+  "results": [
+    {
+      "id": "N03",
+      "question": "연장근무가 밤 9시에 끝났습니다. 저녁 식사비 기준과 상한을 알려주세요.",
+      "answerable": true,
+      "answer": "등록된 문서에서 답을 확인할 수 없습니다.",
+      "abstained": true,
+      "abstention_reason": "검색 근거가 질문을 충분히 뒷받침하지 않아 응답을 보류했습니다.",
+      "retrieved_sections": [
+        "POL-01.txt::승인된 재택근무 식사",
+        "POL-01.txt::연장근무 및 교육 식사",
+        "TRV-01.txt::숙박비",
+        "TRV-01.txt::출장 택시"
+      ],
+      "cited_sections": [],
+      "retrieval_distances": [
+        {
+          "section": "POL-01.txt::연장근무 및 교육 식사",
+          "distance": 0.3020182142971335
+        },
+        {
+          "section": "POL-01.txt::승인된 재택근무 식사",
+          "distance": 0.4598275101733391
+        },
+        {
+          "section": "TRV-01.txt::출장 택시",
+          "distance": 0.6084069567028999
+        },
+        {
+          "section": "TRV-01.txt::숙박비",
+          "distance": 0.6287426934567018
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": false,
+      "citation_recall": false,
+      "citation_precision": false,
+      "latency_ms": 2673.9
+    },
+    {
+      "id": "N11",
+      "question": "장비가 깨진 경우 직접 고쳐도 되나요? 신고 시한도 알려주세요.",
+      "answerable": true,
+      "answer": "장비가 깨진 경우 사용자는 직접 분해하거나 수리하지 않습니다. 파손 장비는 30분 이내에 서비스 데스크에 알리야 합니다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "ITX-01.txt::분실 기기 신고",
+        "ITX-01.txt::서비스 장애 대응",
+        "ITX-01.txt::파손 장비 처리"
+      ],
+      "cited_sections": [
+        "ITX-01.txt::파손 장비 처리"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "ITX-01.txt::파손 장비 처리",
+          "distance": 0.3978292294115292
+        },
+        {
+          "section": "ITX-01.txt::분실 기기 신고",
+          "distance": 0.5455330353714525
+        },
+        {
+          "section": "ITX-01.txt::서비스 장애 대응",
+          "distance": 0.6617674685607193
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1488.4
+    },
+    {
+      "id": "N14",
+      "question": "밤 9시에 대중교통을 이용할 수 있는데 택시비를 정산할 수 있나요?",
+      "answerable": true,
+      "answer": "아니요, 밤 9시에 대중교통을 이용할 수 있으므로 택시비를 정산할 수 없습니다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "TRV-01.txt::출장 택시"
+      ],
+      "cited_sections": [
+        "TRV-01.txt::출장 택시"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "TRV-01.txt::출장 택시",
+          "distance": 0.43141549670217283
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": false,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1277.7
+    },
+    {
+      "id": "N17",
+      "question": "특실로 승급한 철도 요금도 출장비로 받을 수 있나요?",
+      "answerable": true,
+      "answer": "아니요, 특실로 승급한 철도 요금은 출장비로 받을 수 없습니다. 출장 철도비는 일반석 기준으로 정산되며, 특실이나 좌석 승급 비용은 정산하지 않습니다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "POL-01.txt::승인된 재택근무 식사",
+        "POL-01.txt::연장근무 및 교육 식사",
+        "TRV-01.txt::숙박비",
+        "TRV-01.txt::철도 좌석",
+        "TRV-01.txt::출장 택시"
+      ],
+      "cited_sections": [
+        "TRV-01.txt::철도 좌석"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "TRV-01.txt::철도 좌석",
+          "distance": 0.3575170960911126
+        },
+        {
+          "section": "TRV-01.txt::출장 택시",
+          "distance": 0.5551408182870129
+        },
+        {
+          "section": "TRV-01.txt::숙박비",
+          "distance": 0.6024184754815782
+        },
+        {
+          "section": "POL-01.txt::연장근무 및 교육 식사",
+          "distance": 0.6309381269378309
+        },
+        {
+          "section": "POL-01.txt::승인된 재택근무 식사",
+          "distance": 0.6550701878567962
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1694.8
+    },
+    {
+      "id": "N20",
+      "question": "헬프데스크 지원 티켓의 정확한 보관 시작일과 기간은 어떻게 돼요?",
+      "answerable": true,
+      "answer": "헬프데스크 지원 티켓은 티켓 종료일로부터 3년간 보관한다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "POL-01.txt::회계 자료 보존"
+      ],
+      "cited_sections": [
+        "POL-01.txt::회계 자료 보존"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "POL-01.txt::회계 자료 보존",
+          "distance": 0.4421226995493507
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1158.4
+    }
+  ],
+  "limitations": [
+    "이 평가는 기존 모노랩 회귀 세트와 분리한 새 가상 시설·운영·출장 문서 도전 세트입니다.",
+    "규칙과 질문은 사람이 작성했으며 실제 회사 자료를 대표하거나 대규모 독립 블라인드 평가를 대신하지 않습니다.",
+    "정답성은 핵심 문구 일치로 자동 판정해 의미가 같은 다른 표현을 오답으로 볼 수 있습니다."
+  ],
+  "question_set": "nuance_questions.json",
+  "document_set": "nuance_docs",
+  "readiness": {
+    "database": {
+      "available": true,
+      "pgvector": false,
+      "backend": "sqlite"
+    },
+    "ollama": {
+      "available": true,
+      "version": "0.40.11",
+      "error": null
+    },
+    "models": {
+      "chat": {
+        "name": "qwen3:4b-instruct",
+        "installed": true,
+        "functional": true
+      },
+      "embedding": {
+        "name": "embeddinggemma",
+        "installed": true,
+        "functional": true,
+        "dimensions": 768
+      }
+    },
+    "retrieval": {
+      "max_cosine_distance": 0.68
+    }
+  },
+  "evaluation_environment": "isolated_sqlite_api_fresh_challenge",
+  "fixture_sha256": {
+    "ITX-01.txt": "9d5651c31e9a3744481ca12a2ee809c539170cd93375c15f393df7b88ba4263e",
+    "POL-01.txt": "6f497499f9b7694ebaabede741b8e12c8019f371f651ed636584da18c9d3079b",
+    "TRV-01.txt": "58cabee82f65e62a81537e1e1c3543d2c87c7ebe1cf7eaafda8e0810ac8c94ac"
+  }
+}

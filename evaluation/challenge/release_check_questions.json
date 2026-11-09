@@ -1,0 +1,16 @@
+[
+  {"id":"R01","question":"업무용 전기차 충전비는 출장 한 번에 얼마까지 정산되나요?","answerable":true,"required_sections":["FLEET-01-S3"],"must_include":[["45,000원","45000원","4만 5천원"],["출장 1회","1회"]]},
+  {"id":"R02","question":"개인 소유 차의 충전비도 회사에 청구할 수 있나요?","answerable":true,"required_sections":["FLEET-01-S3"],"must_include":[["정산 대상이 아니다","정산하지 않는다","청구할 수 없습니다","지원하지 않는다"]]},
+  {"id":"R03","question":"차를 어디서 예약하고 열쇠는 출발 몇 분 전부터 받을 수 있습니까?","answerable":true,"required_sections":["FLEET-01-S1"],"must_include":[["FleetBoard"],["10분","십 분"],["경비 데스크"]]},
+  {"id":"R04","question":"공용 차량을 쓴 뒤 차와 열쇠는 어디에 언제 반납해야 해요?","answerable":true,"required_sections":["FLEET-01-S1"],"must_include":[["지정 주차면"],["열쇠"],["근무 종료 전","근무가 끝나기 전"]]},
+  {"id":"R05","question":"사람이 다치지 않은 차량 사고는 몇 분 안에 누구에게 보고하며 현장에서는 무엇을 하지 말아야 하죠?","answerable":true,"required_sections":["FLEET-01-S2"],"must_include":[["15분","십오 분"],["차량 담당자"],["과실 책임을 인정하지","과실 책임을 인정하거나 합의하지 말아야","합의하지 않는다"]]},
+  {"id":"R06","question":"외부 교육이 끝나면 어떤 서류를 누구에게 며칠 안에 내야 하나요?","answerable":true,"required_sections":["TRN-01-S1"],"must_include":[["참석 기록","출석 기록"],["수료증"],["교육 담당자"],["3영업일","영업일 3일"]]},
+  {"id":"R07","question":"교육 시작 하루 전에 취소하면 수수료를 지원받을 수 있나요? 취소 기준도 알려주세요.","answerable":true,"required_sections":["TRN-01-S2"],"must_include":[["2영업일","영업일 2일"],["지원하지 않는다","지원하지 않습니다","회사가 지원하지 않는다"]]},
+  {"id":"R08","question":"직무 교육 학비의 연간 지원 비율과 상한, 결제 전 승인자는 누구인가요?","answerable":true,"required_sections":["TRN-01-S3"],"must_include":[["60%","60퍼센트"],["300,000원","300000원","30만원"],["부서장"]]},
+  {"id":"R09","question":"80,000원짜리 물품을 주문할 때 누가 승인해야 합니까?","answerable":true,"required_sections":["BUY-01-S1"],"must_include":[["팀장"]]},
+  {"id":"R10","question":"정확히 500,000원인 구매의 결재자는 누구예요?","answerable":true,"required_sections":["BUY-01-S1"],"must_include":[["본부장"]]},
+  {"id":"R11","question":"750,000원 구매는 어느 두 팀의 승인을 받아야 하나요?","answerable":true,"required_sections":["BUY-01-S1"],"must_include":[["재무팀"],["구매팀"]]},
+  {"id":"R12","question":"관리자 승인을 받지 않은 외부 교육도 신청해 등록할 수 있나요?","answerable":true,"required_sections":["TRN-01-S1"],"must_include":[["승인을 받아야","승인을 받지 않으면","신청 전에"]]},
+  {"id":"R13","question":"표준 발주 후 납품까지 정확히 며칠 걸리는지 알려주세요.","answerable":true,"required_sections":["BUY-01-S2"],"must_include":[["정하지 않았다","정해져 있지 않다","명시하지 않았다"],["납품 소요일","납품 시점"]]},
+  {"id":"R14","question":"공용 차량의 1회 주행 가능 거리는 몇 km인가요?","answerable":false,"required_sections":["FLEET-01-S1"]}
+]

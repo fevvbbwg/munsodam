@@ -1,0 +1,160 @@
+{
+  "suite": "fresh_local_challenge",
+  "generated_at": "2026-11-08T12:47:26.886906+00:00",
+  "counts": {
+    "total": 3,
+    "answerable": 2,
+    "unanswerable": 1
+  },
+  "metrics": {
+    "recall_at_5": {
+      "hits": 2,
+      "total": 2,
+      "value": 1.0
+    },
+    "answer_correctness": {
+      "hits": 2,
+      "total": 2,
+      "value": 1.0
+    },
+    "citation_recall": {
+      "hits": 2,
+      "total": 2,
+      "value": 1.0
+    },
+    "citation_precision": {
+      "hits": 2,
+      "total": 2,
+      "value": 1.0
+    },
+    "abstention_accuracy": {
+      "hits": 1,
+      "total": 1,
+      "value": 1.0
+    },
+    "median_response_ms": 1789.7
+  },
+  "results": [
+    {
+      "id": "V11-01",
+      "question": "실험실 폐기물 용기는 언제 교체해?",
+      "answerable": true,
+      "answer": "실험실 폐기물 용기는 표시선까지 찼을 때 즉시 교체한다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "FACILITY-88.txt::일상 점검"
+      ],
+      "cited_sections": [
+        "FACILITY-88.txt::일상 점검"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "FACILITY-88.txt::일상 점검",
+          "distance": 0.5031286527120314
+        },
+        {
+          "section": "FACILITY-88.txt::일상 점검",
+          "distance": 0.5232209080750967
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1789.3
+    },
+    {
+      "id": "V11-02",
+      "question": "실험실 폐기물 용기는 며칠마다 정기 교체해?",
+      "answerable": false,
+      "answer": "등록된 문서에서 답을 확인할 수 없습니다.",
+      "abstained": true,
+      "abstention_reason": "검색 근거가 질문을 충분히 뒷받침하지 않아 응답을 보류했습니다.",
+      "retrieved_sections": [
+        "FACILITY-88.txt::일상 점검"
+      ],
+      "cited_sections": [],
+      "retrieval_distances": [
+        {
+          "section": "FACILITY-88.txt::일상 점검",
+          "distance": 0.499790782627198
+        },
+        {
+          "section": "FACILITY-88.txt::일상 점검",
+          "distance": 0.5198439597273077
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": false,
+      "citation_precision": false,
+      "latency_ms": 4029.5
+    },
+    {
+      "id": "V11-03",
+      "question": "냉장 장비에 경보가 뜨면 누구에게 연락해?",
+      "answerable": true,
+      "answer": "냉장 장비에 경보가 뜨면 시설 책임자에게 즉시 연락한다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "FACILITY-88.txt::냉장 장비 경보"
+      ],
+      "cited_sections": [
+        "FACILITY-88.txt::냉장 장비 경보"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "FACILITY-88.txt::냉장 장비 경보",
+          "distance": 0.252301526189765
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1789.7
+    }
+  ],
+  "limitations": [
+    "이 평가는 기존 모노랩 회귀 세트와 분리한 새 가상 시설·운영·출장 문서 도전 세트입니다.",
+    "규칙과 질문은 사람이 작성했으며 실제 회사 자료를 대표하거나 대규모 독립 블라인드 평가를 대신하지 않습니다.",
+    "정답성은 핵심 문구 일치로 자동 판정해 의미가 같은 다른 표현을 오답으로 볼 수 있습니다."
+  ],
+  "question_set": "long_document_v11_questions.json",
+  "question_set_sha256": "c8257bdd5f0efbd7575cb380919d3f46c3ec8c0223dc29ca22691add431ac7ec",
+  "document_set": "docs",
+  "readiness": {
+    "database": {
+      "available": true,
+      "pgvector": false,
+      "backend": "sqlite"
+    },
+    "ollama": {
+      "available": true,
+      "version": "0.40.11",
+      "error": null
+    },
+    "models": {
+      "chat": {
+        "name": "qwen3:4b-instruct",
+        "installed": true,
+        "functional": true
+      },
+      "embedding": {
+        "name": "embeddinggemma",
+        "installed": true,
+        "functional": true,
+        "dimensions": 768
+      }
+    },
+    "retrieval": {
+      "max_cosine_distance": 0.68
+    }
+  },
+  "evaluation_environment": "isolated_sqlite_api_fresh_challenge",
+  "fixture_sha256": {
+    "FACILITY-88.txt": "4d8e2efe70663a7853dfb797130fa25b0be33971778a5ea5af7013172de533f0"
+  }
+}

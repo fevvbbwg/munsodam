@@ -1,0 +1,492 @@
+{
+  "suite": "fresh_local_challenge",
+  "generated_at": "2026-11-08T06:05:29.106128+00:00",
+  "counts": {
+    "total": 14,
+    "answerable": 12,
+    "unanswerable": 2
+  },
+  "metrics": {
+    "recall_at_5": {
+      "hits": 12,
+      "total": 12,
+      "value": 1.0
+    },
+    "answer_correctness": {
+      "hits": 12,
+      "total": 12,
+      "value": 1.0
+    },
+    "citation_recall": {
+      "hits": 12,
+      "total": 12,
+      "value": 1.0
+    },
+    "citation_precision": {
+      "hits": 12,
+      "total": 12,
+      "value": 1.0
+    },
+    "abstention_accuracy": {
+      "hits": 2,
+      "total": 2,
+      "value": 1.0
+    },
+    "median_response_ms": 1058.7
+  },
+  "results": [
+    {
+      "id": "H01",
+      "question": "방문객 맞이하는 직원은 안내 데스크에서 어떤 정보를 받아 적나요?",
+      "answerable": true,
+      "answer": "방문객을 맞이하는 직원은 1층 안내 데스크에서 방문객의 이름과 소속 회사를 기록한다. 방문객은 방문증을 잘 보이게 착용하고, 건물을 나가기 전에 안내 데스크에 반납한다.",
+      "abstained": false,
+      "retrieved_sections": [
+        "FAC-01.txt::방문객 등록",
+        "FAC-01.txt::배송물 수령",
+        "FAC-01.txt::제한 구역 출입",
+        "OPS-01.txt::예비 노트북 대여"
+      ],
+      "cited_sections": [
+        "FAC-01.txt::방문객 등록"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "FAC-01.txt::방문객 등록",
+          "distance": 0.31045022750338225
+        },
+        {
+          "section": "FAC-01.txt::제한 구역 출입",
+          "distance": 0.520110008957406
+        },
+        {
+          "section": "OPS-01.txt::예비 노트북 대여",
+          "distance": 0.6760650790605733
+        },
+        {
+          "section": "FAC-01.txt::배송물 수령",
+          "distance": 0.6772123002450294
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1052.2
+    },
+    {
+      "id": "H02",
+      "question": "방문객 혼자 보안 장비실에 들어가도 됩니까?",
+      "answerable": true,
+      "answer": "아니요, 방문객 혼자 보안 장비실에 들어가지 않습니다. 방문객이 서버실이나 보안 장비실에 들어갈 때에는 담당 직원이 입실부터 퇴실까지 동행해야 합니다.",
+      "abstained": false,
+      "retrieved_sections": [
+        "FAC-01.txt::방문객 등록",
+        "FAC-01.txt::제한 구역 출입"
+      ],
+      "cited_sections": [
+        "FAC-01.txt::제한 구역 출입"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "FAC-01.txt::제한 구역 출입",
+          "distance": 0.44175651171063235
+        },
+        {
+          "section": "FAC-01.txt::방문객 등록",
+          "distance": 0.5737801185516677
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1577.5
+    },
+    {
+      "id": "H03",
+      "question": "회의실 예약 일정은 어떤 서비스에서 취소하나요?",
+      "answerable": true,
+      "answer": "회의실 예약은 WorkCalendar에서 취소합니다.",
+      "abstained": false,
+      "retrieved_sections": [
+        "FAC-01.txt::회의실 취소"
+      ],
+      "cited_sections": [
+        "FAC-01.txt::회의실 취소"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "FAC-01.txt::회의실 취소",
+          "distance": 0.30921511106804933
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1019.1
+    },
+    {
+      "id": "H04",
+      "question": "일반 배송 물품은 어디에서 찾아가야 해요?",
+      "answerable": true,
+      "answer": "1층 안내 데스크에서 찾아가야 해요",
+      "abstained": false,
+      "retrieved_sections": [
+        "FAC-01.txt::배송물 수령"
+      ],
+      "cited_sections": [
+        "FAC-01.txt::배송물 수령"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "FAC-01.txt::배송물 수령",
+          "distance": 0.430977626695348
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1065.3
+    },
+    {
+      "id": "H05",
+      "question": "출장 택시비의 원화 상한액이 얼마인지 알려주세요.",
+      "answerable": false,
+      "answer": "등록된 문서에서 답을 확인할 수 없습니다.",
+      "abstained": true,
+      "retrieved_sections": [
+        "FIN-01.txt::주차비",
+        "FIN-01.txt::출장 식비",
+        "FIN-01.txt::택시비"
+      ],
+      "cited_sections": [],
+      "retrieval_distances": [
+        {
+          "section": "FIN-01.txt::택시비",
+          "distance": 0.5145648109168106
+        },
+        {
+          "section": "FIN-01.txt::주차비",
+          "distance": 0.5159420931962215
+        },
+        {
+          "section": "FIN-01.txt::출장 식비",
+          "distance": 0.5446236536953084
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": false,
+      "citation_precision": false,
+      "latency_ms": 1789.3
+    },
+    {
+      "id": "H06",
+      "question": "출장 중 식사비는 하루 최대 얼마까지 정산해요?",
+      "answerable": true,
+      "answer": "하루 최대 12,000원까지 정산한다.",
+      "abstained": false,
+      "retrieved_sections": [
+        "FIN-01.txt::주차비",
+        "FIN-01.txt::출장 식비",
+        "OPS-01.txt::예비 노트북 대여"
+      ],
+      "cited_sections": [
+        "FIN-01.txt::출장 식비"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "FIN-01.txt::출장 식비",
+          "distance": 0.2525974602627208
+        },
+        {
+          "section": "FIN-01.txt::주차비",
+          "distance": 0.43827961253899606
+        },
+        {
+          "section": "OPS-01.txt::예비 노트북 대여",
+          "distance": 0.6503021483057294
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1136.9
+    },
+    {
+      "id": "H07",
+      "question": "출장 주차비 청구에 영수증이 있어야 하나요?",
+      "answerable": true,
+      "answer": "출장 주차비 청구에 영수증이 있어야 합니다.",
+      "abstained": false,
+      "retrieved_sections": [
+        "FAC-01.txt::방문객 등록",
+        "FIN-01.txt::주차비",
+        "FIN-01.txt::출장 식비",
+        "FIN-01.txt::택시비"
+      ],
+      "cited_sections": [
+        "FIN-01.txt::주차비"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "FIN-01.txt::주차비",
+          "distance": 0.3750455447222314
+        },
+        {
+          "section": "FIN-01.txt::출장 식비",
+          "distance": 0.5088931652051492
+        },
+        {
+          "section": "FIN-01.txt::택시비",
+          "distance": 0.6062797237992409
+        },
+        {
+          "section": "FAC-01.txt::방문객 등록",
+          "distance": 0.6732537195930508
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1033.0
+    },
+    {
+      "id": "H08",
+      "question": "장비가 깨진 걸 발견했을 때 직접 고쳐도 되나요?",
+      "answerable": true,
+      "answer": "아니요, 장비가 파손된 것을 발견했을 때는 사용자가 직접 분해하거나 수리하지 않습니다. 30분 이내에 서비스 데스크에 알리야 합니다.",
+      "abstained": false,
+      "retrieved_sections": [
+        "OPS-01.txt::장비 파손 신고"
+      ],
+      "cited_sections": [
+        "OPS-01.txt::장비 파손 신고"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "OPS-01.txt::장비 파손 신고",
+          "distance": 0.38060412765101737
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1421.2
+    },
+    {
+      "id": "H09",
+      "question": "자리를 비우면 컴퓨터 화면 잠금이 몇 분 내 작동해야 해요?",
+      "answerable": true,
+      "answer": "자리를 비울 때 업무 화면은 2분 이내에 자동 잠금되도록 설정한다.",
+      "abstained": false,
+      "retrieved_sections": [
+        "OPS-01.txt::업무 화면 잠금"
+      ],
+      "cited_sections": [
+        "OPS-01.txt::업무 화면 잠금"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "OPS-01.txt::업무 화면 잠금",
+          "distance": 0.40578250894152856
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 937.0
+    },
+    {
+      "id": "H10",
+      "question": "예비 노트북 대여 기간과 함께 반납할 액세서리는 무엇인가요?",
+      "answerable": true,
+      "answer": "직원은 서비스 데스크에서 예비 노트북을 최대 2영업일 동안 대여할 수 있다. 반납할 때 노트북과 전원 어댑터를 함께 돌려준다. 주말까지 대여하려면 사전에 별도의 서면 승인을 받아야 한다.",
+      "abstained": false,
+      "retrieved_sections": [
+        "OPS-01.txt::예비 노트북 대여"
+      ],
+      "cited_sections": [
+        "OPS-01.txt::예비 노트북 대여"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "OPS-01.txt::예비 노트북 대여",
+          "distance": 0.3932143398538128
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 956.8
+    },
+    {
+      "id": "H11",
+      "question": "방문객이 직원용 네트워크 계정을 받아 쓸 수 있나요?",
+      "answerable": true,
+      "answer": "아니요, 방문객에게 직원용 네트워크 계정을 발급하지 않습니다.",
+      "abstained": false,
+      "retrieved_sections": [
+        "FAC-01.txt::방문객 등록",
+        "FAC-01.txt::제한 구역 출입",
+        "OPS-01.txt::예비 노트북 대여"
+      ],
+      "cited_sections": [
+        "FAC-01.txt::제한 구역 출입"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "FAC-01.txt::제한 구역 출입",
+          "distance": 0.38067883082846343
+        },
+        {
+          "section": "FAC-01.txt::방문객 등록",
+          "distance": 0.5192902766689727
+        },
+        {
+          "section": "OPS-01.txt::예비 노트북 대여",
+          "distance": 0.633217168083777
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1166.9
+    },
+    {
+      "id": "H12",
+      "question": "택시비 청구할 때 영수증 말고 어떤 내용을 제출해야 하죠?",
+      "answerable": true,
+      "answer": "디지털 영수증과 이용 사유를 제출한다.",
+      "abstained": false,
+      "retrieved_sections": [
+        "FIN-01.txt::주차비",
+        "FIN-01.txt::출장 식비",
+        "FIN-01.txt::택시비"
+      ],
+      "cited_sections": [
+        "FIN-01.txt::택시비"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "FIN-01.txt::택시비",
+          "distance": 0.3851382439011548
+        },
+        {
+          "section": "FIN-01.txt::주차비",
+          "distance": 0.6200760527674696
+        },
+        {
+          "section": "FIN-01.txt::출장 식비",
+          "distance": 0.6539133516556879
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1051.6
+    },
+    {
+      "id": "H13",
+      "question": "출장이 아닌 평일 점심값도 출장 식비 기준으로 청구할 수 있어요?",
+      "answerable": true,
+      "answer": "출장 중 식비는 하루 최대 12,000원까지 정산할 수 있다. 항목이 표시된 영수증을 제출한다. 출장과 무관한 평일 점심은 이 기준으로 정산하지 않는다.",
+      "abstained": false,
+      "retrieved_sections": [
+        "FIN-01.txt::주차비",
+        "FIN-01.txt::출장 식비"
+      ],
+      "cited_sections": [
+        "FIN-01.txt::출장 식비"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "FIN-01.txt::출장 식비",
+          "distance": 0.32714607270313933
+        },
+        {
+          "section": "FIN-01.txt::주차비",
+          "distance": 0.5719966211563782
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 891.1
+    },
+    {
+      "id": "H14",
+      "question": "택시비 상한을 넘길 때 승인받을 담당자의 이메일 주소가 뭔가요?",
+      "answerable": false,
+      "answer": "등록된 문서에서 답을 확인할 수 없습니다.",
+      "abstained": true,
+      "retrieved_sections": [
+        "FIN-01.txt::택시비"
+      ],
+      "cited_sections": [],
+      "retrieval_distances": [
+        {
+          "section": "FIN-01.txt::택시비",
+          "distance": 0.5607657140743854
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": false,
+      "citation_precision": false,
+      "latency_ms": 1750.9
+    }
+  ],
+  "limitations": [
+    "이 평가는 기존 모노랩 회귀 세트와 분리한 새 가상 시설·운영·출장 문서 도전 세트입니다.",
+    "규칙과 질문은 사람이 작성했으며 실제 회사 자료를 대표하거나 대규모 독립 블라인드 평가를 대신하지 않습니다.",
+    "정답성은 핵심 문구 일치로 자동 판정해 의미가 같은 다른 표현을 오답으로 볼 수 있습니다."
+  ],
+  "question_set": "holdout_questions.json",
+  "document_set": "challenge\\docs",
+  "readiness": {
+    "database": {
+      "available": true,
+      "pgvector": false,
+      "backend": "sqlite"
+    },
+    "ollama": {
+      "available": true,
+      "version": "0.40.11",
+      "error": null
+    },
+    "models": {
+      "chat": {
+        "name": "qwen3:4b-instruct",
+        "installed": true,
+        "functional": true
+      },
+      "embedding": {
+        "name": "embeddinggemma",
+        "installed": true,
+        "functional": true,
+        "dimensions": 768
+      }
+    },
+    "retrieval": {
+      "max_cosine_distance": 0.68
+    }
+  },
+  "evaluation_environment": "isolated_sqlite_api_fresh_challenge",
+  "fixture_sha256": {
+    "FAC-01.txt": "3a6930d5731e548a864d5c14970078cdce22d28a41378501ce38b77af3b5296c",
+    "FIN-01.txt": "a0c92d8121c376c6edf5b0e94d5d02534134e6b217bb9df6939db34ef0e98cfc",
+    "OPS-01.txt": "a4e57f9093ef56359a78f254d110b380fc0286743215a403dc52649789eee2f0"
+  }
+}

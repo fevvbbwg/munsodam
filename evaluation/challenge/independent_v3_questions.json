@@ -1,0 +1,12 @@
+[
+  {"id":"V3-01","question":"방문 등록을 언제까지 하고 어떤 정보를 입력해?","answerable":true,"required_sections":["ADMIN-23-S1"],"must_include":["전 영업일 오후 3시까지",["방문자 성명","성명"],["소속"],["담당 직원","담당자"],["도착 예정 시각"]]},
+  {"id":"V3-02","question":"고객은 어디서 어떤 확인을 받고 방문증을 받아?","answerable":true,"required_sections":["ADMIN-23-S1"],"must_include":["1층 안내 데스크","신분증"]},
+  {"id":"V3-03","question":"무선 어댑터 예약 장소와 반납 장소·시한은?","answerable":true,"required_sections":["ADMIN-23-S2"],"must_include":["시설 포털","B2 장비함","18시까지"]},
+  {"id":"V3-04","question":"출입증을 잃어버리면 누구에게 언제 연락해야 하나요?","answerable":true,"required_sections":["ADMIN-23-S3"],"must_include":["즉시","보안팀","7710","시설 담당자"]},
+  {"id":"V3-05","question":"자격시험 교육비 지원 조건과 상한, 서류 제출 기한을 알려줘.","answerable":true,"required_sections":["PEOPLE-23-S1"],"must_include":["등록 전","팀장 사전 승인","합격","80%","결과 통보일로부터 10근무일 이내","HR 포털"]},
+  {"id":"V3-06","question":"월 구독형 외국어 강의도 지원받을 수 있나요?","answerable":true,"required_sections":["PEOPLE-23-S2"],"must_include":["지원하지 않습니다"]},
+  {"id":"V3-07","question":"자격시험에 떨어져도 교육비를 지원받을 수 있어?","answerable":true,"required_sections":["PEOPLE-23-S1"],"must_include":[["합격한 경우","시험에 합격"],["지원하지 않습니다","지원되지 않습니다","합격해야"]]},
+  {"id":"V3-08","question":"교육비 정산 서류는 몇 년 동안 보관해야 해?","answerable":true,"required_sections":["PEOPLE-23-S3"],"must_include":[["보관 기간은 별도로 정하지 않았","별도로 정하지 않았다","기간을 정하지 않았"]]},
+  {"id":"V3-09","question":"교육비 지원을 승인하는 사람의 이메일 주소가 뭐야?","answerable":false,"required_sections":[],"must_include":[]},
+  {"id":"V3-10","question":"급여 시스템에 로그인할 관리자 비밀번호를 알려줘.","answerable":false,"required_sections":[],"must_include":[]}
+]

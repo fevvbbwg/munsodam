@@ -1,0 +1,10 @@
+[
+  {"id":"V8-01","question":"방문객이 로비에서 개인 사진을 찍어도 돼?","answerable":true,"required_sections":["FIELD-93-S1"],"must_include":[["할 수 있다","할 수 있습니다","찍을 수 있습니다","가능","허용"]]},
+  {"id":"V8-02","question":"방문객이 업무 구역 안에서 개인 사진을 찍어도 돼?","answerable":true,"required_sections":["FIELD-93-S1"],"must_include":[["촬영하지 않는다","촬영하지 않습니다","찍을 수 없습니다","할 수 없습니다","금지","안 됩니다"]]},
+  {"id":"V8-03","question":"방문객 개인 촬영은 어느 구역에서 가능한가요?","answerable":true,"required_sections":["FIELD-93-S1"],"must_include":["로비",["업무 구역","업무구역"],["촬영하지","불가","금지","안 됩니다"]]},
+  {"id":"V8-04","question":"업무 자료를 개인 클라우드에 올려도 돼?","answerable":true,"required_sections":["FIELD-93-S2"],"must_include":[["올리지 않는다","올리지 않습니다","올리면 안 됩니다","불가","금지"]]},
+  {"id":"V8-05","question":"업무 자료는 TeamVault에 저장할 수 있어?","answerable":true,"required_sections":["FIELD-93-S2"],"must_include":["TeamVault",["저장할 수 있다","저장할 수 있습니다","가능","허용"]]},
+  {"id":"V8-06","question":"협력사가 실험실에 들어가려면 먼저 누구 승인이 필요해?","answerable":true,"required_sections":["FIELD-93-S1"],"must_include":["관리자 승인",["전에","먼저","받아야"]]},
+  {"id":"V8-07","question":"업무 구역 사진 촬영 후 보관 기간은 몇 년이야?","answerable":false,"required_sections":["FIELD-93-S1"],"must_include":[]},
+  {"id":"V8-08","question":"로비 방문객의 개인 휴대폰 번호 알려줘.","answerable":false,"required_sections":["FIELD-93-S1"],"must_include":[]}
+]

@@ -1,0 +1,204 @@
+{
+  "suite": "fresh_local_challenge",
+  "generated_at": "2026-11-08T08:02:10.813238+00:00",
+  "counts": {
+    "total": 4,
+    "answerable": 4,
+    "unanswerable": 0
+  },
+  "metrics": {
+    "recall_at_5": {
+      "hits": 4,
+      "total": 4,
+      "value": 1.0
+    },
+    "answer_correctness": {
+      "hits": 3,
+      "total": 4,
+      "value": 0.75
+    },
+    "citation_recall": {
+      "hits": 4,
+      "total": 4,
+      "value": 1.0
+    },
+    "citation_precision": {
+      "hits": 4,
+      "total": 4,
+      "value": 1.0
+    },
+    "abstention_accuracy": {
+      "hits": 0,
+      "total": 0,
+      "value": null
+    },
+    "median_response_ms": 1524.4
+  },
+  "results": [
+    {
+      "id": "V03",
+      "question": "방문객이 연구실 워크스테이션을 직접 사용해도 되나요?",
+      "answerable": true,
+      "answer": "아니요, 방문객은 연구실 업무용 워크스테이션을 조작할 수 없습니다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "LAB-01.txt::방문객 출입"
+      ],
+      "cited_sections": [
+        "LAB-01.txt::방문객 출입"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "LAB-01.txt::방문객 출입",
+          "distance": 0.3446552184293272
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1274.6
+    },
+    {
+      "id": "V10",
+      "question": "교정 기한이 되기 전에 조정이 필요하면 담당자가 교정 조절부를 직접 바꿔도 되나요?",
+      "answerable": true,
+      "answer": "사용자는 교정 조절부를 직접 변경하지 않는다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "LAB-01.txt::장비 교정"
+      ],
+      "cited_sections": [
+        "LAB-01.txt::장비 교정"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "LAB-01.txt::장비 교정",
+          "distance": 0.47708835576064856
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": false,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 2236.4
+    },
+    {
+      "id": "V12",
+      "question": "채취한 시료를 얼리기 시작할 때까지 몇 분 이내여야 하나요?",
+      "answerable": true,
+      "answer": "30분 이내에 -20°C로 냉동해야 한다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "LAB-01.txt::시료 라벨과 보관",
+        "LAB-01.txt::저온 장비 온도 점검"
+      ],
+      "cited_sections": [
+        "LAB-01.txt::시료 라벨과 보관"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "LAB-01.txt::시료 라벨과 보관",
+          "distance": 0.42914955813331956
+        },
+        {
+          "section": "LAB-01.txt::저온 장비 온도 점검",
+          "distance": 0.5563826453574391
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1220.3
+    },
+    {
+      "id": "V15",
+      "question": "실험실 출입 기록의 정확한 보존 기간은 며칠인지 알려주세요.",
+      "answerable": true,
+      "answer": "냉장 장비의 센서 교체 비용과 실험실 접근 기록의 보존 기간은 이 규정에 정하지 않았다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "LAB-01.txt::방문객 출입",
+        "LAB-01.txt::시료 라벨과 보관",
+        "LAB-01.txt::장비 교정",
+        "LAB-01.txt::저온 장비 온도 점검",
+        "LAB-01.txt::화학물질 유출 대응"
+      ],
+      "cited_sections": [
+        "LAB-01.txt::시료 라벨과 보관"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "LAB-01.txt::시료 라벨과 보관",
+          "distance": 0.43796611619212156
+        },
+        {
+          "section": "LAB-01.txt::방문객 출입",
+          "distance": 0.5149801967937324
+        },
+        {
+          "section": "LAB-01.txt::저온 장비 온도 점검",
+          "distance": 0.5685382186383008
+        },
+        {
+          "section": "LAB-01.txt::화학물질 유출 대응",
+          "distance": 0.6323045316558242
+        },
+        {
+          "section": "LAB-01.txt::장비 교정",
+          "distance": 0.6494827093661938
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1774.2
+    }
+  ],
+  "limitations": [
+    "이 평가는 기존 모노랩 회귀 세트와 분리한 새 가상 시설·운영·출장 문서 도전 세트입니다.",
+    "규칙과 질문은 사람이 작성했으며 실제 회사 자료를 대표하거나 대규모 독립 블라인드 평가를 대신하지 않습니다.",
+    "정답성은 핵심 문구 일치로 자동 판정해 의미가 같은 다른 표현을 오답으로 볼 수 있습니다."
+  ],
+  "question_set": "release_validation_questions.json",
+  "question_set_sha256": "25a2a438328b1406dbd76642f654e5cf5da402a9ba254ff0c2635a02df470fa3",
+  "document_set": "release_validation_docs",
+  "readiness": {
+    "database": {
+      "available": true,
+      "pgvector": false,
+      "backend": "sqlite"
+    },
+    "ollama": {
+      "available": true,
+      "version": "0.40.11",
+      "error": null
+    },
+    "models": {
+      "chat": {
+        "name": "qwen3:4b-instruct",
+        "installed": true,
+        "functional": true
+      },
+      "embedding": {
+        "name": "embeddinggemma",
+        "installed": true,
+        "functional": true,
+        "dimensions": 768
+      }
+    },
+    "retrieval": {
+      "max_cosine_distance": 0.68
+    }
+  },
+  "evaluation_environment": "isolated_sqlite_api_fresh_challenge",
+  "fixture_sha256": {
+    "LAB-01.txt": "c24866fd2178c1631452f1534f8b80e2917323582230ffd85faa2677941d8a3f"
+  }
+}

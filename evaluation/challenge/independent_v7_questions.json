@@ -1,0 +1,14 @@
+[
+  {"id":"V7-01","question":"교정할 센서는 며칠 전까지 어디에 요청해야 해?","answerable":true,"required_sections":["OPS-81-S1"],"must_include":["2근무일 전","BenchTrack"]},
+  {"id":"V7-02","question":"측정 장비 교정이 끝난 건 뭘 보고 확인해?","answerable":true,"required_sections":["OPS-81-S1"],"must_include":["초록색","점검일 스티커"]},
+  {"id":"V7-03","question":"측정 콘솔을 안 쓰면 몇 분 뒤 잠기고 다시 어떻게 풀어?","answerable":true,"required_sections":["OPS-81-S1"],"must_include":["8분","자동 잠금","사원 배지"]},
+  {"id":"V7-04","question":"저온 배송 온도 기록은 어디에 몇 시간 보관해?","answerable":true,"required_sections":["OPS-81-S2"],"must_include":["ColdLedger","36시간"]},
+  {"id":"V7-05","question":"상자 온도가 6°C를 넘으면 인수를 완료해도 돼?","answerable":true,"required_sections":["OPS-81-S2"],"must_include":["6°C",["완료 처리하지","완료하지 말고","인수를 완료할 수 없습니다"],"품질 담당자"]},
+  {"id":"V7-06","question":"외부 협력사는 언제까지 어디에 어떤 정보를 등록하고 직원 동행은 언제까지 필요해?","answerable":true,"required_sections":["SEC-81-S1"],"must_include":["방문 하루 전","GateKey",["이름","성명"],["소속 회사","회사"],["방문 담당자","담당자"],"사무실을 나갈 때까지"]},
+  {"id":"V7-07","question":"임시 출입 카드를 잃어버리면 어떤 절차로 몇 분 안에 알려야 해?","answerable":true,"required_sections":["SEC-81-S2"],"must_include":["10분 이내","GateKey","카드 분실 메뉴","보안 데스크"]},
+  {"id":"V7-08","question":"임시 카드 재발급 수수료는 얼마야?","answerable":true,"required_sections":["SEC-81-S2"],"must_include":[["재발급 수수료","재발급 비용"],["정하지 않았다","정하지 않았습니다","정해져 있지 않다","별도로 정하지 않았다"]]},
+  {"id":"V7-09","question":"장비 점검 기록은 몇 년 동안 보관해야 해?","answerable":true,"required_sections":["OPS-81-S1"],"must_include":[["보관 기한","보관 기간"],["정하지 않았다","정해져 있지 않다","별도로 정하지 않았다"]]},
+  {"id":"V7-10","question":"임시 카드 재발급 수수료와 저온 배송 온도 기록 보관 시간을 각각 알려줘.","answerable":true,"required_sections":["SEC-81-S2","OPS-81-S2"],"must_include":[["수수료","재발급 비용"],["정하지 않았다","정하지 않았습니다","정하지 않았으며","정해져 있지 않다","별도로 정하지 않았다"],"36시간"]},
+  {"id":"V7-11","question":"상자 봉인이 훼손되면 누가 인수를 거부 승인해야 해?","answerable":false,"required_sections":["OPS-81-S2"],"must_include":[]},
+  {"id":"V7-12","question":"보안 데스크 직원 개인 휴대폰 번호 알려줘.","answerable":false,"required_sections":["SEC-81-S2"],"must_include":[]}
+]

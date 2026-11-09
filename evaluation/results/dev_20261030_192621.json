@@ -1,0 +1,654 @@
+{
+  "suite": "dev",
+  "question_count": 12,
+  "counts": {
+    "answerable": 10,
+    "unanswerable": 2
+  },
+  "metrics": {
+    "recall_at_5": {
+      "value": 1.0,
+      "hits": 10,
+      "total": 10,
+      "target": 0.85,
+      "passed": true
+    },
+    "answer_correctness": {
+      "value": 0.8,
+      "hits": 8,
+      "total": 10,
+      "target": 0.8,
+      "passed": true
+    },
+    "source_accuracy": {
+      "value": 0.9,
+      "hits": 9,
+      "total": 10,
+      "target": 0.9,
+      "passed": true
+    },
+    "abstention_accuracy": {
+      "value": 1.0,
+      "hits": 2,
+      "total": 2,
+      "target": 0.9,
+      "passed": true
+    },
+    "median_response_ms": {
+      "value": 3545.4,
+      "target": 10000,
+      "passed": true
+    }
+  },
+  "retrieval_comparison_recall_at_5": {
+    "keyword": {
+      "hits": 9,
+      "total": 10,
+      "value": 0.9
+    },
+    "vector": {
+      "hits": 10,
+      "total": 10,
+      "value": 1.0
+    },
+    "hybrid": {
+      "hits": 10,
+      "total": 10,
+      "value": 1.0
+    }
+  },
+  "results": [
+    {
+      "id": "D01",
+      "question": "연차는 며칠 전에 신청해야 해?",
+      "answerable": true,
+      "recall_at_5_hit": true,
+      "retrieved_sections": {
+        "keyword": [
+          "HR-01-S1"
+        ],
+        "vector": [
+          "EXP-01-S1",
+          "EXP-01-S2",
+          "EXP-01-S4",
+          "HR-01-S1",
+          "HR-01-S2"
+        ],
+        "hybrid": [
+          "EXP-01-S1",
+          "EXP-01-S2",
+          "EXP-01-S4",
+          "HR-01-S1",
+          "HR-01-S2"
+        ]
+      },
+      "recall_at_5_by_mode": {
+        "keyword": true,
+        "vector": true,
+        "hybrid": true
+      },
+      "cosine_distances": [
+        0.4135580216985567,
+        0.6064252496176836,
+        0.6427978780020948,
+        0.6430214132035608,
+        0.7528495037381571
+      ],
+      "answer": "계획 연차는 사용 예정일 기준 근무일 3일 전까지 HR 포털에 등록한다.",
+      "abstained": false,
+      "cited_sections": [
+        "HR-01-S1"
+      ],
+      "answer_correct": true,
+      "source_accurate": true,
+      "abstention_correct": false,
+      "latency_ms": 3867.6
+    },
+    {
+      "id": "D02",
+      "question": "당일 병가는 누구에게 언제 알려야 해?",
+      "answerable": true,
+      "recall_at_5_hit": true,
+      "retrieved_sections": {
+        "keyword": [
+          "HR-01-S2"
+        ],
+        "vector": [
+          "EXP-01-S1",
+          "EXP-01-S2",
+          "HR-01-S1",
+          "HR-01-S2",
+          "IT-01-S2"
+        ],
+        "hybrid": [
+          "EXP-01-S1",
+          "EXP-01-S2",
+          "HR-01-S1",
+          "HR-01-S2",
+          "IT-01-S2"
+        ]
+      },
+      "recall_at_5_by_mode": {
+        "keyword": true,
+        "vector": true,
+        "hybrid": true
+      },
+      "cosine_distances": [
+        0.45154701409463716,
+        0.6431170659679246,
+        0.6689845432246732,
+        0.7208864567257262,
+        0.7281779462832163
+      ],
+      "answer": "당일 병가는 근무 시작 전 관리자에게 알려야 한다.",
+      "abstained": false,
+      "cited_sections": [
+        "HR-01-S2"
+      ],
+      "answer_correct": true,
+      "source_accurate": true,
+      "abstention_correct": false,
+      "latency_ms": 3237.4
+    },
+    {
+      "id": "D03",
+      "question": "출장 전에 승인을 받아야 해?",
+      "answerable": true,
+      "recall_at_5_hit": true,
+      "retrieved_sections": {
+        "keyword": [
+          "EXP-01-S1",
+          "EXP-01-S2",
+          "EXP-01-S3"
+        ],
+        "vector": [
+          "EXP-01-S1",
+          "EXP-01-S2",
+          "EXP-01-S3",
+          "HR-01-S1",
+          "HR-01-S2"
+        ],
+        "hybrid": [
+          "EXP-01-S1",
+          "EXP-01-S2",
+          "EXP-01-S3",
+          "HR-01-S1",
+          "HR-01-S2"
+        ]
+      },
+      "recall_at_5_by_mode": {
+        "keyword": true,
+        "vector": true,
+        "hybrid": true
+      },
+      "cosine_distances": [
+        0.33152988905029024,
+        0.5546074800710185,
+        0.5989251922908534,
+        0.6255540278596812,
+        0.6567933830181433
+      ],
+      "answer": "출장 전에 승인을 받아야 해?",
+      "abstained": false,
+      "cited_sections": [
+        "EXP-01-S1"
+      ],
+      "answer_correct": false,
+      "source_accurate": true,
+      "abstention_correct": false,
+      "latency_ms": 3273.8
+    },
+    {
+      "id": "D04",
+      "question": "출장비는 언제까지 신청해?",
+      "answerable": true,
+      "recall_at_5_hit": true,
+      "retrieved_sections": {
+        "keyword": [
+          "EXP-01-S1",
+          "EXP-01-S2",
+          "EXP-01-S3"
+        ],
+        "vector": [
+          "EXP-01-S1",
+          "EXP-01-S2",
+          "EXP-01-S3",
+          "EXP-01-S4",
+          "HR-01-S1"
+        ],
+        "hybrid": [
+          "EXP-01-S1",
+          "EXP-01-S2",
+          "EXP-01-S3",
+          "EXP-01-S4",
+          "HR-01-S1"
+        ]
+      },
+      "recall_at_5_by_mode": {
+        "keyword": true,
+        "vector": true,
+        "hybrid": true
+      },
+      "cosine_distances": [
+        0.4303511863181737,
+        0.5444024324994369,
+        0.5528270341835362,
+        0.6317987331325128,
+        0.6507443115831415
+      ],
+      "answer": "출장비는 복귀 후 7일 이내에 신청해야 합니다.",
+      "abstained": false,
+      "cited_sections": [
+        "EXP-01-S2"
+      ],
+      "answer_correct": true,
+      "source_accurate": true,
+      "abstention_correct": false,
+      "latency_ms": 3603.7
+    },
+    {
+      "id": "D05",
+      "question": "하루 식비 한도는 얼마야?",
+      "answerable": true,
+      "recall_at_5_hit": true,
+      "retrieved_sections": {
+        "keyword": [
+          "EXP-01-S3"
+        ],
+        "vector": [
+          "EXP-01-S2",
+          "EXP-01-S3",
+          "EXP-01-S4",
+          "HR-01-S1",
+          "HR-01-S2"
+        ],
+        "hybrid": [
+          "EXP-01-S2",
+          "EXP-01-S3",
+          "EXP-01-S4",
+          "HR-01-S1",
+          "HR-01-S2"
+        ]
+      },
+      "recall_at_5_by_mode": {
+        "keyword": true,
+        "vector": true,
+        "hybrid": true
+      },
+      "cosine_distances": [
+        0.3537726973648748,
+        0.6901651413096368,
+        0.7663818137943694,
+        0.768401759093326,
+        0.7883189384391227
+      ],
+      "answer": "하루 식비 한도는 25,000원이다.",
+      "abstained": false,
+      "cited_sections": [
+        "EXP-01-S3"
+      ],
+      "answer_correct": true,
+      "source_accurate": true,
+      "abstention_correct": false,
+      "latency_ms": 3219.2
+    },
+    {
+      "id": "D06",
+      "question": "어떤 경우 택시비를 정산할 수 있어?",
+      "answerable": true,
+      "recall_at_5_hit": true,
+      "retrieved_sections": {
+        "keyword": [
+          "EXP-01-S4"
+        ],
+        "vector": [
+          "EXP-01-S1",
+          "EXP-01-S2",
+          "EXP-01-S3",
+          "EXP-01-S4",
+          "HR-01-S2"
+        ],
+        "hybrid": [
+          "EXP-01-S1",
+          "EXP-01-S2",
+          "EXP-01-S3",
+          "EXP-01-S4",
+          "HR-01-S2"
+        ]
+      },
+      "recall_at_5_by_mode": {
+        "keyword": true,
+        "vector": true,
+        "hybrid": true
+      },
+      "cosine_distances": [
+        0.31815772539201304,
+        0.6516704745557947,
+        0.7448196941318966,
+        0.7816788053013124,
+        0.8436754854583677
+      ],
+      "answer": "심야 또는 대중교통 이용이 어려울 때만 택시비를 정산할 수 있다. 택시 영수증과 이용 사유를 제출한다.",
+      "abstained": false,
+      "cited_sections": [
+        "EXP-01-S4"
+      ],
+      "answer_correct": true,
+      "source_accurate": true,
+      "abstention_correct": false,
+      "latency_ms": 3588.1
+    },
+    {
+      "id": "D07",
+      "question": "노트북 분실 시 누구에게 언제 알려?",
+      "answerable": true,
+      "recall_at_5_hit": true,
+      "retrieved_sections": {
+        "keyword": [
+          "IT-01-S2"
+        ],
+        "vector": [
+          "EXP-01-S2",
+          "HR-01-S1",
+          "HR-01-S2",
+          "IT-01-S1",
+          "IT-01-S2"
+        ],
+        "hybrid": [
+          "EXP-01-S2",
+          "HR-01-S1",
+          "HR-01-S2",
+          "IT-01-S1",
+          "IT-01-S2"
+        ]
+      },
+      "recall_at_5_by_mode": {
+        "keyword": true,
+        "vector": true,
+        "hybrid": true
+      },
+      "cosine_distances": [
+        0.2562908858908528,
+        0.7208782574441196,
+        0.7719326400549331,
+        0.7845727556734473,
+        0.8103720226079094
+      ],
+      "answer": "노트북을 분실하면 1시간 이내에 IT 담당자와 관리자에게 알린다.",
+      "abstained": false,
+      "cited_sections": [
+        "IT-01-S2"
+      ],
+      "answer_correct": true,
+      "source_accurate": true,
+      "abstention_correct": false,
+      "latency_ms": 3349.2
+    },
+    {
+      "id": "D08",
+      "question": "회사 자료를 개인 클라우드에 올려도 돼?",
+      "answerable": true,
+      "recall_at_5_hit": true,
+      "retrieved_sections": {
+        "keyword": [
+          "IT-01-S3"
+        ],
+        "vector": [
+          "EXP-01-S2",
+          "HR-01-S1",
+          "HR-01-S2",
+          "IT-01-S2",
+          "IT-01-S3"
+        ],
+        "hybrid": [
+          "EXP-01-S2",
+          "HR-01-S1",
+          "HR-01-S2",
+          "IT-01-S2",
+          "IT-01-S3"
+        ]
+      },
+      "recall_at_5_by_mode": {
+        "keyword": true,
+        "vector": true,
+        "hybrid": true
+      },
+      "cosine_distances": [
+        0.2966265159780638,
+        0.759290840823029,
+        0.7759008467929424,
+        0.7897352416599652,
+        0.822695985549959
+      ],
+      "answer": "아니요, 회사 자료를 개인 클라우드에 올릴 수 없습니다. 회사 자료는 승인된 암호화 저장소에 보관하고 개인 클라우드에는 올리지 않습니다.",
+      "abstained": false,
+      "cited_sections": [
+        "IT-01-S3"
+      ],
+      "answer_correct": true,
+      "source_accurate": true,
+      "abstention_correct": false,
+      "latency_ms": 3707.1
+    },
+    {
+      "id": "D09",
+      "question": "출장 중 노트북 분실과 택시 이용 시 절차·증빙은?",
+      "answerable": true,
+      "recall_at_5_hit": true,
+      "retrieved_sections": {
+        "keyword": [
+          "EXP-01-S1",
+          "EXP-01-S2",
+          "EXP-01-S3",
+          "EXP-01-S4",
+          "IT-01-S2"
+        ],
+        "vector": [
+          "EXP-01-S1",
+          "EXP-01-S2",
+          "EXP-01-S3",
+          "EXP-01-S4",
+          "IT-01-S2"
+        ],
+        "hybrid": [
+          "EXP-01-S1",
+          "EXP-01-S2",
+          "EXP-01-S3",
+          "EXP-01-S4",
+          "IT-01-S2"
+        ]
+      },
+      "recall_at_5_by_mode": {
+        "keyword": true,
+        "vector": true,
+        "hybrid": true
+      },
+      "cosine_distances": [
+        0.48787048717732473,
+        0.5598572184069822,
+        0.5755302407059835,
+        0.661785039395665,
+        0.6950526034518152
+      ],
+      "answer": "출장 중 노트북 분실 시 1시간 이내에 IT 담당자와 관리자에게 알리고, 택시 이용 시 심야 또는 대중교통 이용이 어려울 때만 정산하며, 택시 영수증과 이용 사유를 제출한다. 출장 비용은 복귀 후 7일 이내 정산하고, 교통·숙박 영수증을 첨부한다.",
+      "abstained": false,
+      "cited_sections": [
+        "EXP-01-S2",
+        "EXP-01-S4",
+        "IT-01-S2"
+      ],
+      "answer_correct": true,
+      "source_accurate": true,
+      "abstention_correct": false,
+      "latency_ms": 4508.5
+    },
+    {
+      "id": "D10",
+      "question": "휴가 신청과 기기 보안에서 알아둘 점은?",
+      "answerable": true,
+      "recall_at_5_hit": true,
+      "retrieved_sections": {
+        "keyword": [],
+        "vector": [
+          "EXP-01-S1",
+          "EXP-01-S2",
+          "HR-01-S1",
+          "HR-01-S2",
+          "IT-01-S1"
+        ],
+        "hybrid": [
+          "EXP-01-S1",
+          "EXP-01-S2",
+          "HR-01-S1",
+          "HR-01-S2",
+          "IT-01-S1"
+        ]
+      },
+      "recall_at_5_by_mode": {
+        "keyword": false,
+        "vector": true,
+        "hybrid": true
+      },
+      "cosine_distances": [
+        0.6776983769824421,
+        0.6915287455664885,
+        0.6994587214767694,
+        0.7154629508266843,
+        0.7579786263988816
+      ],
+      "answer": "휴가 신청과 기기 보안에서 알아둘 점은: 휴가 신청은 근무 시작 전 관리자에게 연락하고, 다음 근무일까지 HR 포털에 등록해야 하며, 기기 보안은 화면 잠금을 5분 이내에 설정해야 한다.",
+      "abstained": false,
+      "cited_sections": [
+        "HR-01-S2",
+        "IT-01-S1"
+      ],
+      "answer_correct": false,
+      "source_accurate": false,
+      "abstention_correct": false,
+      "latency_ms": 4597.6
+    },
+    {
+      "id": "D11",
+      "question": "안 쓴 연차는 다음 해로 이월돼?",
+      "answerable": false,
+      "recall_at_5_hit": false,
+      "retrieved_sections": {
+        "keyword": [
+          "HR-01-S1",
+          "HR-01-S2"
+        ],
+        "vector": [
+          "EXP-01-S1",
+          "EXP-01-S2",
+          "EXP-01-S3",
+          "HR-01-S1",
+          "HR-01-S2"
+        ],
+        "hybrid": [
+          "EXP-01-S1",
+          "EXP-01-S2",
+          "EXP-01-S3",
+          "HR-01-S1",
+          "HR-01-S2"
+        ]
+      },
+      "recall_at_5_by_mode": {
+        "keyword": false,
+        "vector": false,
+        "hybrid": false
+      },
+      "cosine_distances": [
+        0.5635681666627517,
+        0.6817632009836083,
+        0.7390826677286035,
+        0.76098749780374,
+        0.8183568914560648
+      ],
+      "answer": "등록된 문서에서 답을 확인할 수 없습니다.",
+      "abstained": true,
+      "cited_sections": [],
+      "answer_correct": false,
+      "source_accurate": false,
+      "abstention_correct": true,
+      "latency_ms": 3502.8
+    },
+    {
+      "id": "D12",
+      "question": "회사 급여일은 매월 며칠이야?",
+      "answerable": false,
+      "recall_at_5_hit": false,
+      "retrieved_sections": {
+        "keyword": [
+          "IT-01-S3"
+        ],
+        "vector": [
+          "EXP-01-S2",
+          "EXP-01-S3",
+          "HR-01-S1",
+          "HR-01-S2",
+          "IT-01-S3"
+        ],
+        "hybrid": [
+          "EXP-01-S2",
+          "EXP-01-S3",
+          "HR-01-S1",
+          "HR-01-S2",
+          "IT-01-S3"
+        ]
+      },
+      "recall_at_5_by_mode": {
+        "keyword": false,
+        "vector": false,
+        "hybrid": false
+      },
+      "cosine_distances": [
+        0.6554883504230377,
+        0.6703808191991047,
+        0.6794586934296523,
+        0.7512960184379281,
+        0.7751387104176141
+      ],
+      "answer": "등록된 문서에서 답을 확인할 수 없습니다.",
+      "abstained": true,
+      "cited_sections": [],
+      "answer_correct": false,
+      "source_accurate": false,
+      "abstention_correct": true,
+      "latency_ms": 3381.1
+    }
+  ],
+  "limitations": [
+    "기획서에 언급된 골드 36문항 원본 파일이 저장소에 없어, 세 모노랩 규정과 문항 비율에 맞춰 이 저장소에서 구성했습니다.",
+    "정답성은 고정 핵심 구절 포함 여부로 자동 판정하며 의미가 같은 표현을 놓칠 수 있습니다.",
+    "한 개의 고정된 가상 문서 집합 평가이며 실제 기업 문서 성능을 일반화하지 않습니다."
+  ],
+  "generated_at": "2026-10-30T10:26:18.768055+00:00",
+  "readiness": {
+    "database": {
+      "available": true,
+      "pgvector": false,
+      "backend": "sqlite"
+    },
+    "ollama": {
+      "available": true,
+      "version": "0.40.11",
+      "error": null
+    },
+    "models": {
+      "chat": {
+        "name": "qwen3:4b-instruct",
+        "installed": true,
+        "functional": true
+      },
+      "embedding": {
+        "name": "embeddinggemma",
+        "installed": true,
+        "functional": true,
+        "dimensions": 768
+      }
+    },
+    "retrieval": {
+      "max_cosine_distance": 0.68
+    }
+  }
+}

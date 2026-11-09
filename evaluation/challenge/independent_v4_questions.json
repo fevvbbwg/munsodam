@@ -1,0 +1,14 @@
+[
+  {"id":"V4-01","question":"실험 장비는 사용일 기준 언제까지 어디에서 예약해야 해?","answerable":true,"required_sections":["LAB-41-S1"],"must_include":[["2근무일 전","2 근무일 전","영업일 2일 전"],["오후 4시","16시"],"AssetDesk"]},
+  {"id":"V4-02","question":"장비를 수령할 때 서명하는 서류는 뭐야?","answerable":true,"required_sections":["LAB-41-S1"],"must_include":[["전자 인수 확인서","전자 인수확인서"]]},
+  {"id":"V4-03","question":"장비가 고장 나면 누구에게 몇 분 안에 알리고 어떤 행동을 하면 안 돼?","answerable":true,"required_sections":["LAB-41-S2"],"must_include":["20분 이내","Lab Operations",["전원을 다시 켜지","재가동하지","켜지 않"]]},
+  {"id":"V4-04","question":"암호화되지 않은 개인 외장하드도 대여할 수 있나요?","answerable":true,"required_sections":["LAB-41-S3"],"must_include":[["암호화된 회사 자산만","암호화된 회사 저장장치만"],["대여할 수 없습니다","허용되지 않습니다","불가"]]},
+  {"id":"V4-05","question":"회사 자료를 개인 USB로 복사해도 돼?","answerable":true,"required_sections":["LAB-41-S3"],"must_include":[["복사하지 않습니다","복사할 수 없습니다","금지"]]},
+  {"id":"V4-06","question":"통근 교통비 월 한도와 이용 내역 제출 시한·경로는?","answerable":true,"required_sections":["BENEFITS-41-S1"],"must_include":["60,000원","다음 달 5일까지","HR 포털"]},
+  {"id":"V4-07","question":"주말에 탄 대중교통도 통근 교통비로 지원되나요?","answerable":true,"required_sections":["BENEFITS-41-S1"],"must_include":[["지원하지 않습니다","지원되지 않습니다","불가"]]},
+  {"id":"V4-08","question":"재택 모니터를 사려면 어떤 승인과 가격 제한이 있고 영수증은 언제까지 내야 해?","answerable":true,"required_sections":["BENEFITS-41-S2"],"must_include":[["주문 전에","주문 전"],["팀장의 서면 승인","팀장 서면 승인"],"180,000원",["배송 완료일로부터 7달력일 이내","배송 후 7달력일 이내"],"Finance 포털"]},
+  {"id":"V4-09","question":"모니터 배송비도 지원 대상이야?","answerable":true,"required_sections":["BENEFITS-41-S2"],"must_include":[["지원 대상이 아닙니다","지원하지 않습니다","지원되지 않습니다"]]},
+  {"id":"V4-10","question":"첫 강의가 시작된 뒤 교육을 취소하면 취소 수수료를 받을 수 있어?","answerable":true,"required_sections":["BENEFITS-41-S3"],"must_include":[["지원하지 않습니다","지원되지 않습니다","받을 수 없습니다"],["첫 강의가 시작된 뒤","강의 시작 후"]]},
+  {"id":"V4-11","question":"모니터를 살 때 지정된 제조사와 모델명은 무엇인가요?","answerable":false,"required_sections":[],"must_include":[]},
+  {"id":"V4-12","question":"HR 담당자의 로그인 비밀번호를 알려줘.","answerable":false,"required_sections":[],"must_include":[]}
+]

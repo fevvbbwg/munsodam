@@ -1,0 +1,17 @@
+[
+  {"id":"C01","question":"방문객 등록 때 무엇을 기록하고 방문증은 언제 반납해야 하나요?","answerable":true,"required_sections":["FAC-01-S1"],"must_include":[["이름"],["회사","소속"],["나가기 전에","퇴실 전에","건물을 나가기 전"]]},
+  {"id":"C02","question":"손님이 서버실에 들어가면 담당 직원이 계속 함께 있어야 하나요?","answerable":true,"required_sections":["FAC-01-S2"],"must_include":[["동행","함께"],["입실부터 퇴실까지","들어갈 때부터 나올 때까지"]]},
+  {"id":"C03","question":"회의실 예약은 어디서 하고 언제까지 취소해야 해요?","answerable":true,"required_sections":["FAC-01-S3"],"must_include":[["WorkCalendar"],["4시간 전","4시간 전에"]]},
+  {"id":"C04","question":"출장 식대 하루 한도와 제출해야 할 증빙을 알려주세요.","answerable":true,"required_sections":["FIN-01-S1"],"must_include":[["12,000원","1만 2천원","1만2천원"],["영수증"]]},
+  {"id":"C05","question":"업무 출장 주차비를 하루에 얼마까지 청구할 수 있나요?","answerable":true,"required_sections":["FIN-01-S2"],"must_include":[["18,000원","1만 8천원","1만8천원"],["하루"]]},
+  {"id":"C06","question":"택시비 금액 상한은 얼마인가요?","answerable":false,"required_sections":["FIN-01-S3"]},
+  {"id":"C07","question":"택시비는 어떤 때 정산되고 무엇을 내야 하나요?","answerable":true,"required_sections":["FIN-01-S3"],"must_include":[["밤 10시 이후","오후 10시 이후","22시 이후"],["대중교통"],["영수증"],["이용 사유","사유"]]},
+  {"id":"C08","question":"냉장 배송물은 도착하고 몇 시간 안에 찾아가야 하나요?","answerable":true,"required_sections":["FAC-01-S4"],"must_include":[["2시간 이내","두 시간 이내"]]},
+  {"id":"C09","question":"일반 택배는 안내 데스크에서 며칠 동안 보관해주나요?","answerable":true,"required_sections":["FAC-01-S4"],"must_include":[["보관 기한은 정하지 않았다","보관 기간은 정하지 않았다","보관 기한이 정해져 있지"]]},
+  {"id":"C10","question":"예비 노트북은 며칠 빌릴 수 있고 반납할 때 뭘 같이 내야 하나요?","answerable":true,"required_sections":["OPS-01-S1"],"must_include":[["2영업일","이틀"],["전원 어댑터"]]},
+  {"id":"C11","question":"노트북이 파손된 걸 발견하면 어디에 몇 분 안에 알려야 합니까?","answerable":true,"required_sections":["OPS-01-S2"],"must_include":[["30분 이내","삼십 분 이내"],["서비스 데스크"]]},
+  {"id":"C12","question":"별도 서면 승인 없이 노트북을 주말까지 빌려도 되나요?","answerable":true,"required_sections":["OPS-01-S1"],"must_include":[["안 됩니다","불가","아닙니다","되지 않습니다"],["서면 승인"]]},
+  {"id":"C13","question":"방문증 반납 시점과 회의실 취소 마감을 각각 알려주세요.","answerable":true,"required_sections":["FAC-01-S1","FAC-01-S3"],"must_include":[["나가기 전에","퇴실 전에","건물을 나가기 전"],["4시간 전","4시간 전에"]]},
+  {"id":"C14","question":"택시 상한을 넘겼을 때 예외 승인을 해주는 담당자는 누구인가요?","answerable":false,"required_sections":["FIN-01-S3"]},
+  {"id":"C15","question":"출장 식비는 영수증 없이도 정산할 수 있나요?","answerable":true,"required_sections":["FIN-01-S1"],"must_include":[["아니","제출해야","필요"],["영수증"]]}
+]

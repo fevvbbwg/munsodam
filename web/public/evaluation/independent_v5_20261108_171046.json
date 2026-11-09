@@ -1,0 +1,404 @@
+{
+  "suite": "fresh_local_challenge",
+  "generated_at": "2026-11-08T08:10:46.013051+00:00",
+  "counts": {
+    "total": 11,
+    "answerable": 8,
+    "unanswerable": 3
+  },
+  "metrics": {
+    "recall_at_5": {
+      "hits": 8,
+      "total": 8,
+      "value": 1.0
+    },
+    "answer_correctness": {
+      "hits": 7,
+      "total": 8,
+      "value": 0.875
+    },
+    "citation_recall": {
+      "hits": 8,
+      "total": 8,
+      "value": 1.0
+    },
+    "citation_precision": {
+      "hits": 8,
+      "total": 8,
+      "value": 1.0
+    },
+    "abstention_accuracy": {
+      "hits": 3,
+      "total": 3,
+      "value": 1.0
+    },
+    "median_response_ms": 1597.7
+  },
+  "results": [
+    {
+      "id": "V5-01",
+      "question": "국내 출장 요청은 출발 며칠 전에 어디에 등록하고 누가 승인해야 하나요?",
+      "answerable": true,
+      "answer": "국내 출장자는 출발일 기준 3근무일 전까지 RouteMate에서 출장 요청을 등록하고 직속 관리자의 승인을 받아야 한다. 승인 후 일정이 바뀌면 출발 전에 RouteMate에서 변경 요청을 다시 제출한다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "TRAVEL-51.txt::국내 출장 신청과 변경",
+        "TRAVEL-51.txt::출장 식비와 증빙"
+      ],
+      "cited_sections": [
+        "TRAVEL-51.txt::국내 출장 신청과 변경"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "TRAVEL-51.txt::국내 출장 신청과 변경",
+          "distance": 0.29867080668879753
+        },
+        {
+          "section": "TRAVEL-51.txt::출장 식비와 증빙",
+          "distance": 0.6218376026388563
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 2465.9
+    },
+    {
+      "id": "V5-02",
+      "question": "승인된 출장 일정이 바뀌면 무엇을 언제 다시 제출하나요?",
+      "answerable": true,
+      "answer": "승인 후 일정이 바뀌면 출발 전에 RouteMate에서 변경 요청을 다시 제출한다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "TRAVEL-51.txt::국내 출장 신청과 변경",
+        "TRAVEL-51.txt::출장 식비와 증빙"
+      ],
+      "cited_sections": [
+        "TRAVEL-51.txt::국내 출장 신청과 변경"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "TRAVEL-51.txt::국내 출장 신청과 변경",
+          "distance": 0.3850545915495135
+        },
+        {
+          "section": "TRAVEL-51.txt::출장 식비와 증빙",
+          "distance": 0.5389728010241795
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 2221.7
+    },
+    {
+      "id": "V5-03",
+      "question": "출장 식비는 하루 얼마까지 정산할 수 있어요?",
+      "answerable": true,
+      "answer": "하루 최대 22,000원까지 정산할 수 있습니다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "TRAVEL-51.txt::국내 출장 신청과 변경",
+        "TRAVEL-51.txt::출장 식비와 증빙"
+      ],
+      "cited_sections": [
+        "TRAVEL-51.txt::출장 식비와 증빙"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "TRAVEL-51.txt::출장 식비와 증빙",
+          "distance": 0.2606968707745473
+        },
+        {
+          "section": "TRAVEL-51.txt::국내 출장 신청과 변경",
+          "distance": 0.6115804967919447
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1161.7
+    },
+    {
+      "id": "V5-04",
+      "question": "출장 식비 영수증은 복귀 후 언제까지 어느 시스템에 제출하나요?",
+      "answerable": true,
+      "answer": "복귀일 다음 날부터 5근무일 이내에 MoneyFlow에 제출한다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "DEVICE-51.txt::대여 장비 반납",
+        "TRAVEL-51.txt::국내 출장 신청과 변경",
+        "TRAVEL-51.txt::출장 식비와 증빙"
+      ],
+      "cited_sections": [
+        "TRAVEL-51.txt::출장 식비와 증빙"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "TRAVEL-51.txt::출장 식비와 증빙",
+          "distance": 0.3393390070315323
+        },
+        {
+          "section": "TRAVEL-51.txt::국내 출장 신청과 변경",
+          "distance": 0.6333922491521748
+        },
+        {
+          "section": "DEVICE-51.txt::대여 장비 반납",
+          "distance": 0.6504445449141272
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1151.4
+    },
+    {
+      "id": "V5-05",
+      "question": "개인 약속에서 먹은 식사도 출장 식비로 정산할 수 있나요?",
+      "answerable": true,
+      "answer": "아니요, 개인 약속에서 먹은 식사 비용은 출장 식비로 정산하지 않습니다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "TRAVEL-51.txt::국내 출장 신청과 변경",
+        "TRAVEL-51.txt::출장 식비와 증빙"
+      ],
+      "cited_sections": [
+        "TRAVEL-51.txt::출장 식비와 증빙"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "TRAVEL-51.txt::출장 식비와 증빙",
+          "distance": 0.3280193118694773
+        },
+        {
+          "section": "TRAVEL-51.txt::국내 출장 신청과 변경",
+          "distance": 0.6627842965820283
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1194.6
+    },
+    {
+      "id": "V5-06",
+      "question": "회사 노트북을 잃어버렸을 때 몇 분 안에 누구에게 어디로 신고하고, 신고에 무엇을 적어야 하나요?",
+      "answerable": true,
+      "answer": "회사 노트북을 잃어버렸을 때 30분 이내에 HelpHub 보안 사고 양식으로 IT 보안팀에 신고해야 하며, 신고 내용에 기기 일련번호와 마지막으로 확인한 장소를 적어야 합니다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "DEVICE-51.txt::대여 장비 반납",
+        "DEVICE-51.txt::회사 노트북 분실"
+      ],
+      "cited_sections": [
+        "DEVICE-51.txt::회사 노트북 분실"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "DEVICE-51.txt::회사 노트북 분실",
+          "distance": 0.24358880891416423
+        },
+        {
+          "section": "DEVICE-51.txt::대여 장비 반납",
+          "distance": 0.45762898007179353
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1604.9
+    },
+    {
+      "id": "V5-07",
+      "question": "분실한 노트북을 찾으면 보안팀 답변을 받기 전에 원격 초기화해도 되나요?",
+      "answerable": true,
+      "answer": "아니요, 분실한 노트북을 찾더라도 보안팀의 답변을 받기 전에는 원격 초기화를 실행할 수 없습니다. 기기 일련번호와 마지막으로 확인한 장소를 신고 내용에 적어야 하며, 원격 초기화는 보안팀의 회신 전에는 수행되지 않습니다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "DEVICE-51.txt::대여 장비 반납",
+        "DEVICE-51.txt::회사 노트북 분실"
+      ],
+      "cited_sections": [
+        "DEVICE-51.txt::회사 노트북 분실"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "DEVICE-51.txt::회사 노트북 분실",
+          "distance": 0.3384359168333525
+        },
+        {
+          "section": "DEVICE-51.txt::대여 장비 반납",
+          "distance": 0.5578669293197843
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": false,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1799.6
+    },
+    {
+      "id": "V5-08",
+      "question": "수리 중 빌린 노트북은 언제 어디에 반납하고 어떤 확인을 해야 하나요?",
+      "answerable": true,
+      "answer": "수리 중 빌린 노트북은 본인 장비를 돌려받은 날부터 2근무일 이내에 IT 창구에 반납하고, 전자 장비 인수증에 확인 서명을 남겨야 합니다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "DEVICE-51.txt::대여 장비 반납",
+        "DEVICE-51.txt::회사 노트북 분실"
+      ],
+      "cited_sections": [
+        "DEVICE-51.txt::대여 장비 반납"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "DEVICE-51.txt::대여 장비 반납",
+          "distance": 0.28409173958051737
+        },
+        {
+          "section": "DEVICE-51.txt::회사 노트북 분실",
+          "distance": 0.5124626424820813
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1610.1
+    },
+    {
+      "id": "V5-09",
+      "question": "분실 노트북 교체 가격은 얼마인가요?",
+      "answerable": false,
+      "answer": "등록된 문서에서 답을 확인할 수 없습니다.",
+      "abstained": true,
+      "abstention_reason": "질문한 수치나 단위를 문서 근거로 확인하지 못했습니다.",
+      "retrieved_sections": [
+        "DEVICE-51.txt::대여 장비 반납",
+        "DEVICE-51.txt::회사 노트북 분실"
+      ],
+      "cited_sections": [],
+      "retrieval_distances": [
+        {
+          "section": "DEVICE-51.txt::대여 장비 반납",
+          "distance": 0.40562285495600836
+        },
+        {
+          "section": "DEVICE-51.txt::회사 노트북 분실",
+          "distance": 0.5173205848532896
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": false,
+      "citation_precision": false,
+      "latency_ms": 1519.6
+    },
+    {
+      "id": "V5-10",
+      "question": "출장 식비의 월간 한도는 얼마인가요?",
+      "answerable": false,
+      "answer": "등록된 문서에서 답을 확인할 수 없습니다.",
+      "abstained": true,
+      "abstention_reason": "검색 근거가 질문을 충분히 뒷받침하지 않아 응답을 보류했습니다.",
+      "retrieved_sections": [
+        "TRAVEL-51.txt::국내 출장 신청과 변경",
+        "TRAVEL-51.txt::출장 식비와 증빙"
+      ],
+      "cited_sections": [],
+      "retrieval_distances": [
+        {
+          "section": "TRAVEL-51.txt::출장 식비와 증빙",
+          "distance": 0.29685298253741677
+        },
+        {
+          "section": "TRAVEL-51.txt::국내 출장 신청과 변경",
+          "distance": 0.6160894629237719
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": false,
+      "citation_precision": false,
+      "latency_ms": 1597.7
+    },
+    {
+      "id": "V5-11",
+      "question": "IT 보안팀의 직통 전화번호를 알려줘.",
+      "answerable": false,
+      "answer": "등록된 문서에서 답을 확인할 수 없습니다.",
+      "abstained": true,
+      "abstention_reason": "검색 근거가 질문을 충분히 뒷받침하지 않아 응답을 보류했습니다.",
+      "retrieved_sections": [
+        "DEVICE-51.txt::회사 노트북 분실"
+      ],
+      "cited_sections": [],
+      "retrieval_distances": [
+        {
+          "section": "DEVICE-51.txt::회사 노트북 분실",
+          "distance": 0.5425841369209681
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": false,
+      "citation_precision": false,
+      "latency_ms": 1587.8
+    }
+  ],
+  "limitations": [
+    "이 평가는 기존 모노랩 회귀 세트와 분리한 새 가상 시설·운영·출장 문서 도전 세트입니다.",
+    "규칙과 질문은 사람이 작성했으며 실제 회사 자료를 대표하거나 대규모 독립 블라인드 평가를 대신하지 않습니다.",
+    "정답성은 핵심 문구 일치로 자동 판정해 의미가 같은 다른 표현을 오답으로 볼 수 있습니다."
+  ],
+  "question_set": "independent_v5_questions.json",
+  "question_set_sha256": "521690fef570214e1d0bad11a7b79d2a872c5498f59605b85625c45e9b2f96c5",
+  "document_set": "docs",
+  "readiness": {
+    "database": {
+      "available": true,
+      "pgvector": false,
+      "backend": "sqlite"
+    },
+    "ollama": {
+      "available": true,
+      "version": "0.40.11",
+      "error": null
+    },
+    "models": {
+      "chat": {
+        "name": "qwen3:4b-instruct",
+        "installed": true,
+        "functional": true
+      },
+      "embedding": {
+        "name": "embeddinggemma",
+        "installed": true,
+        "functional": true,
+        "dimensions": 768
+      }
+    },
+    "retrieval": {
+      "max_cosine_distance": 0.68
+    }
+  },
+  "evaluation_environment": "isolated_sqlite_api_fresh_challenge",
+  "fixture_sha256": {
+    "DEVICE-51.txt": "95c71ef4bbc463d7b05b138b9ead88f8966408c663127493359327637165417a",
+    "TRAVEL-51.txt": "57a49497a8458d32fc59b844165edad5aa36aec2a98a4b787372c63aab69d502"
+  }
+}

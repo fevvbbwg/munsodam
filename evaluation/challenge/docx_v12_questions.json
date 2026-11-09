@@ -1,0 +1,6 @@
+[
+  {"id":"V12-01","question":"현장 카메라는 언제 EquipDesk에서 대여 신청해야 해?","answerable":true,"required_sections":["DEVICE-55.docx::현장 장비 운영 / 대여 신청"],"must_include":[["출발 2일 전","출발일 2일 전","출발 이틀 전"],"EquipDesk"]},
+  {"id":"V12-02","question":"현장 카메라는 언제 어디에 반납해야 해?","answerable":true,"required_sections":["DEVICE-55.docx::현장 장비 운영 / 반납"],"must_include":[["복귀 다음 날","복귀 후 다음 날","복귀 다음날"],"장비실"]},
+  {"id":"V12-03","question":"사무실 키보드도 대여 신청을 해야 해?","answerable":true,"required_sections":["DEVICE-55.docx::사무실 장비 / 대여 신청"],"must_include":[["필요하지 않","신청하지 않아도","신청할 필요 없","안 해도"]]},
+  {"id":"V12-04","question":"현장 카메라 대여 수수료는 얼마야?","answerable":false,"required_sections":["DEVICE-55.docx::현장 장비 운영 / 대여 신청"],"must_include":[]}
+]

@@ -1,0 +1,8 @@
+[
+  {"id":"V9-01","question":"직원이 본사 작업실에서 시제품 사진을 찍어도 돼?","answerable":true,"required_sections":["STUDIO-72-S1"],"must_include":[["촬영할 수","찍을 수","가능","허용"]]},
+  {"id":"V9-02","question":"직원이 외부 전시장에서 시제품 사진을 찍어도 돼?","answerable":true,"required_sections":["STUDIO-72-S1"],"must_include":[["금지","촬영하지","찍을 수 없","안 됩니다"]]},
+  {"id":"V9-03","question":"시제품 사진을 개인 메신저로 공유해도 돼?","answerable":true,"required_sections":["STUDIO-72-S2"],"must_include":[["공유하지","안 됩니다","금지","불가"]]},
+  {"id":"V9-04","question":"촬영 사진의 삭제 기한은 정해져 있어?","answerable":true,"required_sections":["STUDIO-72-S2"],"must_include":[["삭제 기한","삭제 기간"],["정하지","정해져 있지","명시하지"]]},
+  {"id":"V9-05","question":"외부 전시장에서 촬영하면 며칠 안에 승인받아야 해?","answerable":false,"required_sections":["STUDIO-72-S1"],"must_include":[]},
+  {"id":"V9-06","question":"시제품 사진은 어느 장소에서 촬영할 수 있어?","answerable":true,"required_sections":["STUDIO-72-S1"],"must_include":[["본사 작업실","작업실"],["외부 전시장","전시장"],["금지","촬영하지","할 수 없"]]}
+]

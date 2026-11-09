@@ -1,0 +1,14 @@
+[
+  {"id":"D01","question":"연차는 며칠 전에 신청해야 해?","answerable":true,"required_sections":["HR-01-S1"],"must_include":["근무일 3일 전"]},
+  {"id":"D02","question":"당일 병가는 누구에게 언제 알려야 해?","answerable":true,"required_sections":["HR-01-S2"],"must_include":["근무 시작 전","관리자"]},
+  {"id":"D03","question":"출장 전에 승인을 받아야 해?","answerable":true,"required_sections":["EXP-01-S1"],"must_include":[["출장 예약 전","출장 전에"],"관리자 승인"]},
+  {"id":"D04","question":"출장비는 언제까지 신청해?","answerable":true,"required_sections":["EXP-01-S2"],"must_include":["복귀 후 7일 이내"]},
+  {"id":"D05","question":"하루 식비 한도는 얼마야?","answerable":true,"required_sections":["EXP-01-S3"],"must_include":["25,000원"]},
+  {"id":"D06","question":"어떤 경우 택시비를 정산할 수 있어?","answerable":true,"required_sections":["EXP-01-S4"],"must_include":["심야","대중교통"]},
+  {"id":"D07","question":"노트북 분실 시 누구에게 언제 알려?","answerable":true,"required_sections":["IT-01-S2"],"must_include":["1시간 이내","IT 담당자","관리자"]},
+  {"id":"D08","question":"회사 자료를 개인 클라우드에 올려도 돼?","answerable":true,"required_sections":["IT-01-S3"],"must_include":["개인 클라우드",["올리지","허용되지","올릴 수 없습니다","안 됩니다","금지"]]},
+  {"id":"D09","question":"출장 중 노트북 분실과 택시 이용 시 절차·증빙은?","answerable":true,"required_sections":["IT-01-S2","EXP-01-S4"],"allowed_citation_sections":["IT-01-S2","EXP-01-S4","EXP-01-S2"],"must_include":["1시간 이내","IT 담당자","영수증","사유"]},
+  {"id":"D10","question":"휴가 신청과 기기 보안에서 알아둘 점은?","answerable":true,"required_sections":["HR-01-S1","IT-01-S1"],"allowed_citation_sections":["HR-01-S1","HR-01-S2","IT-01-S1"],"must_include":["근무일 3일 전","5분 이내"]},
+  {"id":"D11","question":"안 쓴 연차는 다음 해로 이월돼?","answerable":false,"required_sections":[],"must_include":[]},
+  {"id":"D12","question":"회사 급여일은 매월 며칠이야?","answerable":false,"required_sections":[],"must_include":[]}
+]

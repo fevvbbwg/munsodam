@@ -1,0 +1,17 @@
+[
+  {"id":"V01","question":"실험실 방문객이 안전 안내 없이 먼저 들어가도 괜찮나요?","answerable":true,"required_sections":["LAB-01-S1"],"must_include":[["들어가기 전에","입실 전에","먼저 이수"],["안전 안내"]]},
+  {"id":"V02","question":"방문객은 실험실에 있는 동안 누가 동행해야 합니까?","answerable":true,"required_sections":["LAB-01-S1"],"must_include":[["방문을 주관한 직원","주관 직원"],["입실부터 퇴실까지","퇴실까지","실험실에 있는 동안"]]},
+  {"id":"V03","question":"방문객이 연구실 워크스테이션을 직접 사용해도 되나요?","answerable":true,"required_sections":["LAB-01-S1"],"must_include":[["조작할 수 없다","조작할 수 없습니다","사용할 수 없다"]]},
+  {"id":"V04","question":"화학물질을 흘리면 직접 닦아도 되나요? 책임자에게 몇 분 안에 알려야 하나요?","answerable":true,"required_sections":["LAB-01-S2"],"must_include":[["직접 닦지","직접 닦을 수 없습니다","회수하지 않는다","직접 청소하지 않는다"],["5분","오 분"],["실험실 책임자"]]},
+  {"id":"V05","question":"유출 사고에서 연기나 강한 냄새가 날 때 연락할 비상 내선은 몇 번인가요?","answerable":true,"required_sections":["LAB-01-S2"],"must_include":[["7711","칠칠일일"]]},
+  {"id":"V06","question":"저온 보관 장비 온도는 하루 중 몇 시에 기록하나요?","answerable":true,"required_sections":["LAB-01-S3"],"must_include":[["오전 9시","09시"],["오후 4시","16시"]]},
+  {"id":"V07","question":"저온 장비가 9°C를 표시하면 누구에게 언제 알리고 시료는 언제까지 옮겨야 해요?","answerable":true,"required_sections":["LAB-01-S3"],"must_include":[["실험실 관리자"],["10분","십 분"],["예비 냉동고"],["20분","이십 분"]]},
+  {"id":"V08","question":"저온 장비 표시가 정확히 8°C면 초과 대응을 해야 하나요?","answerable":true,"required_sections":["LAB-01-S3"],"must_include":[["8°C","8도"],["초과 기준에 해당하지 않는다","대응하지 않아도 된다","초과하지 않는다"]]},
+  {"id":"V09","question":"교정 라벨 날짜가 지난 장비는 어떻게 하고 재교정은 어디에 신청합니까?","answerable":true,"required_sections":["LAB-01-S4"],"must_include":[["사용을 멈춘다","사용을 멈추고","사용을 중단한다"],["LabDesk"],["티켓"]]},
+  {"id":"V10","question":"교정 기한이 되기 전에 조정이 필요하면 담당자가 교정 조절부를 직접 바꿔도 되나요?","answerable":true,"required_sections":["LAB-01-S4"],"must_include":[["직접 변경하지 않는다","직접 변경하지 않습니다","변경할 수 없다","바꾸면 안 된다"],["LabDesk"]]},
+  {"id":"V11","question":"시료 라벨에 반드시 들어갈 정보 두 가지는 무엇인가요?","answerable":true,"required_sections":["LAB-01-S5"],"must_include":[["프로젝트 코드"],["채취 날짜"]]},
+  {"id":"V12","question":"채취한 시료를 얼리기 시작할 때까지 몇 분 이내여야 하나요?","answerable":true,"required_sections":["LAB-01-S5"],"must_include":[["30분","삼십 분"],["-20°C","영하 20도"]]},
+  {"id":"V13","question":"사용하지 않은 시료는 프로젝트 종료 후 며칠 동안 보관해요?","answerable":true,"required_sections":["LAB-01-S5"],"must_include":[["90일","구십 일"]]},
+  {"id":"V14","question":"저온 장비 센서 교체 비용은 얼마인가요?","answerable":false,"required_sections":["LAB-01-S5"]},
+  {"id":"V15","question":"실험실 출입 기록의 정확한 보존 기간은 며칠인지 알려주세요.","answerable":true,"required_sections":["LAB-01-S5"],"must_include":[["정하지 않았다","정해져 있지 않다","명시하지 않았다"],["접근 기록","출입 기록"]]}
+]

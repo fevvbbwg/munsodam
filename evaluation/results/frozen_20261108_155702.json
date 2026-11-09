@@ -1,0 +1,486 @@
+{
+  "suite": "fresh_local_challenge",
+  "generated_at": "2026-11-08T06:57:02.976494+00:00",
+  "counts": {
+    "total": 13,
+    "answerable": 11,
+    "unanswerable": 2
+  },
+  "metrics": {
+    "recall_at_5": {
+      "hits": 11,
+      "total": 11,
+      "value": 1.0
+    },
+    "answer_correctness": {
+      "hits": 6,
+      "total": 11,
+      "value": 0.5454545454545454
+    },
+    "citation_recall": {
+      "hits": 9,
+      "total": 11,
+      "value": 0.8181818181818182
+    },
+    "citation_precision": {
+      "hits": 9,
+      "total": 11,
+      "value": 0.8181818181818182
+    },
+    "abstention_accuracy": {
+      "hits": 2,
+      "total": 2,
+      "value": 1.0
+    },
+    "median_response_ms": 1460.0
+  },
+  "results": [
+    {
+      "id": "F01",
+      "question": "행사 참가자는 시작 시각 몇 분 전에 도착해 등록해야 하나요?",
+      "answerable": true,
+      "answer": "참가자는 안내된 프로그램 시작 시각 15분 전까지 도착해 등록한다. 주관자는 등록대에서 참가자 배지를 배부한다. 참가자는 행사장을 나가기 전에 배지를 등록대에 반납한다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "CONF-01.txt::참가자 등록",
+        "CONF-01.txt::참가자 사진 촬영",
+        "CONF-01.txt::참가자 연락처 목록",
+        "CONF-01.txt::회의 공간 준비와 취소"
+      ],
+      "cited_sections": [
+        "CONF-01.txt::참가자 등록"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "CONF-01.txt::참가자 등록",
+          "distance": 0.2926824937089414
+        },
+        {
+          "section": "CONF-01.txt::회의 공간 준비와 취소",
+          "distance": 0.5842462147478137
+        },
+        {
+          "section": "CONF-01.txt::참가자 연락처 목록",
+          "distance": 0.6154604697618862
+        },
+        {
+          "section": "CONF-01.txt::참가자 사진 촬영",
+          "distance": 0.6453600684240806
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 971.6
+    },
+    {
+      "id": "F02",
+      "question": "행사에서 나가기 전에 참가자가 무엇을 어디에 반납해야 합니까?",
+      "answerable": true,
+      "answer": "참가자는 행사장을 나가기 전에 배지를 등록대에 반납해야 합니다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "CONF-01.txt::참가자 등록",
+        "CONF-01.txt::참가자 사진 촬영",
+        "CONF-01.txt::참가자 연락처 목록",
+        "CONF-01.txt::회의 공간 준비와 취소"
+      ],
+      "cited_sections": [
+        "CONF-01.txt::참가자 등록"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "CONF-01.txt::참가자 등록",
+          "distance": 0.38997721603556623
+        },
+        {
+          "section": "CONF-01.txt::참가자 연락처 목록",
+          "distance": 0.5512592893850548
+        },
+        {
+          "section": "CONF-01.txt::회의 공간 준비와 취소",
+          "distance": 0.6024604371342168
+        },
+        {
+          "section": "CONF-01.txt::참가자 사진 촬영",
+          "distance": 0.6196331642717874
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1130.3
+    },
+    {
+      "id": "F03",
+      "question": "회의 주관자는 화면과 마이크를 언제 확인해야 해요?",
+      "answerable": true,
+      "answer": "회의 주관자는 예약 시작 10분 전까지 화면 공유와 마이크를 확인해야 해요.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "CONF-01.txt::참가자 등록",
+        "CONF-01.txt::회의 공간 준비와 취소"
+      ],
+      "cited_sections": [
+        "CONF-01.txt::회의 공간 준비와 취소"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "CONF-01.txt::회의 공간 준비와 취소",
+          "distance": 0.4550259335448986
+        },
+        {
+          "section": "CONF-01.txt::참가자 등록",
+          "distance": 0.6567796908675125
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1128.7
+    },
+    {
+      "id": "F04",
+      "question": "회의실 예약을 취소할 수 있는 마지막 시점과 취소할 서비스는 무엇인가요?",
+      "answerable": true,
+      "answer": "회의실 예약을 취소할 수 있는 마지막 시점은 예정된 시작 시각보다 최소 2시간 전이며, 취소할 서비스는 회의실 예약입니다. 이 정보는 출처 1의 '회의 공간 준비와 취소' 섹션에서 제공됩니다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "CONF-01.txt::참가자 연락처 목록",
+        "CONF-01.txt::회의 공간 준비와 취소"
+      ],
+      "cited_sections": [
+        "CONF-01.txt::회의 공간 준비와 취소"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "CONF-01.txt::회의 공간 준비와 취소",
+          "distance": 0.36802815386233156
+        },
+        {
+          "section": "CONF-01.txt::참가자 연락처 목록",
+          "distance": 0.6763342126315183
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": false,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 2201.5
+    },
+    {
+      "id": "F05",
+      "question": "참가자 얼굴이 보이는 사진은 어떤 경우에 찍어도 되나요?",
+      "answerable": true,
+      "answer": "참가자 얼굴이 보이는 사진은 해당 참가자의 명시적인 동의를 받은 경우에만 찍어도 됩니다. 동의가 없는 경우 사진 프레임에서 제외됩니다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "CONF-01.txt::참가자 등록",
+        "CONF-01.txt::참가자 사진 촬영"
+      ],
+      "cited_sections": [
+        "CONF-01.txt::참가자 사진 촬영"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "CONF-01.txt::참가자 사진 촬영",
+          "distance": 0.38515483926488003
+        },
+        {
+          "section": "CONF-01.txt::참가자 등록",
+          "distance": 0.6599082199025184
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": false,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1540.9
+    },
+    {
+      "id": "F06",
+      "question": "행사 뒤 택시비를 정산할 수 있는 조건과 1회 한도를 알려주세요.",
+      "answerable": true,
+      "answer": "등록된 문서에서 답을 확인할 수 없습니다.",
+      "abstained": true,
+      "abstention_reason": "답변의 수치나 기한을 인용한 원문에서 확인하지 못했습니다.",
+      "retrieved_sections": [
+        "CONF-01.txt::행사 후 택시"
+      ],
+      "cited_sections": [],
+      "retrieval_distances": [
+        {
+          "section": "CONF-01.txt::행사 후 택시",
+          "distance": 0.28788139087648534
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": false,
+      "citation_recall": false,
+      "citation_precision": false,
+      "latency_ms": 3822.4
+    },
+    {
+      "id": "F07",
+      "question": "택시비 30,000원이 나오면 어떤 승인을 언제 받아야 예외로 처리되나요?",
+      "answerable": true,
+      "answer": "택시비 30,000원이 나오면 한도를 넘는 금액이므로, 이용 전에 팀 관리자의 서면 승인을 받아야 하며, 이 승인은 택시비 발생 전에 받아야 한다. 기준은 택시비 발생 시점이다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "CONF-01.txt::참가자 사진 촬영",
+        "CONF-01.txt::행사 후 택시"
+      ],
+      "cited_sections": [
+        "CONF-01.txt::행사 후 택시"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "CONF-01.txt::행사 후 택시",
+          "distance": 0.5051154914347717
+        },
+        {
+          "section": "CONF-01.txt::참가자 사진 촬영",
+          "distance": 0.6580401704424118
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 2151.7
+    },
+    {
+      "id": "F08",
+      "question": "택시비 정산을 위해 제출할 영수증 형태는 무엇입니까?",
+      "answerable": true,
+      "answer": "대중교통을 이용할 수 없거나 업무 이동이 22시 이후 끝난 경우에 택시비를 정산할 수 있다. 기본 한도는 1회 28,000원이다. 한도를 넘는 금액은 이용 전에 팀 관리자의 서면 승인을 받아야 한다. 디지털 영수증을 제출한다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "CONF-01.txt::행사 후 택시"
+      ],
+      "cited_sections": [
+        "CONF-01.txt::행사 후 택시"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "CONF-01.txt::행사 후 택시",
+          "distance": 0.4413377155162589
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1002.0
+    },
+    {
+      "id": "F09",
+      "question": "참가자 연락처 목록을 어디에 저장하고 공유 링크는 언제 만료되게 해야 하나요?",
+      "answerable": true,
+      "answer": "참가자 연락처 목록은 승인된 CompanyDrive 행사 폴더에 저장하고, 공유 링크는 행사 종료 48시간 후에 만료되게 해야 합니다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "CONF-01.txt::참가자 등록",
+        "CONF-01.txt::참가자 연락처 목록",
+        "CONF-01.txt::회의 공간 준비와 취소"
+      ],
+      "cited_sections": [
+        "CONF-01.txt::참가자 연락처 목록"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "CONF-01.txt::참가자 연락처 목록",
+          "distance": 0.20402330617133058
+        },
+        {
+          "section": "CONF-01.txt::참가자 등록",
+          "distance": 0.5991090590609017
+        },
+        {
+          "section": "CONF-01.txt::회의 공간 준비와 취소",
+          "distance": 0.6356728376703445
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": false,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1421.4
+    },
+    {
+      "id": "F10",
+      "question": "참가자 연락처 목록을 개인 이메일로 보내도 되나요?",
+      "answerable": true,
+      "answer": "등록된 문서에서 답을 확인할 수 없습니다.",
+      "abstained": true,
+      "abstention_reason": "질문한 수치나 단위를 문서 근거로 확인하지 못했습니다.",
+      "retrieved_sections": [
+        "CONF-01.txt::참가자 등록",
+        "CONF-01.txt::참가자 사진 촬영",
+        "CONF-01.txt::참가자 연락처 목록"
+      ],
+      "cited_sections": [],
+      "retrieval_distances": [
+        {
+          "section": "CONF-01.txt::참가자 연락처 목록",
+          "distance": 0.38529985910220366
+        },
+        {
+          "section": "CONF-01.txt::참가자 등록",
+          "distance": 0.6371644132002559
+        },
+        {
+          "section": "CONF-01.txt::참가자 사진 촬영",
+          "distance": 0.6374015749188271
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": false,
+      "citation_recall": false,
+      "citation_precision": false,
+      "latency_ms": 1955.2
+    },
+    {
+      "id": "F11",
+      "question": "행사 참가자 목록은 행사가 끝나고 며칠 안에 삭제해야 합니까?",
+      "answerable": true,
+      "answer": "행사가 끝나고 30일 이내에 삭제해야 합니다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "CONF-01.txt::참가자 등록",
+        "CONF-01.txt::참가자 사진 촬영",
+        "CONF-01.txt::참가자 연락처 목록",
+        "CONF-01.txt::회의 공간 준비와 취소"
+      ],
+      "cited_sections": [
+        "CONF-01.txt::참가자 연락처 목록"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "CONF-01.txt::참가자 연락처 목록",
+          "distance": 0.34247179478485146
+        },
+        {
+          "section": "CONF-01.txt::참가자 등록",
+          "distance": 0.5517838594800044
+        },
+        {
+          "section": "CONF-01.txt::참가자 사진 촬영",
+          "distance": 0.6015363639885467
+        },
+        {
+          "section": "CONF-01.txt::회의 공간 준비와 취소",
+          "distance": 0.6029504200883669
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1171.4
+    },
+    {
+      "id": "F12",
+      "question": "회의실을 한 시간 대여하는 정확한 비용이 얼마인지 알려주세요.",
+      "answerable": false,
+      "answer": "등록된 문서에서 답을 확인할 수 없습니다.",
+      "abstained": true,
+      "abstention_reason": "검색 근거가 질문을 충분히 뒷받침하지 않아 응답을 보류했습니다.",
+      "retrieved_sections": [
+        "CONF-01.txt::행사 후 택시",
+        "CONF-01.txt::회의 공간 준비와 취소"
+      ],
+      "cited_sections": [],
+      "retrieval_distances": [
+        {
+          "section": "CONF-01.txt::회의 공간 준비와 취소",
+          "distance": 0.5828327749679829
+        },
+        {
+          "section": "CONF-01.txt::행사 후 택시",
+          "distance": 0.6505876687047225
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": false,
+      "citation_precision": false,
+      "latency_ms": 1559.5
+    },
+    {
+      "id": "F13",
+      "question": "행사 택시비의 하루 총한도는 얼마인가요?",
+      "answerable": false,
+      "answer": "등록된 문서에서 답을 확인할 수 없습니다.",
+      "abstained": true,
+      "abstention_reason": "검색 근거가 질문을 충분히 뒷받침하지 않아 응답을 보류했습니다.",
+      "retrieved_sections": [
+        "CONF-01.txt::행사 후 택시"
+      ],
+      "cited_sections": [],
+      "retrieval_distances": [
+        {
+          "section": "CONF-01.txt::행사 후 택시",
+          "distance": 0.35759088916896253
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": false,
+      "citation_precision": false,
+      "latency_ms": 1460.0
+    }
+  ],
+  "limitations": [
+    "이 평가는 기존 모노랩 회귀 세트와 분리한 새 가상 시설·운영·출장 문서 도전 세트입니다.",
+    "규칙과 질문은 사람이 작성했으며 실제 회사 자료를 대표하거나 대규모 독립 블라인드 평가를 대신하지 않습니다.",
+    "정답성은 핵심 문구 일치로 자동 판정해 의미가 같은 다른 표현을 오답으로 볼 수 있습니다."
+  ],
+  "question_set": "frozen_questions.json",
+  "question_set_sha256": "6d4ab1ba85acaa3256dacc605511d15892fbe553f138b18ceb31cc8bf13b0000",
+  "document_set": "frozen_docs",
+  "readiness": {
+    "database": {
+      "available": true,
+      "pgvector": false,
+      "backend": "sqlite"
+    },
+    "ollama": {
+      "available": true,
+      "version": "0.40.11",
+      "error": null
+    },
+    "models": {
+      "chat": {
+        "name": "qwen3:4b-instruct",
+        "installed": true,
+        "functional": true
+      },
+      "embedding": {
+        "name": "embeddinggemma",
+        "installed": true,
+        "functional": true,
+        "dimensions": 768
+      }
+    },
+    "retrieval": {
+      "max_cosine_distance": 0.68
+    }
+  },
+  "evaluation_environment": "isolated_sqlite_api_fresh_challenge",
+  "fixture_sha256": {
+    "CONF-01.txt": "a8d6496989f11247774e807002429fa693ff6fcf7b7dd2292d5a378ced95dc57"
+  }
+}

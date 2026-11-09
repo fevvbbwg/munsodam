@@ -1,0 +1,165 @@
+{
+  "suite": "fresh_local_challenge",
+  "generated_at": "2026-11-08T06:27:10.030743+00:00",
+  "counts": {
+    "total": 2,
+    "answerable": 2,
+    "unanswerable": 0
+  },
+  "metrics": {
+    "recall_at_5": {
+      "hits": 2,
+      "total": 2,
+      "value": 1.0
+    },
+    "answer_correctness": {
+      "hits": 2,
+      "total": 2,
+      "value": 1.0
+    },
+    "citation_recall": {
+      "hits": 2,
+      "total": 2,
+      "value": 1.0
+    },
+    "citation_precision": {
+      "hits": 2,
+      "total": 2,
+      "value": 1.0
+    },
+    "abstention_accuracy": {
+      "hits": 0,
+      "total": 0,
+      "value": null
+    },
+    "median_response_ms": 1221.3
+  },
+  "results": [
+    {
+      "id": "N15",
+      "question": "출장 택시비의 1회 기본 상한과 초과 시 예외 승인자는 누구인가요?",
+      "answerable": true,
+      "answer": "출장 택시비의 1회 기본 상한은 30,000원이며, 이를 초과하는 비용은 부서장의 승인을 받은 경우에만 예외로 인정한다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "POL-01.txt::승인된 재택근무 식사",
+        "POL-01.txt::연장근무 및 교육 식사",
+        "TRV-01.txt::숙박비",
+        "TRV-01.txt::철도 좌석",
+        "TRV-01.txt::출장 택시"
+      ],
+      "cited_sections": [
+        "TRV-01.txt::출장 택시"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "TRV-01.txt::출장 택시",
+          "distance": 0.35090526048657844
+        },
+        {
+          "section": "TRV-01.txt::숙박비",
+          "distance": 0.5272867249279084
+        },
+        {
+          "section": "POL-01.txt::승인된 재택근무 식사",
+          "distance": 0.6164845066718745
+        },
+        {
+          "section": "TRV-01.txt::철도 좌석",
+          "distance": 0.6250554096145224
+        },
+        {
+          "section": "POL-01.txt::연장근무 및 교육 식사",
+          "distance": 0.6518674992135723
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1540.3
+    },
+    {
+      "id": "N16",
+      "question": "택시비 30,000원을 넘길 때 사후에 승인을 받으면 예외 처리됩니까?",
+      "answerable": true,
+      "answer": "택시는 22시 이후 이동했거나 대중교통 이용이 불가능한 경우에만 출장비로 정산할 수 있다. 택시비는 1회 30,000원까지이며 디지털 영수증과 이용 사유를 제출한다. 택시비 30,000원을 넘는 비용은 이용 전에 부서장의 승인을 받은 경우에만 예외로 인정한다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "POL-01.txt::승인된 재택근무 식사",
+        "TRV-01.txt::숙박비",
+        "TRV-01.txt::철도 좌석",
+        "TRV-01.txt::출장 택시"
+      ],
+      "cited_sections": [
+        "TRV-01.txt::출장 택시"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "TRV-01.txt::출장 택시",
+          "distance": 0.3356640062658751
+        },
+        {
+          "section": "TRV-01.txt::숙박비",
+          "distance": 0.6261253727290199
+        },
+        {
+          "section": "TRV-01.txt::철도 좌석",
+          "distance": 0.6626254111979228
+        },
+        {
+          "section": "POL-01.txt::승인된 재택근무 식사",
+          "distance": 0.6626980117061844
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 902.4
+    }
+  ],
+  "limitations": [
+    "이 평가는 기존 모노랩 회귀 세트와 분리한 새 가상 시설·운영·출장 문서 도전 세트입니다.",
+    "규칙과 질문은 사람이 작성했으며 실제 회사 자료를 대표하거나 대규모 독립 블라인드 평가를 대신하지 않습니다.",
+    "정답성은 핵심 문구 일치로 자동 판정해 의미가 같은 다른 표현을 오답으로 볼 수 있습니다."
+  ],
+  "question_set": "nuance_questions.json",
+  "document_set": "nuance_docs",
+  "readiness": {
+    "database": {
+      "available": true,
+      "pgvector": false,
+      "backend": "sqlite"
+    },
+    "ollama": {
+      "available": true,
+      "version": "0.40.11",
+      "error": null
+    },
+    "models": {
+      "chat": {
+        "name": "qwen3:4b-instruct",
+        "installed": true,
+        "functional": true
+      },
+      "embedding": {
+        "name": "embeddinggemma",
+        "installed": true,
+        "functional": true,
+        "dimensions": 768
+      }
+    },
+    "retrieval": {
+      "max_cosine_distance": 0.68
+    }
+  },
+  "evaluation_environment": "isolated_sqlite_api_fresh_challenge",
+  "fixture_sha256": {
+    "ITX-01.txt": "9d5651c31e9a3744481ca12a2ee809c539170cd93375c15f393df7b88ba4263e",
+    "POL-01.txt": "6f497499f9b7694ebaabede741b8e12c8019f371f651ed636584da18c9d3079b",
+    "TRV-01.txt": "9226bff4c1346871aaaff6d8a898d85a75a85670f65d9a6c0a1943768f556492"
+  }
+}

@@ -1,0 +1,470 @@
+{
+  "suite": "fresh_local_challenge",
+  "generated_at": "2026-11-08T06:37:27.233364+00:00",
+  "counts": {
+    "total": 14,
+    "answerable": 12,
+    "unanswerable": 2
+  },
+  "metrics": {
+    "recall_at_5": {
+      "hits": 12,
+      "total": 12,
+      "value": 1.0
+    },
+    "answer_correctness": {
+      "hits": 8,
+      "total": 12,
+      "value": 0.6666666666666666
+    },
+    "citation_recall": {
+      "hits": 9,
+      "total": 12,
+      "value": 0.75
+    },
+    "citation_precision": {
+      "hits": 9,
+      "total": 12,
+      "value": 0.75
+    },
+    "abstention_accuracy": {
+      "hits": 2,
+      "total": 2,
+      "value": 1.0
+    },
+    "median_response_ms": 1652.1
+  },
+  "results": [
+    {
+      "id": "R01",
+      "question": "업무용 전기차 충전비는 출장 한 번에 얼마까지 정산되나요?",
+      "answerable": true,
+      "answer": "출장 1회당 최대 45,000원까지 정산할 수 있다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "FLEET-01.txt::전기차 충전 정산",
+        "FLEET-01.txt::차량 예약과 반납",
+        "TRN-01.txt::학비 지원"
+      ],
+      "cited_sections": [
+        "FLEET-01.txt::전기차 충전 정산"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "FLEET-01.txt::전기차 충전 정산",
+          "distance": 0.25467982285608914
+        },
+        {
+          "section": "FLEET-01.txt::차량 예약과 반납",
+          "distance": 0.6587743329547247
+        },
+        {
+          "section": "TRN-01.txt::학비 지원",
+          "distance": 0.659402424898072
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1233.3
+    },
+    {
+      "id": "R02",
+      "question": "개인 소유 차의 충전비도 회사에 청구할 수 있나요?",
+      "answerable": true,
+      "answer": "아니요, 개인 소유 차량의 충전 비용은 회사에 청구할 수 없습니다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "FLEET-01.txt::전기차 충전 정산"
+      ],
+      "cited_sections": [
+        "FLEET-01.txt::전기차 충전 정산"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "FLEET-01.txt::전기차 충전 정산",
+          "distance": 0.4335642427046732
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": false,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1185.5
+    },
+    {
+      "id": "R03",
+      "question": "차를 어디서 예약하고 열쇠는 출발 몇 분 전부터 받을 수 있습니까?",
+      "answerable": true,
+      "answer": "차는 FleetBoard에서 예약하고, 출발 10분 전부터 1층 경비 데스크에서 차량 열쇠를 받을 수 있습니다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "FLEET-01.txt::차량 예약과 반납"
+      ],
+      "cited_sections": [
+        "FLEET-01.txt::차량 예약과 반납"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "FLEET-01.txt::차량 예약과 반납",
+          "distance": 0.40616048838907926
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1324.6
+    },
+    {
+      "id": "R04",
+      "question": "공용 차량을 쓴 뒤 차와 열쇠는 어디에 언제 반납해야 해요?",
+      "answerable": true,
+      "answer": "차량을 지정 주차면에 세우고, 열쇠는 그날 근무 종료 전에 1층 경비 데스크에 반납해야 합니다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "FLEET-01.txt::전기차 충전 정산",
+        "FLEET-01.txt::차량 예약과 반납"
+      ],
+      "cited_sections": [
+        "FLEET-01.txt::차량 예약과 반납"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "FLEET-01.txt::차량 예약과 반납",
+          "distance": 0.5366868701585434
+        },
+        {
+          "section": "FLEET-01.txt::전기차 충전 정산",
+          "distance": 0.6688395099817012
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1329.2
+    },
+    {
+      "id": "R05",
+      "question": "사람이 다치지 않은 차량 사고는 몇 분 안에 누구에게 보고하며 현장에서는 무엇을 하지 말아야 하죠?",
+      "answerable": true,
+      "answer": "인명 피해가 없는 사고는 안전한 곳에 정차하고 현장 사진을 찍은 뒤 15분 이내에 차량 담당자에게 알린다. 현장에서 과실 책임을 인정하거나 합의하지 않는다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "FLEET-01.txt::차량 사고 보고"
+      ],
+      "cited_sections": [
+        "FLEET-01.txt::차량 사고 보고"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "FLEET-01.txt::차량 사고 보고",
+          "distance": 0.31795874276645275
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1622.5
+    },
+    {
+      "id": "R06",
+      "question": "외부 교육이 끝나면 어떤 서류를 누구에게 며칠 안에 내야 하나요?",
+      "answerable": true,
+      "answer": "외부 교육이 끝나면 참석 기록과 수료증을 교육 담당자에게 3영업일 이내에 제출해야 합니다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "TRN-01.txt::교육 신청과 결과 제출",
+        "TRN-01.txt::교육 취소"
+      ],
+      "cited_sections": [
+        "TRN-01.txt::교육 신청과 결과 제출"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "TRN-01.txt::교육 신청과 결과 제출",
+          "distance": 0.31489586346776977
+        },
+        {
+          "section": "TRN-01.txt::교육 취소",
+          "distance": 0.5878085061443608
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1362.4
+    },
+    {
+      "id": "R07",
+      "question": "교육 시작 하루 전에 취소하면 수수료를 지원받을 수 있나요? 취소 기준도 알려주세요.",
+      "answerable": true,
+      "answer": "교육 시작 하루 전에 취소하면 수수료를 지원받을 수 없습니다. 취소 기준은 과정 시작일보다 최소 2영업일 전에 취소해야 하며, 기한이 지난 뒤 발생한 취소 수수료는 회사가 지원하지 않습니다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "TRN-01.txt::교육 신청과 결과 제출",
+        "TRN-01.txt::교육 취소"
+      ],
+      "cited_sections": [
+        "TRN-01.txt::교육 취소"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "TRN-01.txt::교육 취소",
+          "distance": 0.3514026715692731
+        },
+        {
+          "section": "TRN-01.txt::교육 신청과 결과 제출",
+          "distance": 0.6373251854903842
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1743.7
+    },
+    {
+      "id": "R08",
+      "question": "직무 교육 학비의 연간 지원 비율과 상한, 결제 전 승인자는 누구인가요?",
+      "answerable": true,
+      "answer": "등록된 문서에서 답을 확인할 수 없습니다.",
+      "abstained": true,
+      "abstention_reason": "질문의 일부를 뒷받침하는 근거 구간을 찾지 못했습니다.",
+      "retrieved_sections": [
+        "BUY-01.txt::구매 승인",
+        "TRN-01.txt::학비 지원"
+      ],
+      "cited_sections": [],
+      "retrieval_distances": [
+        {
+          "section": "TRN-01.txt::학비 지원",
+          "distance": 0.41187897345874747
+        },
+        {
+          "section": "BUY-01.txt::구매 승인",
+          "distance": 0.565272408210226
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": false,
+      "citation_recall": false,
+      "citation_precision": false,
+      "latency_ms": 220.1
+    },
+    {
+      "id": "R09",
+      "question": "80,000원짜리 물품을 주문할 때 누가 승인해야 합니까?",
+      "answerable": true,
+      "answer": "등록된 문서에서 답을 확인할 수 없습니다.",
+      "abstained": true,
+      "abstention_reason": "답변의 수치나 기한을 인용한 원문에서 확인하지 못했습니다.",
+      "retrieved_sections": [
+        "BUY-01.txt::구매 승인"
+      ],
+      "cited_sections": [],
+      "retrieval_distances": [
+        {
+          "section": "BUY-01.txt::구매 승인",
+          "distance": 0.46340020790244285
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": false,
+      "citation_recall": false,
+      "citation_precision": false,
+      "latency_ms": 2835.2
+    },
+    {
+      "id": "R10",
+      "question": "정확히 500,000원인 구매의 결재자는 누구예요?",
+      "answerable": true,
+      "answer": "등록된 문서에서 답을 확인할 수 없습니다.",
+      "abstained": true,
+      "abstention_reason": "검색 근거가 질문을 충분히 뒷받침하지 않아 응답을 보류했습니다.",
+      "retrieved_sections": [
+        "BUY-01.txt::구매 승인"
+      ],
+      "cited_sections": [],
+      "retrieval_distances": [
+        {
+          "section": "BUY-01.txt::구매 승인",
+          "distance": 0.47969736751082026
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": false,
+      "citation_recall": false,
+      "citation_precision": false,
+      "latency_ms": 1681.6
+    },
+    {
+      "id": "R11",
+      "question": "750,000원 구매는 어느 두 팀의 승인을 받아야 하나요?",
+      "answerable": true,
+      "answer": "500,000원 초과 구매는 재무팀과 구매팀이 모두 승인해야 한다. 따라서 750,000원 구매는 재무팀과 구매팀의 승인을 받아야 한다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "BUY-01.txt::구매 승인",
+        "TRN-01.txt::학비 지원"
+      ],
+      "cited_sections": [
+        "BUY-01.txt::구매 승인"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "BUY-01.txt::구매 승인",
+          "distance": 0.39645290808684597
+        },
+        {
+          "section": "TRN-01.txt::학비 지원",
+          "distance": 0.6586112526351184
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1688.9
+    },
+    {
+      "id": "R12",
+      "question": "관리자 승인을 받지 않은 외부 교육도 신청해 등록할 수 있나요?",
+      "answerable": true,
+      "answer": "아니요, 관리자 승인을 받지 않은 외부 교육은 신청해 등록할 수 없습니다. 외부 교육은 신청 전에 직속 관리자의 승인을 받아야 하며, 이는 교육 신청과 결과 제출 섹션에서 명시되어 있습니다.",
+      "abstained": false,
+      "abstention_reason": null,
+      "retrieved_sections": [
+        "TRN-01.txt::교육 신청과 결과 제출",
+        "TRN-01.txt::교육 취소",
+        "TRN-01.txt::학비 지원"
+      ],
+      "cited_sections": [
+        "TRN-01.txt::교육 신청과 결과 제출"
+      ],
+      "retrieval_distances": [
+        {
+          "section": "TRN-01.txt::교육 신청과 결과 제출",
+          "distance": 0.39121218590625084
+        },
+        {
+          "section": "TRN-01.txt::교육 취소",
+          "distance": 0.517066904803039
+        },
+        {
+          "section": "TRN-01.txt::학비 지원",
+          "distance": 0.6407613442985809
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": true,
+      "citation_precision": true,
+      "latency_ms": 1803.7
+    },
+    {
+      "id": "R13",
+      "question": "표준 발주 후 납품까지 정확히 며칠 걸리는지 알려주세요.",
+      "answerable": false,
+      "answer": "등록된 문서에서 답을 확인할 수 없습니다.",
+      "abstained": true,
+      "abstention_reason": "검색 근거가 질문을 충분히 뒷받침하지 않아 응답을 보류했습니다.",
+      "retrieved_sections": [
+        "BUY-01.txt::납품 일정"
+      ],
+      "cited_sections": [],
+      "retrieval_distances": [
+        {
+          "section": "BUY-01.txt::납품 일정",
+          "distance": 0.4612213627054099
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": false,
+      "citation_precision": false,
+      "latency_ms": 1936.9
+    },
+    {
+      "id": "R14",
+      "question": "공용 차량의 1회 주행 가능 거리는 몇 km인가요?",
+      "answerable": false,
+      "answer": "등록된 문서에서 답을 확인할 수 없습니다.",
+      "abstained": true,
+      "abstention_reason": "검색 근거가 질문을 충분히 뒷받침하지 않아 응답을 보류했습니다.",
+      "retrieved_sections": [
+        "FLEET-01.txt::전기차 충전 정산",
+        "FLEET-01.txt::차량 예약과 반납"
+      ],
+      "cited_sections": [],
+      "retrieval_distances": [
+        {
+          "section": "FLEET-01.txt::차량 예약과 반납",
+          "distance": 0.5978369202464708
+        },
+        {
+          "section": "FLEET-01.txt::전기차 충전 정산",
+          "distance": 0.6052809629954921
+        }
+      ],
+      "retrieval_recall_at_5": true,
+      "answer_or_abstention_correct": true,
+      "citation_recall": false,
+      "citation_precision": false,
+      "latency_ms": 1684.3
+    }
+  ],
+  "limitations": [
+    "이 평가는 기존 모노랩 회귀 세트와 분리한 새 가상 시설·운영·출장 문서 도전 세트입니다.",
+    "규칙과 질문은 사람이 작성했으며 실제 회사 자료를 대표하거나 대규모 독립 블라인드 평가를 대신하지 않습니다.",
+    "정답성은 핵심 문구 일치로 자동 판정해 의미가 같은 다른 표현을 오답으로 볼 수 있습니다."
+  ],
+  "question_set": "release_check_questions.json",
+  "document_set": "release_check_docs",
+  "readiness": {
+    "database": {
+      "available": true,
+      "pgvector": false,
+      "backend": "sqlite"
+    },
+    "ollama": {
+      "available": true,
+      "version": "0.40.11",
+      "error": null
+    },
+    "models": {
+      "chat": {
+        "name": "qwen3:4b-instruct",
+        "installed": true,
+        "functional": true
+      },
+      "embedding": {
+        "name": "embeddinggemma",
+        "installed": true,
+        "functional": true,
+        "dimensions": 768
+      }
+    },
+    "retrieval": {
+      "max_cosine_distance": 0.68
+    }
+  },
+  "evaluation_environment": "isolated_sqlite_api_fresh_challenge",
+  "fixture_sha256": {
+    "BUY-01.txt": "ec515820bfdc74964915c1f1b4b285c3c343016624d2ea195df1bc1cb8ae87e6",
+    "FLEET-01.txt": "f1327ead88faa0fbdfa2cfb47344b2e476a41e1a1ba275b7a42ef188e0a5e43e",
+    "TRN-01.txt": "8879660a775d03fec49c56ef70434ecb63e042ad228e722711e80956ca5d221f"
+  }
+}

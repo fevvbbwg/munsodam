@@ -1,0 +1,57 @@
+{
+  "max_cosine_distance": 0.68,
+  "selected_from": "development suite",
+  "dev_questions": 12,
+  "dev_metrics": {
+    "recall_at_5_vector": {
+      "hits": 10,
+      "total": 10,
+      "value": 1.0,
+      "target": 0.85,
+      "passed": true
+    },
+    "answer_correctness": {
+      "hits": 10,
+      "total": 10,
+      "value": 1.0,
+      "target": 0.8,
+      "passed": true
+    },
+    "source_accuracy": {
+      "hits": 10,
+      "total": 10,
+      "value": 1.0,
+      "target": 0.9,
+      "passed": true
+    },
+    "abstention_accuracy": {
+      "hits": 2,
+      "total": 2,
+      "value": 1.0,
+      "target": 0.9,
+      "passed": true
+    },
+    "median_response_ms": {
+      "value": 782.0,
+      "target": 10000,
+      "passed": true
+    }
+  },
+  "retrieval_comparison_recall_at_5": {
+    "keyword": {
+      "hits": 9,
+      "total": 10,
+      "value": 0.9
+    },
+    "vector": {
+      "hits": 10,
+      "total": 10,
+      "value": 1.0
+    },
+    "hybrid": {
+      "hits": 10,
+      "total": 10,
+      "value": 1.0
+    }
+  }
+}
