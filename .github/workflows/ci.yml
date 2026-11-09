@@ -11,7 +11,7 @@ permissions:
 jobs:
   api:
     name: API unit tests
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - name: Check out source
         uses: actions/checkout@v7
@@ -31,7 +31,7 @@ jobs:
 
   web:
     name: Web tests and build
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     defaults:
       run:
         working-directory: web
