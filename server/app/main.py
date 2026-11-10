@@ -645,17 +645,36 @@ def conflicting_policy_sources(query: str, rows: list[tuple[DocumentChunk, float
     best_distance = min(distance for _chunk, distance in rows)
     distance_limit = min(settings.max_cosine_distance, best_distance + 0.12)
     query_terms = keyword_tokens(query)
-    by_section: dict[str, list[DocumentChunk]] = {}
+    eligible: list[DocumentChunk] = []
     for chunk, distance in rows:
-        if distance > distance_limit or not chunk.section_path or lexical_match_score(query_terms, chunk) < 0.5:
+        if distance > distance_limit or lexical_match_score(query_terms, chunk) < 0.5:
             continue
-        if named_years and not any(
-            year in f"{chunk.document.filename} {chunk.section_path} {chunk.content}"
-            for year in named_years
-        ):
+        chunk_years = set(re.findall(
+            r"(?<!\d)((?:19|20)\d{2})\s*년?(?!\d)",
+            f"{chunk.document.filename} {chunk.section_path or ''} {chunk.content}",
+        ))
+        if named_years and chunk_years and not chunk_years.intersection(named_years):
             continue
-        section_key = re.sub(r"\s+", "", chunk.section_path.casefold())
-        by_section.setdefault(section_key, []).append(chunk)
+        eligible.append(chunk)
+
+    def same_policy_topic(first: DocumentChunk, second: DocumentChunk) -> bool:
+        generic_terms = {
+            "국내", "해외", "출장", "규정", "정책", "지침", "안내", "문서", "회사",
+            "하루", "일일", "한도", "금액", "비용", "기한", "마감", "기간",
+            "언제", "얼마", "몇일", "며칠", "가능", "허용", "금지",
+            "저장", "사용", "이용", "신청", "처리",
+        }
+        def is_generic(term: str) -> bool:
+            base = re.sub(r"(?:인가요|예요|나요|어요|습니다|에서|으로|은|는|이|가|을|를|의|에|로|와|과|도|요)$", "", term)
+            return base in generic_terms or bool(re.fullmatch(r"(?:19|20)\d{2}", base))
+        first_terms = keyword_tokens(f"{first.section_path or ''} {first.content}")
+        second_terms = keyword_tokens(f"{second.section_path or ''} {second.content}")
+        return any(
+            not is_generic(term)
+            and any(term in source or source in term for source in first_terms)
+            and any(term in source or source in term for source in second_terms)
+            for term in query_terms
+        )
 
     def values_by_unit(chunk: DocumentChunk) -> dict[str, set[tuple]]:
         values: dict[str, set[tuple]] = {}
@@ -666,21 +685,20 @@ def conflicting_policy_sources(query: str, rows: list[tuple[DocumentChunk, float
             values.setdefault(unit, set()).add((number, day_basis, bound, relative, period))
         return values
 
-    for chunks in by_section.values():
-        for index, first in enumerate(chunks):
-            first_values = values_by_unit(first)
-            for second in chunks[index + 1:]:
-                if first.document_id == second.document_id:
-                    continue
-                second_values = values_by_unit(second)
-                for unit in first_values.keys() & second_values.keys():
-                    if len(first_values[unit]) == len(second_values[unit]) == 1 and first_values[unit] != second_values[unit]:
-                        return first, second
-                if asks_permission:
-                    first_permission = permission_polarity(first.content)
-                    second_permission = permission_polarity(second.content)
-                    if first_permission is not None and second_permission is not None and first_permission != second_permission:
-                        return first, second
+    for index, first in enumerate(eligible):
+        first_values = values_by_unit(first)
+        for second in eligible[index + 1:]:
+            if first.document_id == second.document_id or not same_policy_topic(first, second):
+                continue
+            second_values = values_by_unit(second)
+            for unit in first_values.keys() & second_values.keys():
+                if len(first_values[unit]) == len(second_values[unit]) == 1 and first_values[unit] != second_values[unit]:
+                    return first, second
+            if asks_permission:
+                first_permission = permission_polarity(first.content)
+                second_permission = permission_polarity(second.content)
+                if first_permission is not None and second_permission is not None and first_permission != second_permission:
+                    return first, second
     return None
 
 

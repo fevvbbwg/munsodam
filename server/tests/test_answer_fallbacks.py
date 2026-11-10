@@ -45,6 +45,11 @@ class QuestionRetrievalTests(unittest.TestCase):
         self.assertIsNone(conflicting_policy_sources("2025년 출장 식비 하루 한도는 얼마인가요?", rows))
         self.assertIsNone(conflicting_policy_sources("2026년 출장 식비 하루 한도는 얼마인가요?", rows))
         self.assertIsNone(conflicting_policy_sources("두 해의 출장 식비 한도를 각각 비교해 주세요.", rows))
+        undated = chunk("출장 식비", "출장 식비 한도는 하루 25,000원이다.")
+        self.assertEqual(
+            conflicting_policy_sources("2025년 출장 식비 하루 한도는 얼마인가요?", [(old, 0.32), (undated, 0.33)]),
+            (old, undated),
+        )
 
     def test_chat_exposes_both_conflicting_sources_without_treating_them_as_an_answer(self):
         old = chunk("출장 식비", "2025년 출장 식비 한도는 하루 20,000원이다.")
@@ -62,14 +67,26 @@ class QuestionRetrievalTests(unittest.TestCase):
         model_client.assert_not_called()
 
     def test_conflict_check_ignores_different_topics_and_distant_chunks(self):
-        food = chunk("출장 식비", "출장 식비 한도는 하루 20,000원이다.")
-        taxi = chunk("출장 택시비", "출장 택시비 한도는 하루 30,000원이다.")
+        food = chunk("출장", "출장 식비 한도는 하루 20,000원이다.")
+        taxi = chunk("출장", "출장 택시비 한도는 하루 30,000원이다.")
         newer_food = chunk("출장 식비", "출장 식비 한도는 하루 30,000원이다.")
         matching_food = chunk("출장 식비", "출장 식비 한도는 하루 20,000원이다.")
 
         self.assertIsNone(conflicting_policy_sources("출장 식비 하루 한도는 얼마인가요?", [(food, 0.3), (taxi, 0.31)]))
         self.assertIsNone(conflicting_policy_sources("출장 식비 하루 한도는 얼마인가요?", [(food, 0.3), (newer_food, 0.6)]))
         self.assertIsNone(conflicting_policy_sources("출장 식비 하루 한도는 얼마인가요?", [(food, 0.3), (matching_food, 0.31)]))
+
+    def test_conflict_check_matches_the_same_topic_under_different_headings(self):
+        old = chunk("식대 지원", "2025년 국내 출장 식비의 하루 한도는 20,000원이다.")
+        new = chunk("출장 중 식사비", "2026년 국내 출장 식비의 하루 한도는 30,000원이다.")
+        taxi = chunk("교통비 지급", "2026년 국내 출장 택시비의 하루 한도는 30,000원이다.")
+        self.assertEqual(
+            conflicting_policy_sources("국내 출장 식비 하루 한도는 얼마인가요?", [(new, 0.28), (old, 0.3)]),
+            (new, old),
+        )
+        self.assertIsNone(
+            conflicting_policy_sources("국내 출장 식비와 택시비 한도는 얼마인가요?", [(old, 0.28), (taxi, 0.3)]),
+        )
 
     def test_unscoped_permission_conflict_requires_a_version(self):
         old = chunk("개인 USB 저장", "2025년 보안 규정은 회사 자료를 개인 USB에 저장할 수 있다.")

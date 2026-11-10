@@ -43,6 +43,7 @@ python evaluation/run_local_ollama_evaluation.py --suite gold
 .\.venv\Scripts\python.exe evaluation/run_challenge_evaluation.py --questions evaluation/challenge/docx_v12_questions.json --docs evaluation/challenge/docx_v12/docs
 .\.venv\Scripts\python.exe evaluation/run_challenge_evaluation.py --questions evaluation/challenge/conflict_v13_questions.json --docs evaluation/challenge/conflict_v13/docs
 .\.venv\Scripts\python.exe evaluation/run_challenge_evaluation.py --questions evaluation/challenge/permission_conflict_v14_questions.json --docs evaluation/challenge/permission_conflict_v14/docs
+.\.venv\Scripts\python.exe evaluation/run_challenge_evaluation.py --questions evaluation/challenge/renamed_policy_v15_questions.json --docs evaluation/challenge/renamed_policy_v15/docs
 .\.venv\Scripts\python.exe evaluation/run_challenge_evaluation.py --questions evaluation/challenge/portfolio_smoke_questions.json --docs evaluation/docs
 ```
 
@@ -50,9 +51,11 @@ python evaluation/run_local_ollama_evaluation.py --suite gold
 
 포트폴리오 화면과 같은 가상 문서 3개에 잘못된 수치·전후 조건, 대상과 시점, 문서에 없는 항목을 섞은 5문항을 추가했습니다. [질문](challenge/portfolio_smoke_questions.json)과 [2026-11-09 실행 보고서](results/portfolio_smoke_20261109_200438.json)를 공개합니다. 답변 가능한 4문항은 답변·출처가 4/4, 근거가 일부 없는 복합 질문은 1/1 보류했습니다. 이 질문은 발견한 오류를 고치는 데 사용했으므로 개발 회귀 결과입니다.
 
-2026-11-09 격리 SQLite API 회귀는 [골드 보고서](results/gold_20261109_212206.json)와 [개발 보고서](results/dev_20261109_212054.json)에 기록했습니다. 골드는 Recall@5·답변·출처 24/24, 보류 12/12였고 응답 중앙값 1,477.5ms였습니다. 개발 세트는 답변·출처·검색 10/10, 보류 2/2, 중앙값 1,312.4ms였습니다. 기존 세트는 개발 중 보강에 사용했으며 독립 블라인드 결과가 아닙니다.
+2026-11-10 격리 SQLite API 회귀는 [골드 보고서](results/gold_20261110_190426.json)와 [개발 보고서](results/dev_20261110_190315.json)에 기록했습니다. 골드는 Recall@5·답변·출처 24/24, 보류 12/12였고 응답 중앙값 1,472.9ms였습니다. 개발 세트는 답변·출처·검색 10/10, 보류 2/2, 중앙값 1,271.4ms였습니다. 기존 세트는 개발 중 보강에 사용했으며 독립 블라인드 결과가 아닙니다.
 
-같은 규정의 서로 다른 연도 문서가 충돌하는 [금액·기한 8문항](results/conflict_v13_20261109_212636.json)은 답변·출처 6/6, 적용 연도가 없는 질문 보류와 충돌 원문 두 곳 표시 2/2였습니다. [허용·금지 4문항](results/permission_conflict_v14_20261109_212649.json)은 답변·출처 3/3, 충돌 보류와 원문 표시 1/1이었습니다. 비교 질문은 두 값이 답에 있는지만 보는 대신 **각 연도와 올바른 값·허용 방향이 연결됐는지**도 채점합니다. 수정 전 초기 [금액·기한 실행](results/conflict_v13_20261109_205244.json)은 연도가 없는 질문의 보류가 0/2, [허용·금지 실행](results/permission_conflict_v14_20261109_205530.json)은 0/1이었습니다. 이 문서·질문은 오류를 발견하고 수정하는 데 사용한 자체 작성 합성 개발 자료입니다.
+같은 규정의 서로 다른 연도 문서가 충돌하는 [금액·기한 8문항](results/conflict_v13_20261110_190228.json)은 답변·출처 6/6, 적용 연도가 없는 질문 보류와 충돌 원문 두 곳 표시 2/2였습니다. [허용·금지 4문항](results/permission_conflict_v14_20261110_190241.json)은 답변·출처 3/3, 충돌 보류와 원문 표시 1/1이었습니다. 비교 질문은 두 값이 답에 있는지만 보는 대신 **각 연도와 올바른 값·허용 방향이 연결됐는지**도 채점합니다. 수정 전 초기 [금액·기한 실행](results/conflict_v13_20261109_205244.json)은 연도가 없는 질문의 보류가 0/2, [허용·금지 실행](results/permission_conflict_v14_20261109_205530.json)은 0/1이었습니다. 이 문서·질문은 오류를 발견하고 수정하는 데 사용한 자체 작성 합성 개발 자료입니다.
+
+같은 규정인데 제목 표현만 달라진 [v15 4문항](results/renamed_policy_v15_20261110_190202.json)에서 제목이 ‘식대 지원’과 ‘출장 중 식사비’로 달라도 본문 주제와 검색 점수가 맞으면 충돌 원문을 함께 표시했습니다. 답변 가능 질문 3/3, 연도 없는 질문 보류·충돌 표시 1/1이었습니다. 초기 [v15 실행](results/renamed_policy_v15_20261109_213039.json)은 제목이 다르다는 이유로 임의의 연도 하나를 답해 보류 0/1이었습니다. 단위·거리·주제 신호가 좁게 맞는 경우만 비교하며, 작은 합성 문서 평가이므로 모든 동의어 제목의 충돌을 찾는다는 뜻은 아닙니다.
 
 시설·운영 규정 [회귀 15문항](results/release_validation_20261108_170937.json)은 검색·답변·출처 14/14, 답변 불가 1/1 보류였습니다. 자동 채점의 V02에는 의미가 같은 “실험실에 있는 동안” 표현을 허용하도록 보완했습니다. 재택·연장근무·기산일·경계값 [뉘앙스 20문항](results/nuance_20261108_171334.json)은 검색·답변·출처 19/19, 보류 1/1이었습니다. 문서 속 지시문 회귀 [3문항](results/injection_20261108_171344.json)은 정책 질문 1/1, 민감 정보 요청 보류 2/2였습니다.
 

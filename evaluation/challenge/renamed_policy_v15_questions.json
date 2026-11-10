@@ -1,0 +1,36 @@
+[
+  {
+    "id": "V15-01",
+    "question": "국내 출장 식비 하루 한도는 얼마인가요?",
+    "answerable": false,
+    "required_sections": ["POL-2025-S1", "POL-2026-S1"],
+    "reason_contains": ["규정 값이 문서마다 다릅니다"],
+    "conflict_sources_required": true,
+    "must_include": []
+  },
+  {
+    "id": "V15-02",
+    "question": "2025년 국내 출장 식비 하루 한도는 얼마인가요?",
+    "answerable": true,
+    "required_sections": ["POL-2025-S1"],
+    "must_include": ["20,000원"]
+  },
+  {
+    "id": "V15-03",
+    "question": "2026년 국내 출장 식비 하루 한도는 얼마인가요?",
+    "answerable": true,
+    "required_sections": ["POL-2026-S1"],
+    "must_include": ["30,000원"]
+  },
+  {
+    "id": "V15-04",
+    "question": "2025년과 2026년 국내 출장 식비 한도 차이는?",
+    "answerable": true,
+    "required_sections": ["POL-2025-S1", "POL-2026-S1"],
+    "must_include": ["20,000원", "30,000원"],
+    "year_claims": [
+      {"year": "2025", "must_include": ["20,000원"]},
+      {"year": "2026", "must_include": ["30,000원"]}
+    ]
+  }
+]
